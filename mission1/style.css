@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-display: swap;
+}
+
+
+body{
+  font-family:'Pretendard';
+}
+
+
+#wrap{
+  overflow:hidden;
+}
+
+/* Common */
+.btn{
+  display:flex;
+  height:26px;
+  padding:0 10px;
+  border-radius:8px;
+  color:#fff;
+  line-height:26px;  
+}
+.btn.round{}
+.btn.sm_40{}
+.btn.sm_48{}
+.col_primary_100{color:#3692ff}
+.col_primary_200{color:#1967d6;}
+.col_primary_300{color:#1251aa}
+.col_secondary_400{color:#9ca3af;}
+
+
+/* HEADER */
+.header{}
+.header .logo{}
+.header .logo a{}
+.login_box{}
+.login_box a{}
+
+/* MAIN */
+main{}
+main>section{}
+
+.sec01 .banner_img{}
+.sec01 .banner_img>img{}
+
+.sec01 .tit_box{}
+.sec01 .tit_box h2{}
+.sec01 .tit_box a{}
+
+
+section[class^="sec"]:not(.sec01){}
+section[class^="sec"]:not(.sec01) .info_box{}
+section[class^="sec"]:not(.sec01) .info_box .tit{}
+section[class^="sec"]:not(.sec01) .info_box h2{}
+section[class^="sec"]:not(.sec01) .info_box p{}
+
+
+.sec05 .brand_box{}
+.sec05 .brand_box .tit{}
+
+
+/* FOOTER */
+footer{}
+footer .footer_wrap{}
+footer .footer_wrap .footer_list{}
+
+.footer_wrap .footer_list>li{}
+.footer_list .footer_nav{}
+.footer_list .footer_nav>li{}
+.footer_nav>li>a{}
+
+.sns_list{}
+.sns_list>li{}
+.sns_list>li>a{}
+
+.sns_list .facebook{}
+.sns_list .twitter{}
+.sns_list .youtube{}
+.sns_list .instagram{}
+
+
+@media (min-width: 375px) and (max-width:767px){
+  /* 모바일 */
+}
+
+@media (min-width: 768px) and (max-width:1199px){
+  /* 테블릿 */
+}
+
+@media (min-width: 1200px){
+  /* 데스크탑 */
+}
