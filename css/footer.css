@@ -1,0 +1,23 @@
+footer {
+  background: #111827;
+  height: 160px;
+  padding: 32px 8px;
+  display: flex;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1120px;
+}
+
+.footer-links {
+  font-weight: 400;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+}
