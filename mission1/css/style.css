@@ -1,0 +1,141 @@
+@import url("reset.css");
+@import url("common.css");
+@import url("layout.css");
+@import url("login.css");
+
+
+/* MAIN */
+#cnt{
+  margin-top:7rem;
+  min-height:calc(100vh - 23rem)
+}
+.sec01{
+  display:flex;
+  height:54rem;
+  background:#CFE5FF;
+  justify-content:center;
+}
+.sec01>.inner{
+  display:flex;
+  align-items:end;
+  background:url(../img/img_home_top.svg) no-repeat bottom 0 right 0;
+}
+.sec01 .banner_img{
+  width:74.6rem;
+  height:34rem;
+}
+.sec01 .banner_img>img{
+  width:74.6rem;
+  height:34rem;
+}
+
+.sec01 .visual_box{
+  margin-bottom:10rem;
+}
+
+.sec01 .visual_box h2{
+  width:35.7rem;
+  margin-bottom:2.5rem;
+  font-size:4rem;
+  font-weight: bold;
+  line-height:1.4;
+  color:#374151;
+}
+.sec01 .visual_box a{
+  width:100%;
+  justify-content: center;
+  font-size:2rem;
+}
+
+section[class^="sec"]:not(.sec01):not(.sec05){
+  margin: 20rem 0;
+}
+
+section[class^="sec"]:not(.sec01):not(.sec05) > .inner{
+  display:flex;
+  justify-content: center;
+}
+
+section[class^="sec"]:not(.sec01) .info_box{
+  display:flex;
+  width:98.8rem;
+  height:44.4rem;
+  padding-left:65rem;
+  padding-right:5rem;
+  background-repeat:no-repeat;
+  background-size: 57.9rem 44.4rem;
+  background-position:left 2rem center;
+  background-color:#FCFCFC;
+  flex-direction: column;
+  justify-content:center;
+}
+section[class^="sec"]:not(.sec01) .info_box .tit{
+  color:#3692ff;
+  font-size:1.8rem;
+  line-height:2.6rem;
+  font-weight: 800;
+} 
+section[class^="sec"]:not(.sec01) .info_box h2{
+  margin:1rem 0 2rem;
+  color:#374151;
+  font-size:4rem;
+  font-weight:bold;
+  line-height:1.4;
+  letter-spacing: 2%;
+}
+section[class^="sec"]:not(.sec01) .info_box p{
+  font-size:2.4rem;
+  font-weight:medium;
+  line-height:3.2rem;
+}
+
+.sec02 .info_box{
+  background-image:url(../img/img_home_01.svg);
+}
+
+section[class^="sec"]:not(.sec01).sec03 .info_box{
+  background-image:url(../img/img_home_02.svg);
+  padding-left:0;
+  padding-right:67rem;
+  background-position:right 2rem center;
+  text-align:right;
+}
+
+.sec04 .info_box{
+  background-image:url(../img/img_home_03.svg);
+}
+
+.sec05{
+  display: flex;
+  height: 54rem;
+  background: #CFE5FF;
+  justify-content: center;
+}
+
+.sec05 .inner{
+  display:flex;
+  background:url(../img/img_home_bottom.svg) no-repeat bottom 0 right 0;
+  align-items:center;  
+}
+.sec05 .brand_box .tit{
+  font-size:4rem;
+  font-weight:bold;
+  line-height:1.4;
+}
+
+
+
+@media (max-width:767px){
+  /* 모바일 */
+  html { font-size: 50.8%; } /* 13px */
+}
+
+@media (max-width:1199px){
+  /* 테블릿 */
+  html { font-size: 54.7%; } /* 14px */
+}
+
+@media (min-width: 1120px){
+  /* 데스크탑 */
+  body { font-size: 1.6rem; } /* 16px */
+}

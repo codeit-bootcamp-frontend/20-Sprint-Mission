@@ -1,0 +1,88 @@
+
+/* login.html style */
+
+#cnt.login_area{
+  display:flex;
+  margin-top:0;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.inp_box input[type="password"]{
+  background:#F3F4F6 url(img/btn_visibility_on_24px.svg) no-repeat center right 15px;
+  padding-right:54px;
+}
+
+
+.login_area .login_wrap{
+  width:64rem;
+}
+
+.logo_box{
+  display:flex;
+  margin-bottom:3rem;
+  justify-content:center;
+}
+.logo_box .logo{
+  width:39.6rem;
+  height:13.2rem;
+  background:url(img/logo.svg) no-repeat center top 0 / cover;
+}
+
+
+.login_area .easy_login_box{
+  display:flex;
+  margin-top:3rem;
+  height:7.4rem;
+  padding:0 1.5rem;
+  background: #E6F2FF;
+  border-radius: 0.8rem;
+  align-items:center;
+  justify-content: space-between;
+  color: #1F2937;
+  font-weight: 500;
+  
+}
+
+.login_area .sns_login_box{
+  display:flex;
+  gap:1rem;
+}
+.login_area .sns_login_box>a{
+  display:block;
+  width:4.2rem;
+  height:4.2rem;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center center;
+}
+.login_area .sns_login_box .google_login{
+  background-image:url(img/ic_google.svg);
+  background-size: 4.4rem 4.4rem;
+}
+.sns_login_box .kakao_login{
+  background-image:url(img/ic_kakao.svg)
+}
+
+.login_area .signup_desc{
+  display:flex;
+  margin-top:3rem;
+  gap:1rem;
+  font-size:1.4rem;
+  font-weight:500;
+  color:#1F2937;
+  justify-content: center;
+  align-items: center;
+}
+.login_area .signup_desc .signup_link{
+  color:#3692FF;
+  font-size:1.4rem;
+  font-weight:500;
+}
+
+.login_area .signup_desc .signup_link:hover,
+.login_area .signup_desc .signup_link:focus{
+  text-decoration:underline;
+}
