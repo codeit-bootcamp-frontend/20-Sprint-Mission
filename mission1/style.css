@@ -250,7 +250,7 @@ html{
 .sec01>.inner{
   display:flex;
   align-items:end;
-  background:url(img/Img_home_top.svg) no-repeat bottom 0 right 0;
+  background:url(img/img_home_top.svg) no-repeat bottom 0 right 0;
 }
 .sec01 .banner_img{
   width:74.6rem;
@@ -317,11 +317,11 @@ section[class^="sec"]:not(.sec01) .info_box p{
 }
 
 .sec02 .info_box{
-  background-image:url(img/Img_home_01.svg);
+  background-image:url(img/img_home_01.svg);
 }
 
 section[class^="sec"]:not(.sec01).sec03 .info_box{
-  background-image:url(img/Img_home_02.svg);
+  background-image:url(img/img_home_02.svg);
   padding-left:0;
   padding-right:67rem;
   background-position:right 2rem center;
@@ -329,7 +329,7 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
 }
 
 .sec04 .info_box{
-  background-image:url(img/Img_home_03.svg);
+  background-image:url(img/img_home_03.svg);
 }
 
 
@@ -342,7 +342,7 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
 
 .sec05 .inner{
   display:flex;
-  background:url(img/Img_home_bottom.svg) no-repeat bottom 0 right 0;
+  background:url(img/img_home_bottom.svg) no-repeat bottom 0 right 0;
   align-items:center;  
 }
 .sec05 .brand_box .tit{
