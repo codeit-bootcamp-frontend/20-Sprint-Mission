@@ -1,0 +1,32 @@
+.header {
+  min-width: 375px;
+  height: 70px;
+  margin: 0 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  display: block;
+  width: 153px;
+  height: 51px;
+  background: url("../imgs/logo.png") no-repeat;
+  background-position: -21px -82px;
+}
+
+#logo img {
+  margin-right: 8px;
+}
+
+#login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 48px;
+  background-color: #3692ff;
+  color: #f3f4f6;
+  font-weight: 600;
+  border-radius: 8px;
+}
