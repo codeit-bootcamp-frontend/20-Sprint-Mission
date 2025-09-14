@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>판다마켓</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login_container">
+      <div class="login_logo">
+        <a href="/signup">
+          <img src="img/logo.png" alt="logo" />
+        </a>
+      </div>
+      <form>
+        <div class="form-field">
+          <label class="login_label" for="accountEmail">이메일</label><br />
+          <input
+            class="login_input"
+            id="accountEmail"
+            name="accountEmail"
+            type="email"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label class="login_label" for="userPw">비밀번호</label><br />
+          <input
+            class="login_input"
+            id="userPw"
+            name="userPw"
+            type="password"
+            required
+          />
+        </div>
+        <button class="login_button" type="submit">로그인</button>
+      </form>
+      <div class="easy_login">
+        <div class="easy_login_left">간편 로그인 하기</div>
+        <div class="easy_login_right">
+          <div class="easy_login_google">
+            <img src="img/google_logo.svg" alt="google" />
+          </div>
+          <div class="easy_login_kakao">
+            <img src="img/kakao_logo.svg" alt="kakao" />
+          </div>
+        </div>
+      </div>
+      <div class="signup_link">
+        <p>판다마켓이 처음인가요? <a href="/signup">회원가입</a></p>
+      </div>
+    </div>
+  </body>
+</html>
