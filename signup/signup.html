@@ -3,52 +3,79 @@
   <head>
     <meta charset="utf-8" />
     <title>판다마켓</title>
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="signup.css" />
   </head>
   <body>
-    <div class="login_container">
-      <div class="login_logo">
-        <a href="/signup">
+    <div class="signup_container">
+      <div class="signup_logo">
+        <a href="../index.html">
           <img src="img/logo.png" alt="logo" />
         </a>
       </div>
       <form>
         <div class="form-field">
-          <label class="login_label" for="accountEmail">이메일</label><br />
+          <label class="signup_label" for="accountEmail">이메일</label><br />
           <input
-            class="login_input"
+            class="signup_input"
             id="accountEmail"
             name="accountEmail"
             type="email"
             required
           />
         </div>
-
         <div class="form-field">
-          <label class="login_label" for="userPw">비밀번호</label><br />
+          <label class="signup_label" for="nickname">닉네임</label><br />
           <input
-            class="login_input"
-            id="userPw"
-            name="userPw"
-            type="password"
+            class="signup_input"
+            id="nickname"
+            name="nickname"
+            type="text"
             required
           />
         </div>
-        <button class="login_button" type="submit">로그인</button>
+
+        <div class="form-field">
+          <label class="signup_label" for="userPw">비밀번호</label><br />
+          <div class="password-input-container">
+            <input
+              class="signup_input password-input"
+              id="userPw"
+              name="userPw"
+              type="password"
+              required
+            />
+            <img class="password-toggle" src="img/eye_off.svg" alt="eye_off" />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="signup_label" for="userPw">비밀번호 확인</label><br />
+          <div class="password-input-container">
+            <input
+              class="signup_input password-input"
+              id="userPwCheck"
+              name="userPwCheck"
+              type="password"
+              required
+            />
+            <img class="password-toggle" src="img/eye_on.svg" alt="eye_on" />
+          </div>
+        </div>
+        <button class="signup_button" type="submit">회원가입</button>
       </form>
-      <div class="easy_login">
-        <div class="easy_login_left">간편 로그인 하기</div>
-        <div class="easy_login_right">
-          <div class="easy_login_google">
+      <div class="easy_signup">
+        <div class="easy_signup_left">간편 로그인 하기</div>
+        <div class="easy_signup_right">
+          <div class="easy_signup_google">
             <img src="img/google_logo.svg" alt="google" />
           </div>
-          <div class="easy_login_kakao">
+          <div class="easy_signup_kakao">
             <img src="img/kakao_logo.svg" alt="kakao" />
           </div>
         </div>
       </div>
       <div class="signup_link">
-        <p>판다마켓이 처음인가요? <a href="/signup">회원가입</a></p>
+        <p>이미 회원이신가요? <a href="../login/login.html">로그인</a></p>
       </div>
     </div>
   </body>
