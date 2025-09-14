@@ -193,3 +193,10 @@ footer{
     display: flex;
     gap: 12px;
 }
+
+.footer_center_link{
+    color: #9CA3AF;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
