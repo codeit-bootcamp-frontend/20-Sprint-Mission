@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Pretendard;
+    width: 100%;
+}
+
+.center-basic {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #ffffff;
+}
+
+.header-bar {
+    width: 1120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-bar .title {
+    width: 153px;
+    height: 51px;
+}
+
+.header-bar .login {
+    width: 128px;
+    height: 48px;
+    background-color: #3692ff;
+    padding: 12px 23px;
+    border-radius: 8px;
+    color: #f2f4f6;
+    display: flex;
+    justify-content: center;
+}
+
+.header-bar .login a {
+    text-decoration: none;
+    color: #f2f4f6;
+}
