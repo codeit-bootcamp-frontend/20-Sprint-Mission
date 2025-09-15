@@ -1,0 +1,38 @@
+footer {
+    background-color: #111827;
+    color: #ffffff;
+    
+
+}
+
+footer .footer-conatiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    max-width: 1920px;
+    height: 160px;
+    font-size: 16px;
+    font-weight: 100;
+    margin: 0 auto;
+    padding: 40px 200px 0;
+}
+
+.footer-conatiner span {
+    color: #9CA3AF;
+}
+
+.footer-conatiner a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.footer-conatiner img {
+    height: 19px;
+}
+
+.footer-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
