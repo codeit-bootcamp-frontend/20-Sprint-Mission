@@ -7,13 +7,13 @@
 html {
   height: 100%;
   min-width: 740px;
-}
-
-html,
-body {
   font-family: Pretendard;
   color: #374151;
   line-height: 1.5;
+}
+
+body {
+  height: 100%;
 }
 
 main {
@@ -50,6 +50,7 @@ button,
 input,
 select,
 textarea {
+  font-family: Pretendard;
   border: none;
   background: none;
   outline: none;
