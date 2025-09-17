@@ -8,9 +8,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 640px;
-  height: fit-content;
 }
 
 h1 {
@@ -25,8 +23,8 @@ h1 {
 
 .login-container {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  width: 640px;
   margin-bottom: 24px;
 }
 
@@ -39,7 +37,7 @@ label {
 }
 
 .login-input {
-  width: 640px;
+  width: 100%;
   height: 56px;
   padding: 16px 48px 16px 24px;
   margin-bottom: 24px;
