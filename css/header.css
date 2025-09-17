@@ -1,3 +1,10 @@
+header {
+  background-color: #ffffff;
+  border-bottom: #dfdfdf 1px solid;
+  position: sticky;
+  top: 0;
+}
+
 .header-inner {
   height: 70px;
   margin: 0 200px;
