@@ -10,14 +10,13 @@ body {
   width: 100%;
 }
 
-.center-basic {
+.main-layout {
   display: flex;
   justify-content: center;
 }
 
 header {
   background-color: #ffffff;
-  padding: 9.5px 400px;
 }
 
 .header-bar {
@@ -25,6 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 9.5px 0;
 }
 
 .header-bar .title {
@@ -122,7 +122,7 @@ header {
   border-radius: 12px;
 }
 
-.reverse-item {
+.section-item-reverse {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,7 +134,7 @@ header {
   border-radius: 12px;
 }
 
-.reverse-intro {
+.item-text-reverse {
   text-align: right;
 }
 
@@ -143,7 +143,7 @@ header {
   height: 444px;
 }
 
-.intro-text .hot {
+.item-text .item-hot {
   color: #3692ff;
   font-weight: 800;
   font-size: 18px;
@@ -151,7 +151,7 @@ header {
   padding-bottom: 12px;
 }
 
-.intro-text h2 {
+.item-text h2 {
   color: #374151;
   font-weight: 700;
   font-style: bold;
@@ -160,7 +160,7 @@ header {
   padding-bottom: 24px;
 }
 
-.intro-text .explan {
+.item-text .item-description {
   color: #374151;
   font-weight: 500;
   font-style: medium;
@@ -168,7 +168,7 @@ header {
   line-height: 32px;
 }
 
-.last-item {
+.section-items-last {
   margin-bottom: 138px;
 }
 
@@ -225,7 +225,7 @@ header {
   align-items: center;
 }
 
-footer #license {
+footer #footer-license {
   font-weight: 400;
   font-style: regular;
   font-size: 16px;
