@@ -36,6 +36,11 @@ p {
   background-color: #cfe5ff;
 }
 
+.top_section_container img,
+.bottom_section_container img {
+  vertical-align: bottom;
+}
+
 .top_section_text_title {
   font-size: 40px;
   font-weight: 700;
