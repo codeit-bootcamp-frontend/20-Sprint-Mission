@@ -119,8 +119,9 @@ header {
 
 .reverse-item {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 64px;
   padding: 0 14px;
   width: 988px;
   height: 444px;
@@ -194,12 +195,64 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 69px;
-  width: 295px;
   height: 172px;
 }
 
 .banner img {
   width: 746px;
   height: 397px;
+}
+
+/* footer */
+.footer-contents {
+  align-items: flex-start;
+  width: 100%;
+  height: 160px;
+  background-color: #111827;
+}
+
+.footer-content {
+  margin-top: 32px;
+  width: 1120px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer #license {
+  font-weight: 400;
+  font-style: regular;
+  font-size: 16px;
+  line-height: 100%;
+  color: #9ca3af;
+}
+
+.footer-notice {
+  height: 19px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-notice a {
+  font-weight: 400;
+  font-style: regular;
+  font-size: 16px;
+  line-height: 100%;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.footer-sns {
+  width: 116px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-sns img {
+  width: 20px;
+  height: 20px;
 }
