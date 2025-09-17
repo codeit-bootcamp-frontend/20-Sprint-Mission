@@ -12,10 +12,6 @@ html {
   line-height: 1.5;
 }
 
-body {
-  height: 100%;
-}
-
 main {
   min-width: 375px;
 }
