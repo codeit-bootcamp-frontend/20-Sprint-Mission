@@ -45,25 +45,12 @@
 }
 
 .part-1 a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 56px;
-  border-radius: 40px;
-  background-color: var(--blue);
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 2rem;
-  letter-spacing: 0%;
-  color: var(--gray50);
-}
-
-.part-1 a:hover {
-  background-color: var(--hover-blue);
+  font-size: 1.25rem;
 }
 
 .part-2 {
-  padding: 0 23.5px;
+  padding: 0 24px;
 }
 
 .part-2 > div:first-child {

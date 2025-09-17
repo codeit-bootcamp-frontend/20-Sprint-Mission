@@ -24,17 +24,7 @@ header {
 }
 
 #login-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 128px;
   height: 48px;
-  background-color: var(--blue);
-  color: var(--gray100);
-  font-weight: 600;
   border-radius: 8px;
-}
-
-#login-button:hover {
-  background-color: var(--hover-blue);
 }

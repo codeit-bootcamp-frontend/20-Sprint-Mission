@@ -1,0 +1,31 @@
+:root {
+  /* gray */
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50: #f9fafb;
+  /* blue */
+  --blue: #3692ff;
+  --hover-blue: #1967d6;
+}
+
+.blue-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue);
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: var(--gray100);
+
+  &:hover {
+    background-color: var(--hover-blue);
+  }
+}
