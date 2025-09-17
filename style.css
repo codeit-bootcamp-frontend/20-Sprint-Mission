@@ -49,6 +49,10 @@ header {
   color: #f2f4f6;
 }
 
+.header-bar .login:hover {
+  background-color: #1967d6;
+}
+
 /* section-look */
 .section-look {
   align-items: flex-end;
