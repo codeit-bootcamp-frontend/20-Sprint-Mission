@@ -1,6 +1,11 @@
 .top-bottom-section {
   height: 540px;
-  background: #cfe5ff;
+  background-color: #cfe5ff;
+}
+
+.top-bottom-section img {
+  width: 746px;
+  height: auto;
 }
 
 .main-section {
@@ -16,7 +21,9 @@
 }
 
 .main-section img {
+  width: 579px;
   min-width: 430px;
+  height: auto;
 }
 
 .part-1 {
@@ -51,6 +58,10 @@
   color: #f9fafb;
 }
 
+.part-1 a:hover {
+  background-color: #1967d6;
+}
+
 .part-2 {
   padding: 0 23.5px;
 }
@@ -61,11 +72,6 @@
 
 .part-3 {
   padding: 0 13px;
-}
-
-.part-3 h2,
-.part-3 p,
-.part-3 div {
   text-align: right;
 }
 
@@ -93,7 +99,6 @@
   font-size: 1.2rem;
   font-weight: 800;
   line-height: 1.5rem;
-  letter-spacing: 0%;
   vertical-align: middle;
 }
 
@@ -106,9 +111,7 @@
 
 .description {
   font-weight: 500;
-  font-style: Medium;
   font-size: 1.5rem;
   line-height: 2rem;
-  letter-spacing: 0%;
   vertical-align: middle;
 }

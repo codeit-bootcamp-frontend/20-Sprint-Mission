@@ -1,20 +1,7 @@
-/* reset.css */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-@media (min-width: 375px) and (max-width: 1199px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 1120px) {
-  html {
-    font-size: 16px;
-  }
 }
 
 html {
@@ -29,13 +16,16 @@ body {
   line-height: 1.5;
 }
 
+main {
+  min-width: 375px;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
   line-height: 1.25;
   margin: 0;
 }
@@ -67,4 +57,16 @@ textarea {
 
 button {
   cursor: pointer;
+}
+
+@media (min-width: 375px) and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1120px) {
+  html {
+    font-size: 16px;
+  }
 }

@@ -1,5 +1,4 @@
-.header {
-  min-width: 375px;
+.header-inner {
   height: 70px;
   margin: 0 200px;
   display: flex;
@@ -11,8 +10,6 @@
   display: block;
   width: 153px;
   height: 51px;
-  background: url("../imgs/logo.png") no-repeat;
-  background-position: -21px -82px;
 }
 
 #logo img {
@@ -29,4 +26,8 @@
   color: #f3f4f6;
   font-weight: 600;
   border-radius: 8px;
+}
+
+#login-button:hover {
+  background-color: #1967d6;
 }
