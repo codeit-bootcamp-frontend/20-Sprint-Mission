@@ -261,3 +261,9 @@ footer #footer-license {
   width: 20px;
   height: 20px;
 }
+
+@media (max-width: 1920px) {
+  .header-bar {
+    padding: 0 200px;
+  }
+}
