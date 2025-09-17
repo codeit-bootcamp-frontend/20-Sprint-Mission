@@ -57,13 +57,13 @@ header {
 .section-look {
   align-items: flex-end;
   background-color: #cfe5ff;
-  height: 540px;
+  height: clamp(500px, 28.1vw, 540px);
 }
 
 .section-look h2 {
   font-weight: 700;
   font-style: bold;
-  font-size: 40px;
+  font-size: clamp(30px, 2.1vw, 40px);
   line-height: 140%;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -86,7 +86,7 @@ header {
 
 .look-button {
   background-color: #3692ff;
-  padding: 16px 124px;
+  padding: clamp(10px, 1.5vw, 16px) clamp(100px, 6.4vw, 124px);
   border-radius: 40px;
   margin: 20px 0;
   cursor: pointer;
@@ -96,28 +96,28 @@ header {
   text-decoration: none;
   color: #f9fafb;
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(18px, 1vw, 20px);
   line-height: 32px;
 }
 
 .section-look img {
-  width: 746px;
-  height: 340px;
+  width: clamp(700px, 38.8vw, 746px);
+  height: clamp(315px, 17.7vw, 340px);
 }
 
 /* section-item */
 .section-items {
   align-items: center;
-  height: 720px;
+  height: clamp(680px, 37.5vw, 720px);
 }
 
 .section-item {
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: clamp(57px, 3.3vw, 64px);
   padding: 0 14px 0 23.5px;
-  width: 988px;
-  height: 444px;
+  width: clamp(800px, 51.4vw, 988px);
+  height: clamp(359.5px, 23.1vw, 444px);
   background-color: #fcfcfc;
   border-radius: 12px;
 }
@@ -126,10 +126,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 64px;
+  gap: clamp(57px, 3.3vw, 64px);
   padding: 0 14px;
-  width: 988px;
-  height: 444px;
+  width: clamp(800px, 51.4vw, 988px);
+  height: clamp(359.5px, 23.1vw, 444px);
   background-color: #fcfcfc;
   border-radius: 12px;
 }
@@ -138,33 +138,34 @@ header {
   text-align: right;
 }
 
-.section-item img {
-  width: 579px;
-  height: 444px;
+.section-item img,
+.section-item-reverse img {
+  width: clamp(469px, 30.1vw, 579px);
+  height: clamp(359.5px, 23.1vw, 444px);
 }
 
 .item-text .item-hot {
   color: #3692ff;
   font-weight: 800;
-  font-size: 18px;
+  font-size: clamp(16px, 0.9vw, 18px);
   line-height: 26px;
-  padding-bottom: 12px;
+  padding-bottom: clamp(8px, 0.6vw, 12px);
 }
 
 .item-text h2 {
   color: #374151;
   font-weight: 700;
   font-style: bold;
-  font-size: 40px;
+  font-size: clamp(30px, 2.1vw, 40px);
   line-height: 140%;
-  padding-bottom: 24px;
+  padding-bottom: clamp(16px, 1.2vw, 24px);
 }
 
 .item-text .item-description {
   color: #374151;
   font-weight: 500;
   font-style: medium;
-  font-size: 24px;
+  font-size: clamp(16px, 1.2vw, 24px);
   line-height: 32px;
 }
 
@@ -176,13 +177,13 @@ header {
 .banner {
   align-items: flex-end;
   background-color: #cfe5ff;
-  height: 540px;
+  height: clamp(500px, 28.1vw, 540px);
 }
 
 .banner h2 {
   font-weight: 700;
   font-style: bold;
-  font-size: 40px;
+  font-size: clamp(30px, 2.1vw, 40px);
   line-height: 140%;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -192,8 +193,9 @@ header {
 .banner-contents {
   width: 1110px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 35px;
 }
 
 .banner-content {
@@ -204,8 +206,8 @@ header {
 }
 
 .banner img {
-  width: 746px;
-  height: 397px;
+  width: clamp(650px, 38.8vw, 746px);
+  height: clamp(361px, 20.6vw, 397px);
 }
 
 /* footer */
