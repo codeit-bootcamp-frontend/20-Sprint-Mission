@@ -50,16 +50,16 @@
   justify-content: center;
   height: 56px;
   border-radius: 40px;
-  background-color: #3692ff;
+  background-color: var(--blue);
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 2rem;
   letter-spacing: 0%;
-  color: #f9fafb;
+  color: var(--gray50);
 }
 
 .part-1 a:hover {
-  background-color: #1967d6;
+  background-color: var(--hover-blue);
 }
 
 .part-2 {
@@ -95,7 +95,7 @@
 }
 
 .highlight {
-  color: #3692ff;
+  color: var(--blue);
   font-size: 1.2rem;
   font-weight: 800;
   line-height: 1.5rem;
