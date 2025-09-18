@@ -100,6 +100,10 @@ header {
   line-height: 32px;
 }
 
+.look-button:hover {
+  background-color: #1967d6;
+}
+
 .section-look img {
   width: clamp(700px, 38.8vw, 746px);
   height: clamp(315px, 17.7vw, 340px);
