@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+header {
+  width: 1120px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.mo_logo {
+  display: none;
+}
+
+.login_button {
+  width: 128px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #3692ff;
+  border: 0;
+  border-radius: 8px;
+  color: #f3f4f6;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+.login_button:hover,
+.login_button:focus {
+  background-color: #1967d6;
+}
+.login_button:active {
+  background-color: #1251aa;
+}
+
+@media (max-width: 1920px) {
+  header {
+    width: 100%;
+    padding: 0 200px;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 1200px) {
+  header {
+    width: 100%;
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    width: 420px;
+    padding: 0 20px;
+  }
+  .pc_logo {
+    display: none;
+  }
+  .mo_logo {
+    display: block;
+  }
+}
