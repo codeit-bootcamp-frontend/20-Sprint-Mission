@@ -3,11 +3,8 @@
   font-family: "pretendard", sans-serif;
 }
 
-@media (max-width: 1920px) {
-  .login_button {
-    display: inline-block;
-    white-space: nowrap;
-  }
+li {
+  list-style: none;
 }
 
 header {
@@ -17,6 +14,11 @@ header {
   padding: 0 400px;
   margin: 0;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
 }
 
 body {
@@ -37,6 +39,11 @@ p {
   width: 100%;
   height: 540px;
   background-color: #cfe5ff;
+}
+
+.top_section_container img,
+.bottom_section_container img {
+  vertical-align: bottom;
 }
 
 .top_section_text_title {
@@ -97,7 +104,7 @@ p {
 }
 
 .item {
-  width: 1920px;
+  width: 100%;
   height: 720px;
   background-color: #ffffff;
   display: flex;
@@ -189,4 +196,11 @@ footer {
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
+}
+
+@media (max-width: 1920px) {
+  .login_button {
+    display: inline-block;
+    white-space: nowrap;
+  }
 }
