@@ -73,7 +73,7 @@ header {
 .section-look-contents {
   width: 1110px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -105,8 +105,8 @@ header {
 }
 
 .section-look img {
-  width: clamp(700px, 38.8vw, 746px);
-  height: clamp(315px, 17.7vw, 340px);
+  width: clamp(650px, 38.8vw, 746px);
+  height: clamp(309px, 17.7vw, 340px);
 }
 
 /* section-item */
