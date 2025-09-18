@@ -1,15 +1,11 @@
-html {
-  font-family: "Pretendard", sans-serif;
-}
-
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-p {
-  margin: 0;
+body {
+  font-family: "Pretendard", sans-serif;
 }
 
 .layout {
