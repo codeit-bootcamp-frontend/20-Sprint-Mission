@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다마켓</title>
+    <link rel="stylesheet" href="/css/utils.css" />
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet " href="/css/header.css" />
-    <link rel="stylesheet " href="/css/main.css" />
-    <link rel="stylesheet " href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/home/main.css" />
     <link
       rel="stylesheet"
       as="style"
@@ -17,21 +18,23 @@
   </head>
   <body>
     <header>
-      <div class="header">
+      <div class="header-inner">
         <h1>
-          <a id="logo" href="/" rel="home" aria-label="판다마켓 홈"> </a>
+          <a id="logo" href="/" rel="home" aria-label="판다마켓 홈">
+            <img src="./imgs/smLogo.png" />
+          </a>
         </h1>
-        <a href="/login.html" id="login-button">로그인</a>
+        <a href="/login.html" class="blue-button" id="login-button">로그인</a>
       </div>
     </header>
     <main>
       <section class="top-bottom-section part-1">
         <div>
           <h2 class="sub-title">
-            일상의 모든 물건을 <br />
+            일상의 모든 물건을<br />
             거래해 보세요
           </h2>
-          <a href="/items.html">구경하러 가기</a>
+          <a class="blue-button" href="/items.html">구경하러 가기</a>
         </div>
         <div>
           <img src="imgs/Img_home_top.png" alt="언덕위 판다" />
@@ -44,7 +47,7 @@
         <div>
           <div class="highlight">Hot itme</div>
           <h2 class="sub-title">
-            인기 상품을 <br />
+            인기 상품을<br />
             확인해 보세요
           </h2>
           <p class="description">
@@ -76,7 +79,7 @@
         <div>
           <div class="highlight">Register</div>
           <h2 class="sub-title">
-            판매를 원하는 <br />
+            판매를 원하는<br />
             상품을 등록하세요
           </h2>
           <p class="description">
@@ -101,29 +104,31 @@
       <div class="footer-container">
         <small class="footer-copy">© codeit · 2024</small>
         <nav class="footer-nav" aria-label="푸터 내비게이션">
-          <ul class="footer-links" role="list">
+          <ul class="footer-links">
             <li><a href="/privacy.html">Privacy Policy</a></li>
             <li><a href="/faq.html">FAQ</a></li>
           </ul>
         </nav>
-        <ul class="footer-links" role="list">
+        <ul class="footer-links">
           <li>
-            <a href="https://www.facebook.com/?locale=ko_KR"
-              ><img src="imgs/ic_facebook.png"
-            /></a>
+            <a href="https://www.facebook.com/?locale=ko_KR" target="_blank">
+              <img src="imgs/ic_facebook.png" alt="페이스북 바로가기" />
+            </a>
           </li>
           <li>
-            <a href="https://x.com/"><img src="imgs/ic_twitter.png" /></a>
+            <a href="https://x.com/" target="_blank">
+              <img src="imgs/ic_twitter.png" alt="트위터 바로가기" />
+            </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/"
-              ><img src="imgs/ic_youtube.png"
-            /></a>
+            <a href="https://www.youtube.com/" target="_blank">
+              <img src="imgs/ic_youtube.png" alt="유튜브 바로가기" />
+            </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/"
-              ><img src="imgs/ic_instagram.png"
-            /></a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="imgs/ic_instagram.png" alt="인스타그램 바로가기" />
+            </a>
           </li>
         </ul>
       </div>
