@@ -1,3 +1,21 @@
+:root {
+  --primary-100: #3692ff;
+  --primary-200: #1967d6;
+  --primary-300: #1251aa;
+
+  --error-red: #f74747;
+
+  --gray-900: #111827;
+  --gray-800: #1f2937;
+  --gray-700: #374151;
+  --gray-600: #4b5563;
+  --gray-500: #6b7280;
+  --gray-400: #9ca3af;
+  --gray-200: #e5e7eb;
+  --gray-100: #f3f4f6;
+  --gray-50: #f9fafb;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +24,7 @@
 
 body {
   font-family: "Pretendard", sans-serif;
-  color: #1f2937;
+  color: var(--gray-800);
 }
 
 ol,
@@ -24,25 +42,25 @@ header {
   margin: 0 auto;
   position: sticky;
   top: 0;
-  background-color: white;
+  color: white;
 }
 
 .button {
-  background-color: #3692ff;
-  color: #ffffff;
+  background-color: var(--primary-100);
+  color: white;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
 }
 
 .button:hover {
-  background-color: #1967d6;
+  background-color: var(--primary-200);
 }
 
 .button:active {
-  background-color: #1251aa;
+  background-color: var(--primary-300);
 }
 
 footer {
-  background-color: #111827;
+  background-color: var(--gray-900);
 }
