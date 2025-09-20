@@ -16,13 +16,15 @@ ul {
 
 header {
   width: 100%;
-  max-width: 1600px;
   height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 200px;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .button {
