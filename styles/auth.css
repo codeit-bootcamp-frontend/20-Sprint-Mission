@@ -1,0 +1,88 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  margin-bottom: 40px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+
+input {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  background-color: #f3f4f6;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.pw-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.pw-wrapper button {
+  position: absolute;
+  top: 17%;
+  right: 5%;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#auth-bt {
+  width: 100%;
+  border: 0;
+  border-radius: 26px;
+  padding: 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 24px;
+}
+
+.simple-login {
+  width: 100%;
+  background-color: #e6f2ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 23px;
+  border-radius: 8px;
+}
+
+.simple-login div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.account-message {
+  margin-top: 24px;
+  font-size: 14px;
+}
