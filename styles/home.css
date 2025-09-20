@@ -1,3 +1,9 @@
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 #login {
   padding: 11px 43px;
   border-radius: 8px;
