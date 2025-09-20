@@ -1,0 +1,355 @@
+        :root {
+            /* body color */
+            --body: #CFE5FF;
+
+            /* primary color */
+            --primary_100: #3692FF;
+            --primary_200: #1967D6;
+            --primary_300: #1251AA;
+
+            /* error color */
+            --error: #F74747;
+
+            /* Secondary color */
+            --gray_50: #F9FAFB;
+            --gray_100: #F3F4F6;
+            --gray_200: #E5E7EB;
+            --gray_400: #9CA3AF;
+            --gray_500: #6B7880;
+            --gray_600: #4B5563;
+            --gray_700: #374151;
+            --gray_800: #1F2937;
+            --gray_900: #111827;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'pretendard', 'Abhaya Libre ExtraBold' -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+                'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
+                sans-serif;
+            background-color: var(--body);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* header */
+
+        header {
+            height: 70px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
+
+        header .login {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 60%;
+            margin: 0 200px;
+        }
+
+        header .login .logo_bt {
+            width: 128px;
+            height: 48px;
+            background-color: var(--primary_100);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 26px;
+        }
+
+        header,
+        section,
+        footer {
+            margin: 0 auto;
+        }
+
+        header,
+        section,
+        footer {
+            max-width: 1920px;
+        }
+
+        /* main */
+
+        section .main {
+            position: relative;
+            background-image: url(/img/pc/background.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 540px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section .main .main_all {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 1110px;
+        }
+
+        section .main .main_all span {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--gray_700);
+            height: 112px;
+            display: block;
+            line-height: 140%;
+        }
+
+        section .main .main_all .items {
+            width: 357px;
+            height: 56px;
+            background-color: var(--primary_100);
+            border-radius: 40px;
+            text-align: center;
+            margin-top: 34px;
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* hotiteam */
+
+        section .hotitem {
+            position: relative;
+            height: 720px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section .hotitem .hotitem_text {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-left: 64px;
+        }
+
+
+        /* search */
+
+        section .search {
+            position: relative;
+            height: 720px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section .search .search_text {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-right: 64px;
+            text-align: right;
+        }
+
+        /* register */
+
+        section .register {
+            position: relative;
+            height: 720px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 138px;
+        }
+
+        section .register .register_text {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-left: 64px;
+        }
+
+        /* section text */
+        section .tx_01 {
+            font-family: Abhaya Libre;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--primary_100);
+        }
+
+        section .tx_02 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: 0.2px;
+            color: var(--gray_700);
+        }
+
+        section .tx_03 {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            color: var(--gray_700);
+            margin-top: 12px;
+        }
+
+
+        /* footerimg */
+
+        section .footerimg {
+            height: 540px;
+            background-image: url(/img/pc/background.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section .footerimg .footer_all {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            gap: 69px;
+        }
+
+        section .footerimg .footer_all .footer_title {
+            font-size: 40px;
+            line-height: 140%;
+            color: var(--gray_700);
+            font-weight: 700;
+        }
+
+        /* footer */
+
+        footer {
+            height: 160px;
+            background-color: var(--gray_900);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        footer .footer_intro {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 1120px;
+            margin-top: 32px;
+        }
+
+        footer .footer_intro .address {
+            color: var(--gray_400);
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        footer .footer_intro .link {
+            display: flex;
+            gap: 30px;
+        }
+
+        footer .footer_intro .link .link_tx {
+            color: var(--gray_200);
+        }
+
+        footer .footer_intro .sns {
+            display: flex;
+            gap: 13px;
+        }
+
+        /* hover */
+
+        header .login .logo_bt:hover {
+            background-color: var(--gray_400);
+        }
+
+        section .main .main_all .items:hover {
+            background-color: var(--gray_400);
+        }
+
+        /* media query */
+        @media screen and (max-width: 1600px) {
+            section .tx_01 {
+                font-size: 18px;
+            }
+
+            section .tx_02 {
+                font-size: 36px;
+            }
+
+            section .tx_03 {
+                font-size: 24px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            section .main .main_all span {
+                font-size: 40px;
+            }
+
+            section .main .main_all .items {
+                font-size: 20px;
+            }
+
+            section .tx_01 {
+                font-size: 18px;
+            }
+
+            section .tx_02 {
+                font-size: 32px;
+            }
+
+            section .tx_03 {
+                font-size: 18px;
+            }
+
+            section .footerimg .footer_all .footer_title {
+                font-size: 40px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            section .main .main_all span {
+                font-size: 32px;
+            }
+
+            section .main .main_all .items {
+                font-size: 18px;
+            }
+
+            section .tx_01 {
+                font-size: 16px;
+            }
+
+            section .tx_02 {
+                font-size: 24px;
+            }
+
+            section .tx_03 {
+                font-size: 18px;
+            }
+
+            section .footerimg .footer_all .footer_title {
+                font-size: 32px;
+            }
+        }
