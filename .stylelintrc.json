@@ -1,0 +1,35 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-class-pattern": null,
+    "order/properties-order": [
+      [
+        "display",
+        "justify-content",
+        "align-items",
+        "gap",
+
+        "width",
+        "height",
+
+        "padding",
+        "margin",
+
+        "font-family",
+        "font-size",
+        "font-weight",
+        "line-height",
+
+        "color",
+        "background-color",
+
+        "border",
+        "border-radius"
+      ],
+      {
+        "unspecified": "bottomAlphabetical"
+      }
+    ]
+  }
+}

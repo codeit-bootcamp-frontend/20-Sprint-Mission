@@ -1,0 +1,200 @@
+* {
+  font-family: Pretendard, sans-serif;
+}
+
+body {
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 9px 400px;
+}
+
+@media (max-width: 1920px) {
+  .header {
+    padding: 9px 300px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .header {
+    padding: 9px 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 9px 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 9px 50px;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logoButtonText {
+  font-family: 'Rokaf Sans', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--brand-blue);
+
+  border: none;
+}
+
+.loginButton {
+  width: 128px;
+  height: 48px;
+  padding: 12px 23px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  color: var(--cool-gray-100);
+  background-color: var(--brand-blue);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 540px;
+  background-color: var(--banner);
+}
+
+.bannerLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 720px;
+  background-color: #fff;
+}
+
+.bannerRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 540px;
+}
+
+.bannerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-direction: column;
+  margin-bottom: 40px;
+  margin-top: 240px;
+}
+
+.bannerTitle {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 140%;
+  color: var(--secondary-700);
+  margin-bottom: 32px;
+}
+
+.seeButton {
+  gap: 10px;
+  padding: 16px 124px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--secondary-50);
+  background-color: var(--brand-blue);
+  border: none;
+  border-radius: 40px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+
+.bannerImg {
+  width: 746px;
+  height: 340px;
+  margin-top: 200px;
+}
+
+.sectionLabel {
+  font-family: 'Abhaya Libre', sans-serif;
+  font-weight: 800;
+  color: var(--label);
+  margin-bottom: 4px;
+}
+
+.bannerSubTitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+.bannerContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  width: 988px;
+  height: 444px;
+  background-color: #fcfcfc;
+  border-radius: 12px;
+}
+
+.emptySection {
+  height: 138px;
+  background-color: var(--cool-gray-100);
+}
+
+.footer {
+  height: 160px;
+  padding: 32px 400px;
+  background-color: var(--secondary-900);
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.snsLogo {
+  width: 20px;
+  height: 20px;
+}
+
+.buttonContainer > button {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary-200);
+  background-color: var(--secondary-900);
+  border: none;
+  cursor: pointer;
+}
+
+.footerContainer > p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--secondary-400);
+}
+
+.snsButtonContainer {
+  display: flex;
+  gap: 12px;
+}
