@@ -3,125 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>판다마켓</title>
+    <link rel="icon" href="images/favicon.ico" />
     <link
       rel="stylesheet"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>판다마켓</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
   </head>
   <body>
-    <header class="header-container">
-      <a href="/" class="logo-wrapper">
-        <img
-          src="/images/logo.webp"
-          alt="판다마켓 로고"
-          width="153"
-          height="51"
-        />
+    <header>
+      <a href="/">
+        <img src="/images/logo.webp" alt="판다마켓 로고" width="150" />
       </a>
-      <a href="/login.html" class="button login">로그인</a>
+      <a href="/login.html" id="login" class="button">로그인</a>
     </header>
     <main>
-      <section class="main-bg-section-wrapper">
-        <div class="layout main-bg-contents-wrapper">
-          <div class="main-bg-contents-container">
-            <p class="main-bg-contents-description">
-              일상의 모든 물건을<br />거래해 보세요
-            </p>
-            <a href="/items.html" class="button visit">구경하러 가기</a>
-          </div>
-          <img
-            src="/images/header-img.webp"
-            alt="판다마켓 메인 헤더"
-            width="746"
-            height="340"
-          />
+      <section id="hero" class="banner">
+        <div class="wrapper">
+          <p class="strong-contents">일상의 모든 물건을<br />거래해 보세요</p>
+          <a href="/items.html" id="visit" class="button">구경하러 가기</a>
         </div>
       </section>
-      <section class="main-section-wrapper">
-        <div class="layout main-contents-wrapper">
+
+      <section class="wrapper main-contents">
+        <div class="contents-box">
           <img
             src="/images/contents-img-01.webp"
             alt="판다마켓 메인 컨텐츠 핫이슈"
-            width="579"
-            height="444"
+            width="50%"
           />
           <div class="main-contents-container">
-            <p class="main-contents-title">Hot item</p>
-            <strong class="main-contents-strong"
+            <p class="title-contents">Hot item</p>
+            <strong class="strong-contents"
               >인기 상품을<br />확인해 보세요</strong
             >
-            <p class="main-contents-description">
+            <p class="description-contents">
               가장 HOT한 중고거래 물품을<br />판다 마켓에서 확인해 보세요
             </p>
           </div>
         </div>
       </section>
-      <section class="main-section-wrapper">
-        <div class="layout main-contents-wrapper">
+
+      <section class="wrapper main-contents">
+        <div class="contents-box">
           <div class="main-contents-container left">
-            <p class="main-contents-title">Search</p>
-            <strong class="main-contents-strong"
+            <p class="title-contents">Search</p>
+            <strong class="strong-contents"
               >구매를 원하는 <br />상품을 검색하세요</strong
             >
-            <p class="main-contents-description">
+            <p class="description-contents">
               구매하고 싶은 물품은 검색해서 <br />쉽게 찾아보세요
             </p>
           </div>
           <img
             src="/images/contents-img-02.webp"
             alt="판다마켓 메인 컨텐츠 서치"
-            width="579"
-            height="444"
+            width="50%"
           />
         </div>
       </section>
-      <section class="main-section-wrapper">
-        <div class="layout main-contents-wrapper">
+
+      <section class="wrapper main-contents">
+        <div class="contents-box">
           <img
             src="/images/contents-img-03.webp"
             alt="판다마켓 메인 컨텐츠 레지스터"
-            width="579"
-            height="444"
+            width="50%"
           />
           <div class="main-contents-container">
-            <p class="main-contents-title">Register</p>
-            <strong class="main-contents-strong"
+            <p class="title-contents">Register</p>
+            <strong class="strong-contents"
               >판매를 원하는 <br />상품을 등록하세요</strong
             >
-            <p class="main-contents-description">
+            <p class="description-contents">
               어떤 물건이든 판매하고 싶은 상품을<br />쉽게 등록하세요
             </p>
           </div>
         </div>
       </section>
-      <section class="main-bg-section-wrapper">
-        <div class="layout main-bg-contents-wrapper">
-          <div class="main-bg-contents-container">
-            <p class="main-bg-contents-description">
-              믿을 수 있는 <br />판다마켓 중고 거래
-            </p>
-          </div>
-          <img
-            src="/images/footer-img.webp"
-            alt="판다마켓 메인 헤더"
-            width="746"
-            height="397"
-          />
+
+      <section id="main-footer" class="banner">
+        <div class="wrapper">
+          <p class="strong-contents">믿을 수 있는 <br />판다마켓 중고 거래</p>
         </div>
       </section>
     </main>
-    <footer class="footer-bg-wrapper">
-      <div class="layout footer-container">
+
+    <footer>
+      <div class="wrapper footer">
         <p class="footer-CI">©codeit - 2024</p>
-        <div class="footer-link-container">
-          <a href="/privacy.html" class="footer-link">Privacy Policy</a>
-          <a href="/faq.html" class="footer-link">FAQ</a>
+        <div class="footer-link">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/faq.html">FAQ</a>
         </div>
-        <div class="footer-icon-container">
+        <div class="footer-icon">
           <a
             href="https://www.facebook.com/?locale=ko_KR"
             target="_blank"

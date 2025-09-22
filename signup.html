@@ -19,23 +19,38 @@
       <a href="/" class="logo">
         <img src="/images/logo.webp" alt="판다마켓 로고" width="300" />
       </a>
-      <form action="http://127.0.0.1:5500/login.html">
-        <label for="login-email">이메일</label>
-        <input id="login-email" name="email" type="email" />
+      <form action="http://127.0.0.1:5500/signup.html">
+        <label for="signup-email">이메일</label>
+        <input id="signup-email" name="email" type="email" />
 
-        <label for="login-password">비밀번호</label>
+        <label for="signup-nickname">닉네임</label>
+        <input id="signup-nickname" name="nickname" type="text" />
+
+        <label for="signup-password">비밀번호</label>
         <div class="pw-wrapper">
-          <input id="login-password" name="password" type="password" />
+          <input id="signup-password" name="password" type="password" />
           <button type="button">
             <img
               src="/images/no-view-pw.webp"
+              alt="비밀번호 가리는 아이콘"
+              width="30"
+            />
+          </button>
+        </div>
+
+        <label for="signup-password-check">비밀번호 확인</label>
+        <div class="pw-wrapper">
+          <input id="signup-password-check" name="password-check" type="text" />
+          <button type="button">
+            <img
+              src="/images/view-pw.webp"
               alt="비밀번호 뷰 아이콘"
               width="30"
             />
           </button>
         </div>
 
-        <button type="submit" id="auth-bt" class="button">로그인</button>
+        <button type="submit" id="auth-bt" class="button">회원가입</button>
       </form>
 
       <div class="simple-login">
@@ -62,7 +77,7 @@
         </div>
       </div>
       <p class="account-message">
-        판다마켓이 처음이신가요? <a href="./signup.html">회원가입</a>
+        이미 회원이신가요? <a href="./login.html">로그인</a>
       </p>
     </div>
   </body>
