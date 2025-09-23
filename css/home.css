@@ -46,7 +46,7 @@
 
 .part-1 a {
   height: 56px;
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 .part-2 {
@@ -83,22 +83,22 @@
 
 .highlight {
   color: var(--blue);
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 800;
-  line-height: 1.5rem;
+  line-height: 2.4rem;
   vertical-align: middle;
 }
 
 .sub-title {
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 4rem;
   line-height: 140%;
   vertical-align: middle;
 }
 
 .description {
   font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
   vertical-align: middle;
 }

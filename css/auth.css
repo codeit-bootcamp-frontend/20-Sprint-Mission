@@ -2,13 +2,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
 
 section {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 640px;
 }
 
@@ -32,8 +33,8 @@ h1 {
 label {
   color: var(--gray800);
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.625rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
   margin-bottom: 16px;
 }
 
@@ -44,7 +45,7 @@ label {
   margin-bottom: 24px;
   border-radius: 10px;
   background-color: var(--gray100);
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: var(--gray800);
 }
 
@@ -59,8 +60,8 @@ label {
 }
 
 .password-container img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .login-button {
@@ -83,7 +84,7 @@ label {
 
 .ease-login-container ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.6rem;
 }
 
 .ease-login-container ul img {
@@ -94,7 +95,7 @@ label {
 .to-signup {
   color: var(--gray800);
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 }
 
 .to-signup a {
