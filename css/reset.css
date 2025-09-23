@@ -59,13 +59,22 @@ button {
   cursor: pointer;
 }
 
-@media (min-width: 375px) and (max-width: 1199px) {
+/** 모바일 사이즈 */
+@media (min-width: 375px) and (max-width: 767px) {
   html {
     font-size: 8px;
   }
 }
 
-@media (min-width: 1120px) {
+/** 테블릿 사이즈 */
+@media (min-width: 768px) and (max-width: 1199px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+/** 데스크탑 사이즈 */
+@media (min-width: 1200px) {
   html {
     font-size: 10px;
   }
