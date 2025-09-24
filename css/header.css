@@ -31,6 +31,9 @@ header {
 
 /** 모바일 사이즈 */
 @media (min-width: 375px) and (max-width: 767px) {
+  .header-inner {
+    margin: 0 16px;
+  }
 }
 
 /** 테블릿 사이즈 */

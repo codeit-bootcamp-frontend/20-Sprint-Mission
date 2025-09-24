@@ -5,7 +5,7 @@
 }
 
 html {
-  min-width: 740px;
+  font-size: 10px;
   font-family: Pretendard;
   color: #374151;
   line-height: 1.5;
@@ -13,10 +13,6 @@ html {
 
 body {
   font-size: 1.6rem;
-}
-
-main {
-  min-width: 375px;
 }
 
 h1,
@@ -57,25 +53,4 @@ textarea {
 
 button {
   cursor: pointer;
-}
-
-/** 모바일 사이즈 */
-@media (min-width: 375px) and (max-width: 767px) {
-  html {
-    font-size: 8px;
-  }
-}
-
-/** 테블릿 사이즈 */
-@media (min-width: 768px) and (max-width: 1199px) {
-  html {
-    font-size: 10px;
-  }
-}
-
-/** 데스크탑 사이즈 */
-@media (min-width: 1200px) {
-  html {
-    font-size: 10px;
-  }
 }
