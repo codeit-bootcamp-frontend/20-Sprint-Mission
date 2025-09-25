@@ -6,7 +6,7 @@
     <title>판다마켓 - 로그인 페이지</title>
     <link rel="stylesheet" href="/css/utils.css" />
     <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/login/main.css" />
+    <link rel="stylesheet" href="/css/auth.css" />
   </head>
   <body>
     <section>
@@ -17,15 +17,22 @@
       </h1>
       <form class="login-container">
         <label for="userEmail">이메일</label>
-        <input class="login-input" id="userEmail" type="email" />
+        <input
+          placeholder="이메일을 입력해주세요"
+          class="login-input"
+          id="userEmail"
+          type="email"
+        />
         <label for="userPassword">비밀번호</label>
         <div class="password-container">
-          <input class="login-input" id="userPassword" type="password" />
+          <input
+            placeholder="비밀번호를 입력해주세요"
+            class="login-input"
+            id="userPassword"
+            type="password"
+          />
           <button type="button" class="btn_visibility">
-            <img
-              src="/imgs/btn_visibility_off.png"
-              alt="비밀번호 숨기기 버튼"
-            />
+            <img src="/imgs/ic_visibility_off.png" alt="비밀번호 숨기기 버튼" />
           </button>
         </div>
         <button type="submit" class="blue-button login-button">로그인</button>
