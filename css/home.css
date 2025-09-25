@@ -97,7 +97,7 @@
 }
 
 .highlight {
-  color: var(--blue);
+  color: var(--btn);
   font-size: 2rem;
   font-weight: 800;
   line-height: 2.4rem;
@@ -118,8 +118,142 @@
   vertical-align: middle;
 }
 
+/** 테블릿 사이즈 */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .top-bottom-section {
+    height: 771px;
+    flex: 1;
+  }
+
+  .main-section {
+    background-color: white;
+    border-radius: 12px;
+    height: 708px;
+    width: 696px;
+    margin: 0 auto 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .main-section img {
+    width: 696px;
+    height: 524px;
+    margin-bottom: 24px;
+  }
+
+  .highlight {
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 2.6rem;
+    vertical-align: middle;
+  }
+
+  .sub-title {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 4.2rem;
+    vertical-align: middle;
+  }
+
+  .description {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    vertical-align: middle;
+  }
+
+  .part-1 {
+    margin-bottom: 24px;
+    padding-top: 84px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .part-1 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .part-1 > div:first-child {
+    margin-right: 0;
+    width: 512px;
+    margin-bottom: 221px;
+  }
+
+  .part-1 > div:last-child {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .part-1 h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .part-1 a {
+    text-align: center;
+    width: 357px;
+  }
+
+  .part-2 {
+    padding: 0;
+  }
+
+  .part-2 h2 {
+    width: 100%;
+  }
+
+  .part-2 > div:first-child {
+    margin-right: 0;
+  }
+
+  .part-3 {
+    padding: 0;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+
+  .part-3 h2 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .part-3 > div:first-child {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .part-4 > div:first-child {
+    margin-right: 0;
+  }
+
+  .part-4 h2 {
+    width: 100%;
+  }
+
+  .part-5 {
+    height: 972px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .part-5 > div:first-child {
+    margin-right: 0;
+    margin-bottom: 217px;
+    text-align: center;
+  }
+}
+
 /** 모바일 사이즈 */
-@media (min-width: 375px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .top-bottom-section {
     height: 540px;
   }
@@ -258,137 +392,4 @@
     width: 375px;
     height: 198px;
   }
-}
-
-/** 테블릿 사이즈 */
-@media (min-width: 768px) and (max-width: 1199px) {
-  .top-bottom-section {
-    height: 771px;
-    flex: 1;
-  }
-
-  .main-section {
-    background-color: white;
-    border-radius: 12px;
-    height: 708px;
-    width: 696px;
-    margin: 0 auto 52px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-  }
-
-  .main-section img {
-    width: 696px;
-    height: 524px;
-    margin-bottom: 24px;
-  }
-
-  .highlight {
-    margin-bottom: 16px;
-    font-size: 1.8rem;
-    font-weight: 800;
-    line-height: 2.6rem;
-    vertical-align: middle;
-  }
-
-  .sub-title {
-    margin-bottom: 24px;
-    font-weight: 700;
-    font-size: 3.2rem;
-    line-height: 4.2rem;
-    vertical-align: middle;
-  }
-
-  .description {
-    font-weight: 500;
-    font-size: 1.8rem;
-    line-height: 2.6rem;
-    vertical-align: middle;
-  }
-
-  .part-1 {
-    margin-bottom: 24px;
-    padding-top: 84px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .part-1 > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .part-1 > div:first-child {
-    margin-right: 0;
-    width: 512px;
-    margin-bottom: 221px;
-  }
-
-  .part-1 h2 {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 24px;
-  }
-
-  .part-1 a {
-    text-align: center;
-    width: 357px;
-  }
-
-  .part-2 {
-    padding: 0;
-  }
-
-  .part-2 h2 {
-    width: 100%;
-  }
-
-  .part-2 > div:first-child {
-    margin-right: 0;
-  }
-
-  .part-3 {
-    padding: 0;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-  }
-
-  .part-3 h2 {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .part-3 > div:first-child {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .part-4 > div:first-child {
-    margin-right: 0;
-  }
-
-  .part-4 h2 {
-    width: 100%;
-  }
-
-  .part-5 {
-    height: 972px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
-  }
-
-  .part-5 > div:first-child {
-    margin-right: 0;
-    margin-bottom: 217px;
-    text-align: center;
-  }
-}
-
-/** 데스크탑 사이즈 */
-@media (min-width: 1200px) {
 }

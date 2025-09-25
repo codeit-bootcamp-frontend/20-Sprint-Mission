@@ -5,6 +5,7 @@
 }
 
 html {
+  min-width: 375px;
   font-size: 10px;
   font-family: Pretendard;
   color: #374151;

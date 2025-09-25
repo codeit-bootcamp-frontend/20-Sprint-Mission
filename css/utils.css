@@ -11,15 +11,17 @@
   --gray100: #f3f4f6;
   --gray50: #f9fafb;
   /* blue */
-  --blue: #3692ff;
-  --hover-blue: #1967d6;
+  --btn: #3692ff;
+  --hover-btn: #1967d6;
+  --click-btn: #1251aa;
+  --inactive-btn: #9ca3af;
 }
 
 .blue-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--blue);
+  background-color: var(--btn);
   border-radius: 40px;
   font-weight: 600;
   font-size: 1.6rem;
@@ -27,6 +29,6 @@
   color: var(--gray100);
 
   &:hover {
-    background-color: var(--hover-blue);
+    background-color: var(--hover-btn);
   }
 }
