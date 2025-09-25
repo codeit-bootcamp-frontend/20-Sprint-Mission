@@ -10,7 +10,7 @@
 
 
 .inp_box input[type="password"]{
-  background:#F3F4F6 url(../img/btn_visibility_on_24px.svg) no-repeat center right 15px;
+  background:#F3F4F6 url(../img/btn_visibility_off_24px.svg) no-repeat center right 15px;
   padding-right:54px;
 }
 
