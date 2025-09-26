@@ -1,12 +1,84 @@
-/* tag/클래스 둘 다 대응 */
-footer, .footer{
-  background:var(--gray900); color:var(--gray200);
-  height:160px; padding:32px 8px;
-  display:flex; justify-content:center;
+/* Footer 스타일 */
+footer, .footer {
+  background: var(--gray900);
+  color: var(--gray200);
+  padding: 32px 0;
+  display: flex;
+  justify-content: center;
 }
-.footer-container{
-  display:flex; justify-content:space-between; align-items:center;
-  width:var(--content-max);
+
+.footer .rail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1110px;
+  padding: 0 200px;
 }
-.footer-links{ display:flex; gap:12px; font-weight:400; }
-.icon{ width:22px; height:22px; display:inline-block; }
+
+.footer__left {
+  font-size: 14px;
+  color: var(--gray200);
+}
+
+.footer__right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer__right a {
+  color: var(--gray200);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer__right a:hover {
+  color: var(--gray100);
+}
+
+.footer__sns {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__sns .icon {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.footer__sns .icon:hover {
+  opacity: 0.8;
+}
+
+/* Footer 반응형 */
+@media (max-width: 1024px) {
+  .footer .rail {
+    padding: 0 clamp(16px, 6vw, 40px);
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer__right {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 24px 0;
+  }
+  
+  .footer__right {
+    gap: 12px;
+  }
+  
+  .footer__sns {
+    gap: 8px;
+  }
+}

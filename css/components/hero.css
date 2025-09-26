@@ -58,9 +58,68 @@
   width: 746px; height:auto; max-height:340px; display:block;
 }
 
+/* 신뢰 배너 섹션 스타일 */
+.section--trust {
+  background: #CFE5FF;
+  padding: 80px 0;
+}
+
+.section--trust .trust {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1110px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.section--trust .h2 {
+  color: #374151;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.section--trust img {
+  flex: 1;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 신뢰 배너 반응형 */
+@media (max-width: 1024px) {
+  .section--trust .trust {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+  
+  .section--trust .h2 {
+    font-size: clamp(28px, 4.5vw, 36px);
+  }
+  
+  .section--trust img {
+    max-width: clamp(300px, 80vw, 500px);
+  }
+}
+
+@media (max-width: 480px) {
+  .section--trust {
+    padding: 60px 0;
+  }
+  
+  .section--trust .trust {
+    gap: 24px;
+  }
+}
+
 /* -------------------------
    Responsive: 좁아지면
-   “글 → 버튼 → 그림” 순서로 세로 스택
+   "글 → 버튼 → 그림" 순서로 세로 스택
 ------------------------- */
 @media (max-width: 1024px){
   .hero > .rail{
