@@ -173,36 +173,52 @@
    "글 → 버튼 → 그림" 순서로 세로 스택
 ------------------------- */
 @media (max-width: 1024px){
+  .hero {
+    height: auto;
+    min-height: 420px;
+  }
+  
   .hero > .rail{
     /* 좌우 여백 조금 줄이기 */
     padding-inline: clamp(16px, 6vw, 40px);
+    height: auto;
   }
 
   /* Grid → 세로 스택 */
   .hero-inner{
+    position: static;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    height: auto;                /* 고정 높이 해제 */
+    width: 100%;
+    height: auto;
     min-height: 420px;
     gap: 24px;
-    padding-block: 48px;
+    padding: 48px 0;
     max-width: min(680px, 100%);
+    margin: 0 auto;
   }
 
   .hero__copy{
     width: 100%;
+    max-width: 400px;
     align-items: center;
     text-align: center;
     gap: 20px;
+    padding: 0;
+    height: auto;
   }
+  
   .hero__title{
     width: auto;
+    max-width: 100%;
+    height: auto;
     font-size: clamp(28px, 4.5vw, 34px);
     line-height: 1.35;
+    text-align: center;
   }
+  
   .btn-cta{
     width: clamp(220px, 50vw, 300px);
     height: 48px;
@@ -211,11 +227,54 @@
     font-size: 16px;
     line-height: 24px;
   }
-  .hero__art{ width:100%; height:auto; }
-  .hero__art img{ width: clamp(320px, 80vw, 560px); max-height:none; }
+  
+  .btn-cta span {
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .hero__art{ 
+    width: 100%; 
+    height: auto; 
+    max-width: 400px;
+  }
+  
+  .hero__art img{ 
+    width: 100%; 
+    height: auto; 
+    max-width: 400px;
+  }
 }
 
 @media (max-width: 480px){
-  .hero-inner{ padding-block: 36px; gap: 20px; }
-  .btn-cta{ width: clamp(200px, 70vw, 280px); }
+  .hero-inner{ 
+    padding: 36px 0; 
+    gap: 20px; 
+    min-height: 360px;
+  }
+  
+  .hero__copy {
+    gap: 16px;
+  }
+  
+  .hero__title {
+    font-size: clamp(24px, 6vw, 28px);
+  }
+  
+  .btn-cta{ 
+    width: clamp(200px, 70vw, 280px); 
+    height: 44px;
+    padding: 10px 20px;
+  }
+  
+  .btn-cta span {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .hero__art img {
+    max-width: 300px;
+  }
 }
