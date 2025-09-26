@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <title>판다마켓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="./assets/icons/Property 1=lg1.png" />
+  <link rel="shortcut icon" type="image/png" href="./assets/icons/Property 1=lg1.png" />
   <!-- CSS -->
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/tokens.css">
@@ -31,7 +33,8 @@
   <div class="rail">
     <div class="header-inner">
       <a id="logo" class="logo" href="/" aria-label="판다마켓 홈">
-        <img src="./assets/icons/Property 1=lg.svg" alt="판다마켓" />
+        <img class="logo-desktop" src="./assets/icons/Property 1=lg.svg" alt="판다마켓" />
+        <img class="logo-mobile" src="./assets/icons/Property 1=Typo.svg" alt="판다마켓" />
       </a>
       <a id="login-button" class="btn-login blue-button" href="/login">로그인</a>
     </div>
@@ -45,7 +48,7 @@
   <div class="rail">
     <div class="container hero-inner">   <!-- ← 이 컨테이너가 반드시 hero 내부에 있어야 함 -->
       <div class="hero__copy">
-        <h1 class="hero__title">일상의 모든 물건을<br>거래해 보세요</h1>
+        <h1 class="hero__title">일상의 모든 물건을 <br>거래해 보세요</h1>
         <a class="btn-cta" href="/items"><span>구경하러 가기</span></a>
       </div>
 
@@ -74,7 +77,7 @@
           <div class="card card--text">
             <em class="eyebrow">Hot item</em>
             <h2 class="h2">인기 상품을<br />확인해 보세요</h2>
-            <p class="desc">가장 HOT한 중고거래 물품을 판다마켓에서 확인해 보세요.</p>
+            <p class="desc">가장 HOT한 중고거래 물품을<br> 판다마켓에서 확인해 보세요.</p>
           </div>
         </div>
       </div>
@@ -87,7 +90,7 @@
           <div class="card card--text">
             <em class="eyebrow">Search</em>
             <h2 class="h2">구매를 원하는<br />상품을 검색하세요</h2>
-            <p class="desc">구매하고 싶은 물품을 검색해서 쉽게 찾아보세요.</p>
+            <p class="desc">구매하고 싶은 물품을 검색해서<br>쉽게 찾아보세요.</p>
           </div>
           <div class="card card--image">
             <img
@@ -114,29 +117,30 @@
           <div class="card card--text">
             <em class="eyebrow">Register</em>
             <h2 class="h2">판매를 원하는<br />상품을 등록하세요</h2>
-            <p class="desc">어떤 물건이든 판매하고 싶은 상품을 쉽게 등록해 보세요.</p>
+            <p class="desc">어떤 물건이든 판매하고 싶은 상품을<br>쉽게 등록해 보세요.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 신뢰 배너 (하단 하늘색 섹션) -->
-    <section class="section section--trust hero">
+    <section class="section section--trust">
       <div class="rail">
         <div class="trust">
           <h2 class="h2">믿을 수 있는<br />판다마켓 중고 거래</h2>
-          <img
-            src="./assets/images/Img_home_bottom.svg"
-            alt=""
-            loading="lazy"
-          />
+          <div class="trust__image">
+            <img
+              src="./assets/images/Img_home_bottom.svg"
+              alt=""
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
     <div class="rail">
       <!-- 왼쪽: 저작권 정보 -->
       <div class="footer__left">©codeit · 2024</div>
@@ -148,21 +152,22 @@
       </div>
 
       <!-- 오른쪽: SNS 아이콘들 -->
-      <div class="footer__sns" aria-label="소셜 링크">
-        <a class="icon" href="https://facebook.com" target="_blank" rel="noopener">
-          <img src="./assets/icons/ic_facebook.svg" alt="Facebook" width="22" height="22" />
+      <div class="footer__sns">
+        <a href="https://facebook.com" target="_blank" rel="noopener">
+          <img src="./assets/icons/ic_facebook.svg" alt="Facebook" width="20" height="20" />
         </a>
-        <a class="icon" href="https://twitter.com" target="_blank" rel="noopener">
-          <img src="./assets/icons/ic_twitter.svg" alt="Twitter" width="22" height="22" />
+        <a href="https://twitter.com" target="_blank" rel="noopener">
+          <img src="./assets/icons/ic_twitter.svg" alt="Twitter" width="20" height="20" />
         </a>
-        <a class="icon" href="https://youtube.com" target="_blank" rel="noopener">
-          <img src="./assets/icons/ic_youtube.svg" alt="YouTube" width="22" height="22" />
+        <a href="https://youtube.com" target="_blank" rel="noopener">
+          <img src="./assets/icons/ic_youtube.svg" alt="YouTube" width="20" height="20" />
         </a>
-        <a class="icon" href="https://instagram.com" target="_blank" rel="noopener">
-          <img src="./assets/icons/ic_instagram.svg" alt="Instagram" width="22" height="22" />
+        <a href="https://instagram.com" target="_blank" rel="noopener">
+          <img src="./assets/icons/ic_instagram.svg" alt="Instagram" width="20" height="20" />
         </a>
       </div>
     </div>
-  </footer>
+    </footer>
+  </main>
 </body>
 </html>

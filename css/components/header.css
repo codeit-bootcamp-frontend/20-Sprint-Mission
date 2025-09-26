@@ -1,5 +1,5 @@
 .header{
-  background:#fff; border-bottom:1px solid var(--line);
+  background: var(--gray50); border-bottom:1px solid var(--line);
   position:sticky; top:0; z-index:1000;
 }
 .header-inner{
@@ -12,10 +12,33 @@
   width:clamp(110px,14vw,153px); 
   height:clamp(36px,4.6vw,51px); }
 
-#logo img{ width:100%; 
+/* 로고 기본 스타일 */
+#logo img{ 
+  width:100%; 
   height:100%; 
   object-fit:contain; 
-  display:block; }
+  display:block; 
+}
+
+/* 로고 표시 제어 - 기본적으로 모바일 로고 숨김 */
+#logo .logo-mobile {
+  display: none;
+}
+
+#logo .logo-desktop {
+  display: block;
+}
+
+/* 모바일에서 로고 변경 */
+@media (max-width: 480px) {
+  #logo .logo-desktop {
+    display: none;
+  }
+  
+  #logo .logo-mobile {
+    display: block;
+  }
+}
 
 /* 로그인 버튼 */
 #login-button{
@@ -26,7 +49,7 @@
   height:clamp(32px,5vw,48px);
   background:var(--brand); 
 
-  color:#fff; 
+  color: var(--gray50); 
   font-weight:600; 
   font-size:16px;
   line-height:1; 

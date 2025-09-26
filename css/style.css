@@ -91,7 +91,7 @@ a, button{ color:inherit; text-decoration:none; cursor:pointer; }
 
 /* ---------- Header ---------- */
 .header{
-  background:#fff;
+  background: var(--gray50);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
@@ -124,7 +124,7 @@ a, button{ color:inherit; text-decoration:none; cursor:pointer; }
   width: clamp(84px, 11vw, 128px);
   height: clamp(32px, 5vw, 48px);
   background: var(--brand);
-  color:#fff; font-weight:700;
+  color: var(--gray50); font-weight:700;
   font-size: clamp(12px, 1.4vw, 16px);
   line-height:1;
   border:0; border-radius:8px;
@@ -153,7 +153,7 @@ a, button{ color:inherit; text-decoration:none; cursor:pointer; }
   width: 180px; height: 52px;             /* 필요시 피그마 수치로 조정 */
   border:0; border-radius:999px;
   font-weight:700;
-  background: var(--brand); color:#fff;    /* 유틸 없이 단독 사용해도 OK */
+  background: var(--brand); color: var(--gray50);    /* 유틸 없이 단독 사용해도 OK */
 }
 .hero__art img{ width: clamp(560px, 36vw, 760px); }
 

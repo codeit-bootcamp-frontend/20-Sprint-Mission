@@ -9,6 +9,12 @@
 
 .section{ padding-block:var(--space-xl); }
 .grid-2{
-  display:grid; grid-template-columns:1fr 1fr;
-  align-items:center; gap:32px;
+  display:flex; 
+  flex-direction:row;
+  align-items:center; 
+  gap:32px;
+  /* 그리드 속성 완전 제거 */
+  grid-template-columns: none;
+  column-gap: 0;
+  row-gap: 0;
 }
