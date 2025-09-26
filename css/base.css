@@ -16,9 +16,3 @@ html, body {
     "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", sans-serif;
 }
-@font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
-    font-weight: 100;
-    font-display: swap;
-}

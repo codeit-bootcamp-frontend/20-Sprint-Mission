@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>로그인 - 판다마켓</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" href="./assets/icons/Property 1=lg1.png" />
+  <link rel="shortcut icon" type="image/png" href="./assets/icons/Property 1=lg1.png" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/utilities.css">
+  <link rel="stylesheet" href="/css/components/header.css">
+  <link rel="stylesheet" href="/css/pages/login.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="login-container">
+      <!-- Logo Section -->
+      <div class="login-logo">
+        <div class="logo-container">
+          <a href="index.html" aria-label="판다마켓 홈">
+            <img src="./assets/icons/Property 1=lg-1.svg" alt="판다마켓" class="main-logo" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Login Form -->
+      <div class="login-form">
+        <form class="form-container">
+          <!-- Email Input -->
+          <div class="input-group">
+            <label for="email" class="input-label">이메일</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" name="email" class="input-field" placeholder="codeit@email.com" required>
+            </div>
+          </div>
+
+          <!-- Password Input -->
+          <div class="input-group">
+            <label for="password" class="input-label">비밀번호</label>
+            <div class="input-wrapper password-wrapper">
+              <input type="password" id="password" name="password" class="input-field password-field" required>
+              <button type="button" class="password-toggle" id="passwordToggle">
+                <svg class="eye-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="#4B5563"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Login Button -->
+          <button type="submit" class="btn-login-submit">
+            <span class="btn-text">로그인</span>
+          </button>
+        </form>
+
+        <!-- Social Login -->
+        <div class="social-login">
+          <div class="social-header">
+            <span class="social-title">간편 로그인하기</span>
+            <div class="social-buttons">
+              <a href="https://www.google.com/" class="social-btn google-btn" target="_blank" rel="noopener noreferrer">
+                <div class="social-icon google-icon">
+                  <img src="./assets/icons/ic_google.png" alt="Google" width="22" height="22" />
+                </div>
+              </a>
+              <a href="https://www.kakaocorp.com/page/" class="social-btn kakao-btn" target="_blank" rel="noopener noreferrer">
+                <div class="social-icon kakao-icon">
+                  <img src="./assets/icons/ic_kakao.png" alt="Kakao" width="22" height="22" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Signup Link -->
+        <div class="signup-link">
+          <span class="signup-text">판다마켓이 처음이신가요?</span>
+          <a href="signup.html" class="signup-btn">회원가입</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <script>
+    // 비밀번호 보기/숨기기 기능
+    document.getElementById('passwordToggle').addEventListener('click', function() {
+      const passwordField = document.getElementById('password');
+      const eyeIcon = this.querySelector('.eye-icon');
+      
+      if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        eyeIcon.innerHTML = '<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="#4B5563"/>';
+      } else {
+        passwordField.type = 'password';
+        eyeIcon.innerHTML = '<path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="#4B5563"/>';
+      }
+    });
+  </script>
+</body>
+</html>
