@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <title>판다마켓</title>
-    <link rel="stylesheet" href="../reset.css" />
-    <link rel="stylesheet" href="../auth.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
   </head>
   <body>
     <div class="auth_container">
       <div class="auth_logo">
-        <a href="../index.html">
+        <a href="index.html">
           <img class="auth_logo_img" src="../img/logo.png" alt="logo" />
         </a>
       </div>
@@ -21,16 +21,6 @@
             id="accountEmail"
             name="accountEmail"
             type="email"
-            required
-          />
-        </div>
-        <div class="form-field">
-          <label class="auth_label" for="nickname">닉네임</label>
-          <input
-            class="auth_input"
-            id="nickname"
-            name="nickname"
-            type="text"
             required
           />
         </div>
@@ -50,23 +40,7 @@
             </button>
           </div>
         </div>
-
-        <div class="form-field">
-          <label class="auth_label" for="userPw">비밀번호 확인</label><br />
-          <div class="password-input-container">
-            <input
-              class="auth_input password-input"
-              id="userPwCheck"
-              name="userPwCheck"
-              type="password"
-              required
-            />
-            <button class="password-toggle" type="button">
-              <img src="../img/eye_on.svg" alt="eye_on" />
-            </button>
-          </div>
-        </div>
-        <button class="auth_button" type="submit">회원가입</button>
+        <button class="auth_button" type="submit">로그인</button>
       </form>
       <div class="easy_auth">
         <div class="easy_auth_left">간편 로그인 하기</div>
@@ -80,7 +54,9 @@
         </div>
       </div>
       <div class="auth_link">
-        <p>이미 회원이신가요? <a href="../login/login.html">로그인</a></p>
+        <p>
+          판다마켓이 처음인가요? <a href="signup.html">회원가입</a>
+        </p>
       </div>
     </div>
   </body>
