@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>판다마켓</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/tokens.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/utilities.css">
+
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/components/hero.css">
+    <link rel="stylesheet" href="/css/components/cards.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+
+    <link rel="stylesheet" href="/css/pages/index.css"> <!-- 필요 시 -->
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+  <div class="rail">
+    <div class="header-inner">
+      <a id="logo" class="logo" href="/" aria-label="판다마켓 홈">
+        <img src="./assets/icons/Property 1=lg.svg" alt="판다마켓" />
+      </a>
+      <a id="login-button" class="btn-login blue-button" href="/login">로그인</a>
+    </div>
+  </div>
+</header>
+
+
+
+  <!-- Hero -->
+<section class="hero">
+  <div class="rail">
+    <div class="container hero-inner">   <!-- ← 이 컨테이너가 반드시 hero 내부에 있어야 함 -->
+      <div class="hero__copy">
+        <h1 class="hero__title">일상의 모든 물건을<br>거래해 보세요</h1>
+        <a class="btn-cta" href="/items">구경하러 가기</a>
+      </div>
+
+      <div class="hero__art">
+        <img src="./assets/images/Img_home_top.svg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Main -->
+  <main>
+    <!-- 섹션 1: 인기 상품 -->
+    <section class="section section--hot">
+      <div class="rail">
+        <div class="grid-2">
+          <div class="card card--image">
+            <!-- 좌측 일러스트 (T셔츠/하트 등) -->
+            <img
+              src="./assets/images/Img_home_01.svg"
+              alt="인기 상품 미리보기"
+              loading="lazy"
+            />
+          </div>
+          <div class="card card--text">
+            <em class="eyebrow">Hot item</em>
+            <h2 class="h2">인기 상품을<br />확인해 보세요</h2>
+            <p class="desc">가장 HOT한 중고거래 물품을 판다마켓에서 확인해 보세요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 2: 검색 -->
+    <section class="section section--search">
+      <div class="rail">
+        <div class="grid-2">
+          <div class="card card--text">
+            <em class="eyebrow">Search</em>
+            <h2 class="h2">구매를 원하는<br />상품을 검색하세요</h2>
+            <p class="desc">구매하고 싶은 물품을 검색해서 쉽게 찾아보세요.</p>
+          </div>
+          <div class="card card--image">
+            <img
+              src="./assets/images/Img_home_02.svg"
+              alt="검색 일러스트"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 3: 등록 -->
+    <section class="section section--register">
+      <div class="rail">
+        <div class="grid-2">
+          <div class="card card--image">
+            <img
+              src="./assets/images/Img_home_03.svg"
+              alt="상품 등록 일러스트"
+              loading="lazy"
+            />
+          </div>
+          <div class="card card--text">
+            <em class="eyebrow">Register</em>
+            <h2 class="h2">판매를 원하는<br />상품을 등록하세요</h2>
+            <p class="desc">어떤 물건이든 판매하고 싶은 상품을 쉽게 등록해 보세요.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 신뢰 배너 (하단 하늘색 섹션) -->
+    <section class="section section--trust hero">
+      <div class="rail">
+        <div class="trust">
+          <h2 class="h2">믿을 수 있는<br />판다마켓 중고 거래</h2>
+          <img
+            src="./assets/images/Img_home_bottom.svg"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="rail">
+      <div class="footer__left">©codeit · 2024</div>
+
+      <div class="footer__right">
+        <!-- 내부 페이지 라우팅 -->
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/faq">FAQ</a>
+
+        <!-- SNS 아이콘(새 탭) -->
+        <div class="footer__sns" aria-label="소셜 링크">
+          <a class="icon" href="https://facebook.com" target="_blank" rel="noopener">
+            <img src="./assets/icons/ic_facebook.svg" alt="Facebook" width="22" height="22" />
+          </a>
+          <a class="icon" href="https://twitter.com" target="_blank" rel="noopener">
+            <img src="./assets/icons/ic_twitter.svg" alt="Twitter" width="22" height="22" />
+          </a>
+          <a class="icon" href="https://youtube.com" target="_blank" rel="noopener">
+            <img src="./assets/icons/ic_youtube.svg" alt="YouTube" width="22" height="22" />
+          </a>
+          <a class="icon" href="https://instagram.com" target="_blank" rel="noopener">
+            <img src="./assets/icons/ic_instagram.svg" alt="Instagram" width="22" height="22" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

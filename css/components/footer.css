@@ -1,0 +1,12 @@
+/* tag/클래스 둘 다 대응 */
+footer, .footer{
+  background:var(--gray900); color:var(--gray200);
+  height:160px; padding:32px 8px;
+  display:flex; justify-content:center;
+}
+.footer-container{
+  display:flex; justify-content:space-between; align-items:center;
+  width:var(--content-max);
+}
+.footer-links{ display:flex; gap:12px; font-weight:400; }
+.icon{ width:22px; height:22px; display:inline-block; }

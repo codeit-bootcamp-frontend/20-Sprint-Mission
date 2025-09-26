@@ -1,0 +1,36 @@
+.header{
+  background:#fff; border-bottom:1px solid var(--line);
+  position:sticky; top:0; z-index:1000;
+}
+.header-inner{
+  max-width:var(--content-max); width:100%; height:70px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:clamp(8px,2vw,24px);
+}
+/* 로고 */
+#logo{ display:block; 
+  width:clamp(110px,14vw,153px); 
+  height:clamp(36px,4.6vw,51px); }
+
+#logo img{ width:100%; 
+  height:100%; 
+  object-fit:contain; 
+  display:block; }
+
+/* 로그인 버튼 */
+#login-button{
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  width:clamp(84px,11vw,128px); 
+  height:clamp(32px,5vw,48px);
+  background:var(--brand); 
+
+  color:#fff; 
+  font-weight:600; 
+  font-size:16px;
+  line-height:1; 
+  border:0; 
+  border-radius:8px;
+}
+

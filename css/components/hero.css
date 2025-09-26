@@ -1,0 +1,111 @@
+/* 배경 */
+.hero { background:#CFE5FF; }
+
+.hero .rail { padding: 0 200px; }
+
+/* 데스크톱(1920 기준): 글+이미지 묶음을 가로·세로 모두 중앙 */
+.hero-inner{
+  height: 540px;
+  max-width: 1110px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  justify-content: center;       /* 가로 중앙 */
+  align-content: end;         /* 세로 중앙 */
+  align-items: center;           /* 각 아이템 세로 정렬 */
+  column-gap: 7px;               /* Figma gap */
+  padding: 0;
+}
+
+/* 왼쪽 텍스트 블록 */
+.hero__copy{
+  width: 357px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 0;                    /* 중앙 정렬 방해 요소 제거 */
+}
+
+/* 타이틀 */
+.hero__title{
+  width: 295px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  color: #374151;
+}
+
+/* CTA 버튼 */
+.btn-cta{
+  display:flex; align-items:center; justify-content:center;
+  width: 357px; height: 56px;
+  padding: 16px 124px;
+  background:#3692FF; color:#F9FAFB;
+  border:0; border-radius:40px;
+  font-weight:600; font-size:20px; line-height:32px;
+}
+
+/* 오른쪽 일러스트 */
+.hero__art{
+  width: 746px; height: 340px;
+  display:flex; align-items:center; justify-content:center;
+}
+.hero__art img{
+  width: 746px; height:auto; max-height:340px; display:block;
+}
+
+/* -------------------------
+   Responsive: 좁아지면
+   “글 → 버튼 → 그림” 순서로 세로 스택
+------------------------- */
+@media (max-width: 1024px){
+  .hero > .rail{
+    /* 좌우 여백 조금 줄이기 */
+    padding-inline: clamp(16px, 6vw, 40px);
+  }
+
+  /* Grid → 세로 스택 */
+  .hero-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: auto;                /* 고정 높이 해제 */
+    min-height: 420px;
+    gap: 24px;
+    padding-block: 48px;
+    max-width: min(680px, 100%);
+  }
+
+  .hero__copy{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  .hero__title{
+    width: auto;
+    font-size: clamp(28px, 4.5vw, 34px);
+    line-height: 1.35;
+  }
+  .btn-cta{
+    width: clamp(220px, 50vw, 300px);
+    height: 48px;
+    padding: 12px 24px;
+    border-radius: 40px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .hero__art{ width:100%; height:auto; }
+  .hero__art img{ width: clamp(320px, 80vw, 560px); max-height:none; }
+}
+
+@media (max-width: 480px){
+  .hero-inner{ padding-block: 36px; gap: 20px; }
+  .btn-cta{ width: clamp(200px, 70vw, 280px); }
+}

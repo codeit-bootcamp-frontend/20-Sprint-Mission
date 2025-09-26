@@ -1,0 +1,181 @@
+.section.section--hot,
+.section.section--search,
+.section.section--register{
+  background: transparent;
+  padding-block: 138px;
+}
+
+/* 카드 패널 */
+.section .rail .grid-2{
+  width: 988px;                 /* Figma width */
+  height: 444px;                /* Figma height */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;                    /* Figma gap */
+  background: #FCFCFC;         /* 카드 배경 */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 왼쪽 이미지 영역 */
+.card-img{
+  width: 579px;
+  height: 444px;
+  background: #F3F4F6;
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;          /* 일러스트 비율 유지 */
+}
+
+/* 텍스트 영역 */
+/* 카피 영역을 200px 고정 박스로 */
+.card-copy{
+  flex: 0 0 200px;      /* flex-basis=200, grow/shrink 안 함 */
+  width: 200px;         /* 안전하게 한 번 더 고정 */
+  min-height: 238px;    /* 필요 없으면 제거 가능 */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-right: 0;     /* 200px 안에 글을 넣을 거면 우측 패딩은 0 추천 */
+  background: transparent;
+  /* 긴 단어/URL 대비 */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 자식 텍스트들이 부모 200px 안에 딱 맞게 */
+.eyebrow,
+.card-title,
+.card-desc{
+  width: 100%;
+  max-width: 100%;
+}
+
+/* 기존에 폭을 고정해 둔 부분 해제 */
+.card-title{ /* width: 222px;  ← 제거 */
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  color: #374151;
+}
+.card-desc{  /* width: 274px;  ← 제거 */
+  margin: 0;
+  color: #374151;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* (선택) 아이브로우가 기울어져 보이면 */
+.eyebrow{ font-style: normal; }
+
+
+.eyebrow{
+  margin: 0;
+  color: #3692FF;
+  font-weight: 800;             /* Pretendard 굵게 */
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.card-title{
+  width: 222px;
+  margin: 0;
+  color: #374151;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+}
+
+.card-desc{
+  width: 274px;
+  margin: 0;
+  color: #374151;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* 검색 섹션: 좌우 반전(이미지 오른쪽) */
+.section.section--search .card-row{
+  flex-direction: row-reverse;
+}
+.section.section--search .card-img{
+  border-radius: 0 12px 12px 0; /* 반대쪽 모서리 둥글게 */
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1200px){
+  .card-row{ width: min(988px, 92vw); }
+}
+
+@media (max-width: 1024px){
+  .section.section--hot,
+  .section.section--search,
+  .section.section--register{
+    padding-block: 88px;
+  }
+
+  .card-row{
+    height: auto;
+    padding: 24px 20px;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .card-img{
+    width: 100%;
+    height: auto;
+    min-height: 260px;
+    border-radius: 12px;              /* 세로 스택 때는 사방 라운드 */
+  }
+  .section.section--search .card-img{
+    border-radius: 12px;              /* 반전 케이스도 동일 처리 */
+  }
+  .card-img img{
+    width: clamp(320px, 80vw, 560px);
+    height: auto;
+  }
+
+  .card-copy{
+    width: 100%;
+    padding-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .eyebrow{ font-size: 16px; line-height: 22px; }
+  .card-title{
+    width: auto;
+    font-size: clamp(26px, 4.2vw, 34px);
+    line-height: 1.35;
+  }
+  .card-desc{
+    width: min(580px, 90%);
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px){
+  .section.section--hot,
+  .section.section--search,
+  .section.section--register{
+    padding-block: 64px;
+  }
+  .card-row{ gap: 20px; }
+  .card-img{ min-height: 220px; }
+}

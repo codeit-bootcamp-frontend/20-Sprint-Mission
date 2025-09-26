@@ -1,0 +1,14 @@
+/* 레일: 좌우 패딩이 폭에 맞춰 자동 축소 */
+.rail{
+  width:100%; max-width:var(--rail-max); margin:0 auto;
+  padding-inline: clamp(var(--side-pad-min),
+                        (100% - var(--content-max))/2,
+                        var(--side-pad-pc));
+}
+.container{ max-width:var(--content-max); width:100%; margin:0 auto; }
+
+.section{ padding-block:var(--space-xl); }
+.grid-2{
+  display:grid; grid-template-columns:1fr 1fr;
+  align-items:center; gap:32px;
+}
