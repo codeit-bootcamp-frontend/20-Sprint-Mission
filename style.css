@@ -1,3 +1,5 @@
+@import url("./variables.css");
+
 * {
   box-sizing: border-box;
   font-family: "pretendard", sans-serif;
@@ -19,6 +21,11 @@ header {
   left: 0;
   right: 0;
   background-color: #ffffff;
+}
+
+.header_logo {
+  width: 153px;
+  height: 51px;
 }
 
 body {
