@@ -1,52 +1,107 @@
 /* Footer 스타일 */
 footer, .footer {
-  background: var(--gray900);
-  color: var(--gray200);
-  padding: 32px 0;
+  background: #111827;
+  color: #9CA3AF;
+  padding: 32px 400px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  width: 1920px;
+  height: 160px;
+  left: calc(50% - 1920px/2);
+  top: 3448px;
 }
 
 .footer .rail {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 1110px;
-  padding: 0 200px;
+  padding: 0px;
+  gap: 681px;
+  width: 1120px;
+  height: 20px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
 }
 
+/* 왼쪽: 저작권 정보 */
 .footer__left {
-  font-size: 14px;
-  color: var(--gray200);
+  margin: 0 auto;
+  width: 112px;
+  height: 19px;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #9CA3AF;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
-.footer__right {
+/* 가운데: 링크들 */
+.footer__center {
   display: flex;
-  align-items: center;
-  gap: 24px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 30px;
+  margin: 0 auto;
+  width: 159px;
+  height: 19px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
 
-.footer__right a {
-  color: var(--gray200);
+.footer__center a {
+  color: #E5E7EB;
   text-decoration: none;
-  font-size: 14px;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
   transition: color 0.2s ease;
 }
 
-.footer__right a:hover {
-  color: var(--gray100);
+.footer__center a:hover {
+  color: #F3F4F6;
 }
 
+/* 오른쪽: SNS 아이콘들 */
 .footer__sns {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
   gap: 12px;
+  margin: 0 auto;
+  width: 116px;
+  height: 20px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
 }
 
 .footer__sns .icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   display: inline-block;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
   transition: opacity 0.2s ease;
 }
 
@@ -63,7 +118,7 @@ footer, .footer {
     text-align: center;
   }
   
-  .footer__right {
+  .footer__center {
     flex-direction: column;
     gap: 16px;
   }
@@ -74,7 +129,7 @@ footer, .footer {
     padding: 24px 0;
   }
   
-  .footer__right {
+  .footer__center {
     gap: 12px;
   }
   
