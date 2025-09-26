@@ -30,7 +30,7 @@
 }
 .login_box .login_btn{
   display:inline-flex;
-  background:#3692ff;
+  background:var(--color-primary100);
   width:12.8rem;
   height:4.8rem;
   padding:0 1rem;
@@ -45,7 +45,7 @@
 .footer{
   display:flex;
   height:16rem;
-  background:#111827;
+  background:var(--color-secondary900);
   justify-content: center;
 }
 .footer .footer_inner{
@@ -59,14 +59,14 @@
 }
 
 .footer .footer_list>li{
-  color:#9CA3AF;
+  color:var(--color-secondary400);
 }
 .footer_list .footer_nav{
   display: flex;
   gap:3rem;
 }
 .footer_nav>li>a{
-  color:#E5E7EB;
+  color:var(--color-secondary200);
 }
 
 .sns_list{
