@@ -308,125 +308,284 @@ body {
   color: #2a7ae2;
 }
 
-/* 반응형 디자인 */
-@media (max-width: 768px) {
+/* 태블릿 반응형 디자인 (iPad mini) */
+@media (max-width: 1024px) and (min-width: 769px) {
   .main {
-    padding: 20px 16px;
+    padding: 0px;
+    gap: 40px;
   }
   
   .signup-container {
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-    min-height: 380px;
-    gap: 16px;
-    padding: 24px;
+    width: 640px;
+    height: 842px;
+    gap: 24px;
+    padding: 0px;
   }
   
   .logo-link {
-    width: 180px;
-    height: 60px;
+    width: 396px;
+    height: 132px;
   }
   
   .form-section {
-    height: auto;
-    gap: 12px;
-    min-height: auto;
+    width: 640px;
+    height: 670px;
+    gap: 24px;
   }
   
   .signup-form {
-    height: auto;
-    gap: 12px;
-    min-height: auto;
+    width: 640px;
+    height: 524px;
+    gap: 24px;
   }
   
   .input-group {
-    height: auto;
-    min-height: 50px;
-    gap: 6px;
+    width: 640px;
+    height: 93px;
+    gap: 16px;
+  }
+  
+  .input-label {
+    font-size: 18px;
+    line-height: 21px;
+    height: 21px;
   }
   
   .input-wrapper {
-    height: 36px;
+    width: 640px;
+    height: 56px;
+    padding: 16px 24px;
+    border-radius: 12px;
   }
   
   .password-wrapper {
-    padding: 6px 12px;
+    padding: 16px 24px;
+    gap: 10px;
   }
   
   .input-field {
-    font-size: 11px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .input-field::placeholder {
+    color: #9CA3AF;
   }
   
   .btn-signup {
-    height: 36px;
+    width: 640px;
+    height: 56px;
+    padding: 16px 124px;
+    border-radius: 40px;
+    background: #9CA3AF;
   }
   
   .btn-text {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
   }
   
   .social-login {
-    height: auto;
-    min-height: 44px;
-    padding: 10px 14px;
+    width: 640px;
+    height: 74px;
+    padding: 16px 23px;
   }
   
   .social-header {
-    width: 100%;
-    gap: 8px;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    min-height: auto;
+    width: 594px;
+    height: 42px;
+    gap: 393px;
   }
-
+  
+  .social-title {
+    font-size: 16px;
+    line-height: 26px;
+    width: 101px;
+    height: 26px;
+  }
+  
   .social-buttons {
-    justify-content: center;
+    width: 100px;
+    height: 42px;
+    gap: 16px;
   }
   
   .social-btn {
-    width: 24px;
-    height: 24px;
+    width: 42px;
+    height: 42px;
+  }
+  
+  .social-icon {
+    width: 22px;
+    height: 22px;
   }
   
   .social-icon img {
-    width: 14px;
-    height: 14px;
+    width: 22px;
+    height: 22px;
+  }
+  
+  .login-link {
+    width: 151px;
+    height: 24px;
+    gap: 4px;
+  }
+  
+  .login-text {
+    font-size: 14px;
+    line-height: 24px;
+    width: 108px;
+    height: 24px;
+  }
+  
+  .login-btn {
+    font-size: 15px;
+    line-height: 18px;
+    width: 39px;
+    height: 18px;
+    color: #3182F6;
   }
 }
 
-@media (max-width: 480px) {
+/* 모바일 반응형 디자인 */
+@media (max-width: 768px) {
+  .main {
+    padding: 0px;
+    gap: 24px;
+  }
+  
   .signup-container {
-    height: auto;
-    min-height: 320px;
-    padding: 20px;
-    gap: 12px;
+    width: 343px;
+    height: 681px;
+    gap: 24px;
+    padding: 0px;
+    top: 24px;
   }
   
   .logo-link {
-    width: 160px;
-    height: 50px;
+    width: 198px;
+    height: 66px;
+  }
+  
+  .form-section {
+    width: 343px;
+    height: 591px;
+    gap: 24px;
+  }
+  
+  .signup-form {
+    width: 343px;
+    height: 543px;
+    gap: 24px;
   }
   
   .input-group {
-    height: auto;
-    min-height: 45px;
+    width: 343px;
+    height: 81px;
+    gap: 8px;
+  }
+  
+  .input-label {
+    font-size: 14px;
+    line-height: 17px;
+    height: 17px;
   }
   
   .input-wrapper {
-    height: 32px;
+    width: 343px;
+    height: 56px;
+    padding: 16px 24px;
+    border-radius: 12px;
+  }
+  
+  .password-wrapper {
+    padding: 16px 24px;
+    gap: 10px;
+  }
+  
+  .input-field {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .input-field::placeholder {
+    color: #9CA3AF;
   }
   
   .btn-signup {
-    height: 32px;
+    width: 343px;
+    height: 56px;
+    padding: 16px 124px;
+    border-radius: 40px;
+    background: #9CA3AF;
+  }
+  
+  .btn-text {
+    font-size: 20px;
+    line-height: 32px;
+    color: #F3F4F6;
   }
   
   .social-login {
-    height: auto;
-    min-height: 40px;
-    padding: 8px 12px;
+    width: 343px;
+    height: 74px;
+    padding: 16px 24px;
   }
+  
+  .social-header {
+    width: 296px;
+    height: 42px;
+    gap: 95px;
+  }
+  
+  .social-title {
+    font-size: 16px;
+    line-height: 26px;
+    width: 101px;
+    height: 26px;
+  }
+  
+  .social-buttons {
+    width: 100px;
+    height: 42px;
+    gap: 16px;
+  }
+  
+  .social-btn {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .social-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .social-icon img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .login-link {
+    width: 149px;
+    height: 24px;
+    gap: 4px;
+  }
+  
+  .login-text {
+    font-size: 14px;
+    line-height: 24px;
+    width: 108px;
+    height: 24px;
+  }
+  
+  .login-btn {
+    font-size: 14px;
+    line-height: 17px;
+    width: 37px;
+    height: 17px;
+    color: #3182F6;
+  }
+}
 }
