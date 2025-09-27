@@ -80,7 +80,6 @@
   background-color: var(--cool-gray-100);
 }
 
-/* ✅ 눈 모양 버튼 */
 .togglePassword {
   position: absolute;
   top: 50%;
