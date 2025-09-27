@@ -5,9 +5,66 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/src/shared/font/font.css" />
+  <link rel="stylesheet" href="/src/shared/style/color.css" />
+  <link rel="stylesheet" href="./signup.css" />
   <title>판다마켓</title>
 </head>
 <body>
-   <div>Join Page</div>
+<div class="flexBox">
+  <div class="mainContainer">
+    <div class="logoContainer">
+      <img src="/src/shared/img/logo/brand/logo.svg" alt="로고 이미지" class="logoImg"/>
+      <img src="/src/shared/img/logo/brand/logoText.svg" alt="로고 텍스트 이미지" class="logoTextImg"/>
+    </div>
+
+    <div class="inputContainer">
+      <label for="email">이메일</label>
+      <input id="email" placeholder="codeit@email.com"/>
+    </div>
+
+    <div class="inputContainer">
+      <label for="nickname">닉네임</label>
+      <input id="nickname" placeholder="판다"/>
+    </div>
+
+    <div class="inputContainer">
+      <label for="password">비밀번호</label>
+      <div class="passwordWrapper">
+        <input id="password" type="password" />
+        <button type="button" class="togglePassword">
+          <img src="/src/shared/img/button/btn_visibility_on.svg" alt="비밀번호 보기" />
+        </button>
+      </div>
+    </div>
+
+    <div class="inputContainer">
+      <label for="passwordCheck">비밀번호 확인</label>
+      <div class="passwordWrapper">
+        <input id="passwordCheck" type="password" />
+        <button type="button" class="togglePassword">
+          <img src="/src/shared/img/button/btn_visibility_on.svg" alt="비밀번호 보기" />
+        </button>
+      </div>
+    </div>
+
+    <button class="loginButton">회원가입</button>
+
+    <div class="socialLoginContainer">
+      <div class="box">
+        <div class="socialLoginTitle">간편 로그인하기</div>
+        <div class="socialLoginButtonContainer">
+          <img src="/src/shared/img/logo/loginButton/ic_google_login.svg" alt="구글 로그인" class="socialLoginButton"/>
+          <img src="/src/shared/img/logo/loginButton/ic_kakao_login.svg" alt="카카오톡 로그인" class="socialLoginButton"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="signupContainer">
+      <div class="signupMessage">이미 회원이신가요?</div>
+      <a href="../login/login.html" class="signupButton">로그인</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>
