@@ -500,21 +500,36 @@ p {
     padding: 32px 104px 108px;
   }
 }
+
 @media (min-width: 375px) and (max-width: 767px) {
-  footer {
-    width: 100%;
+  .footer_container {
+    padding: 32px 32px 30px;
+    display: grid;
+    grid-template-areas:
+      "links social"
+      "copyright .";
   }
 
-  .footer_container {
-    width: 100%;
-    padding: 32px 32px 30px;
+  .footer_left {
+    margin-top: 0;
   }
 
   .footer_center {
+    grid-area: links;
+    display: flex;
     gap: 30px;
+    margin-bottom: 60px;
   }
 
   .footer_right {
+    grid-area: social;
+    display: flex;
     gap: 12px;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+  }
+
+  .footer_left {
+    grid-area: copyright;
   }
 }
