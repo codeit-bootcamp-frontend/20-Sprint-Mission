@@ -4,6 +4,7 @@ const loginPassword = document.getElementById("loginPassword");
 const emailError = document.getElementById("emailError");
 const passwordError = document.getElementById("passwordError");
 const loginButton = document.getElementById("loginButton");
+const passwordToggle = document.getElementById("passwordToggle");
 
 // 회원가입 페이지 요소들
 const signupEmail = document.getElementById("signupEmail");
@@ -15,6 +16,10 @@ const nicknameError = document.getElementById("nicknameError");
 const signupPasswordError = document.getElementById("signupPasswordError");
 const passwordCheckError = document.getElementById("passwordCheckError");
 const signupButton = document.getElementById("signupButton");
+
+// 회원가입 비밀번호 토글 버튼 이벤트
+const signupPasswordToggle = document.getElementById("signupPasswordToggle");
+const passwordCheckToggle = document.getElementById("passwordCheckToggle");
 
 const LoginEmailFocusout = () => {
   if (loginEmail.value === "") {
@@ -161,6 +166,87 @@ const SignupButtonClick = (e) => {
   }
 };
 
+// const LoginPasswordToggleClick = () => {
+//   const passwordInput = document.getElementById("loginPassword");
+//   const toggleImg = passwordToggle.querySelector("img");
+
+//   if (passwordInput.type === "password") {
+//     passwordInput.type = "text";
+//     toggleImg.src = "../img/eye_on.svg";
+//     passwordToggle.classList.add("show");
+//   } else {
+//     passwordInput.type = "password";
+//     toggleImg.src = "../img/eye_off.svg";
+//     passwordToggle.classList.remove("show");
+//   }
+// };
+
+// const SignupPasswordToggleClick = () => {
+//   const passwordInput = document.getElementById("signupPassword");
+//   const toggleImg = signupPasswordToggle.querySelector("img");
+
+//   if (passwordInput.type === "password") {
+//     passwordInput.type = "text";
+//     toggleImg.src = "../img/eye_on.svg";
+//     signupPasswordToggle.classList.add("show");
+//   } else {
+//     passwordInput.type = "password";
+//     toggleImg.src = "../img/eye_off.svg";
+//     signupPasswordToggle.classList.remove("show");
+//   }
+// };
+
+// const SignupPasswordCheckToggleClick = () => {
+//   const passwordInput = document.getElementById("signupPasswordCheck");
+//   const toggleImg = passwordCheckToggle.querySelector("img");
+
+//   if (passwordInput.type === "password") {
+//     passwordInput.type = "text";
+//     toggleImg.src = "../img/eye_on.svg";
+//     passwordCheckToggle.classList.add("show");
+//   } else {
+//     passwordInput.type = "password";
+//     toggleImg.src = "../img/eye_off.svg";
+//     passwordCheckToggle.classList.remove("show");
+//   }
+// };
+
+const PasswordToggleClick = (inputId, toggleId) => {
+  const passwordInput = document.getElementById(inputId);
+  const toggleImg = document.getElementById(toggleId).querySelector("img");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    toggleImg.src = "../img/eye_on.svg";
+    document.getElementById(toggleId).classList.add("show");
+  } else {
+    passwordInput.type = "password";
+    toggleImg.src = "../img/eye_off.svg";
+    document.getElementById(toggleId).classList.remove("show");
+  }
+};
+
+// 로그인 비밀번호 토글 버튼 이벤트
+if (passwordToggle) {
+  passwordToggle.addEventListener(
+    "click",
+    () => PasswordToggleClick("loginPassword", "passwordToggle") //아규먼트가 있으면 함수명(아규먼트)로 하면 안되고 () => 함수명(아규먼트)로 해야함
+  ); //함수명만 있는 경우에는 ()=> 없어도 됐었음
+}
+
+// 회원가입 비밀번호 토글 버튼 이벤트
+
+if (signupPasswordToggle) {
+  signupPasswordToggle.addEventListener("click", () =>
+    PasswordToggleClick("signupPassword", "signupPasswordToggle")
+  );
+}
+if (passwordCheckToggle) {
+  passwordCheckToggle.addEventListener("click", () =>
+    PasswordToggleClick("signupPasswordCheck", "passwordCheckToggle")
+  );
+}
+
 // 이메일 focusout
 if (loginEmail) {
   loginEmail.addEventListener("focusout", LoginEmailFocusout);
@@ -196,6 +282,22 @@ if (loginButton) {
 if (signupButton) {
   signupButton.addEventListener("click", SignupButtonClick);
 }
+
+// // 로그인 비밀번호 토글 버튼 이벤트
+// if (passwordToggle) {
+//   passwordToggle.addEventListener("click", LoginPasswordToggleClick);
+// }
+
+// // 회원가입 비밀번호 토글 버튼 이벤트
+// const signupPasswordToggle = document.getElementById("signupPasswordToggle");
+// const passwordCheckToggle = document.getElementById("passwordCheckToggle");
+
+// if (signupPasswordToggle) {
+//   signupPasswordToggle.addEventListener("click", SignupPasswordToggleClick);
+// }
+// if (passwordCheckToggle) {
+//   passwordCheckToggle.addEventListener("click", SignupPasswordCheckToggleClick);
+// }
 
 // 이메일 형식 검증 함수
 function isValidEmail(email) {
