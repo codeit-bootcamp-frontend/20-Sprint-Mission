@@ -61,6 +61,10 @@ form {
   font-weight: 600;
   cursor: pointer;
 }
+.auth_button:disabled {
+  background-color: var(--gray-400);
+  cursor: not-allowed;
+}
 
 /* 공통 입력 필드 스타일 */
 .auth_input {
@@ -167,4 +171,21 @@ form {
     width: 100%;
     max-width: 400px;
   }
+}
+
+.empty_input {
+  border: var(--errer-red) solid 1px;
+}
+
+.error-message {
+  color: var(--errer-red);
+  font-size: 14px;
+  margin-top: 8px;
+  margin-left: 16px;
+  font-weight: 600;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
 }

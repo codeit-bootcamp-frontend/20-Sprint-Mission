@@ -15,22 +15,23 @@
       </div>
       <form>
         <div class="form-field">
-          <label class="auth_label" for="accountEmail">이메일</label>
+          <label class="auth_label" for="loginEmail">이메일</label>
           <input
             class="auth_input"
-            id="accountEmail"
+            id="loginEmail"
             name="accountEmail"
             type="email"
             required
           />
+          <div class="error-message" id="emailError"></div>
         </div>
 
         <div class="form-field">
-          <label class="auth_label" for="userPw">비밀번호</label>
+          <label class="auth_label" for="loginPassword">비밀번호</label>
           <div class="password-input-container">
             <input
               class="auth_input password-input"
-              id="userPw"
+              id="loginPassword"
               name="userPw"
               type="password"
               required
@@ -40,7 +41,11 @@
             </button>
           </div>
         </div>
-        <button class="auth_button" type="submit">로그인</button>
+        <div class="error-message" id="passwordError"></div>
+
+        <button class="auth_button" id="loginButton" type="submit" disabled>
+          로그인
+        </button>
       </form>
       <div class="easy_auth">
         <div class="easy_auth_left">간편 로그인 하기</div>
@@ -57,5 +62,6 @@
         <p>판다마켓이 처음인가요? <a href="signup.html">회원가입</a></p>
       </div>
     </div>
+    <script src="../js/auth.js"></script>
   </body>
 </html>

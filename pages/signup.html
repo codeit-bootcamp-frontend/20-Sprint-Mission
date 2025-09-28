@@ -15,48 +15,55 @@
       </div>
       <form>
         <div class="form-field">
-          <label class="auth_label" for="accountEmail">이메일</label>
+          <label class="auth_label" for="signupEmail">이메일</label>
           <input
             class="auth_input"
-            id="accountEmail"
+            id="signupEmail"
             name="accountEmail"
             type="email"
             required
           />
+          <div class="error-message" id="signupEmailError"></div>
         </div>
+
         <div class="form-field">
-          <label class="auth_label" for="nickname">닉네임</label>
+          <label class="auth_label" for="signupNickname">닉네임</label>
           <input
             class="auth_input"
-            id="nickname"
+            id="signupNickname"
             name="nickname"
             type="text"
             required
           />
+          <div class="error-message" id="nicknameError"></div>
         </div>
 
         <div class="form-field">
-          <label class="auth_label" for="userPw">비밀번호</label>
+          <label class="auth_label" for="signupPassword">비밀번호</label>
           <div class="password-input-container">
             <input
               class="auth_input password-input"
-              id="userPw"
+              id="signupPassword"
               name="userPw"
               type="password"
               required
             />
+
             <button class="password-toggle" type="button">
               <img src="../img/eye_off.svg" alt="eye_off" />
             </button>
           </div>
+          <div class="error-message" id="signupPasswordError"></div>
         </div>
 
         <div class="form-field">
-          <label class="auth_label" for="userPw">비밀번호 확인</label><br />
+          <label class="auth_label" for="signupPasswordCheck"
+            >비밀번호 확인</label
+          ><br />
           <div class="password-input-container">
             <input
               class="auth_input password-input"
-              id="userPwCheck"
+              id="signupPasswordCheck"
               name="userPwCheck"
               type="password"
               required
@@ -65,8 +72,12 @@
               <img src="../img/eye_on.svg" alt="eye_on" />
             </button>
           </div>
+          <div class="error-message" id="signupPasswordCheckError"></div>
         </div>
-        <button class="auth_button" type="submit">회원가입</button>
+
+        <button class="auth_button" id="signupButton" type="submit" disabled>
+          회원가입
+        </button>
       </form>
       <div class="easy_auth">
         <div class="easy_auth_left">간편 로그인 하기</div>
@@ -83,5 +94,6 @@
         <p>이미 회원이신가요? <a href="login.html">로그인</a></p>
       </div>
     </div>
+    <script src="../js/auth.js"></script>
   </body>
 </html>
