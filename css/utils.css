@@ -19,7 +19,7 @@
   --error-red: #f74747;
 }
 
-.blue-button {
+.active-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,4 +33,13 @@
   &:hover {
     background-color: var(--hover-btn);
   }
+}
+
+.disabled-button {
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  background: var(--gray400);
+  color: var(--gray100);
 }

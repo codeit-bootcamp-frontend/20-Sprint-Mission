@@ -4,6 +4,7 @@ import { isMin8, isRequired, isValidEmail } from "./utils.js";
 const form = document.querySelector(".login-container");
 const userEmailInput = document.getElementById("userEmail");
 const userPasswordInput = document.getElementById("userPassword");
+const submitButton = document.getElementById("submit-button");
 
 // 순서대로 검사 처음 실패한 메시지 노출
 const FIELDS = [
@@ -23,6 +24,7 @@ const FIELDS = [
   },
 ];
 
+/** input 유효성 검사 */
 const validateField = (fieldEl, rules) => {
   const value = fieldEl.value;
   for (const { test, message } of rules) {
@@ -32,6 +34,19 @@ const validateField = (fieldEl, rules) => {
     }
   }
   clearError(fieldEl);
+};
+
+/** input 태그 조건 만족시 버튼 활성화 */
+const reevaluate = () => {
+  // 이메일 유효성 검사 && 문자열 최소 입력 확인
+  const ok =
+    isValidEmail(userEmailInput.value) && isMin8(userPasswordInput.value);
+
+  // 두 조건을 만족할시 disabled false
+  submitButton.disabled = !ok;
+
+  submitButton.classList.toggle("active-button", ok);
+  submitButton.classList.toggle("disabled-button", !ok);
 };
 
 // 이벤트 위임
@@ -46,4 +61,5 @@ form.addEventListener("input", (e) => {
   const field = FIELDS.find((f) => f.el === e.target);
   if (!field) return;
   validateField(field.el, field.rules);
+  reevaluate();
 });
