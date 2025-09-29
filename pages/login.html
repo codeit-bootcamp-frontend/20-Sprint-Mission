@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>판다마켓</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/auth.css" />
+  </head>
+  <body>
+    <div class="auth_container">
+      <div class="auth_logo">
+        <a href="../index.html">
+          <img class="auth_logo_img" src="../img/logo.png" alt="logo" />
+        </a>
+      </div>
+      <form>
+        <div class="form-field">
+          <label class="auth_label" for="accountEmail">이메일</label>
+          <input
+            class="auth_input"
+            id="accountEmail"
+            name="accountEmail"
+            type="email"
+            required
+          />
+        </div>
+
+        <div class="form-field">
+          <label class="auth_label" for="userPw">비밀번호</label>
+          <div class="password-input-container">
+            <input
+              class="auth_input password-input"
+              id="userPw"
+              name="userPw"
+              type="password"
+              required
+            />
+            <button class="password-toggle" type="button">
+              <img src="../img/eye_off.svg" alt="eye_off" />
+            </button>
+          </div>
+        </div>
+        <button class="auth_button" type="submit">로그인</button>
+      </form>
+      <div class="easy_auth">
+        <div class="easy_auth_left">간편 로그인 하기</div>
+        <div class="easy_auth_right">
+          <div class="easy_auth_google">
+            <img src="../img/google_logo.svg" alt="google" />
+          </div>
+          <div class="easy_auth_kakao">
+            <img src="../img/kakao_logo.svg" alt="kakao" />
+          </div>
+        </div>
+      </div>
+      <div class="auth_link">
+        <p>판다마켓이 처음인가요? <a href="signup.html">회원가입</a></p>
+      </div>
+    </div>
+  </body>
+</html>
