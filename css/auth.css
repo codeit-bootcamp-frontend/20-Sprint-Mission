@@ -111,6 +111,19 @@ label {
   color: var(--hover-btn);
 }
 
+.is-invalid {
+  border: 1px solid var(--error-red);
+  margin-bottom: 8px;
+}
+
+.is-error-message {
+  padding-left: 16px;
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--error-red);
+}
+
 /** 모바일 사이즈 */
 @media (max-width: 767px) {
   section {

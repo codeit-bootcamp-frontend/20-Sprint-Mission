@@ -15,6 +15,8 @@
   --hover-btn: #1967d6;
   --click-btn: #1251aa;
   --inactive-btn: #9ca3af;
+  /* red */
+  --error-red: #f74747;
 }
 
 .blue-button {
