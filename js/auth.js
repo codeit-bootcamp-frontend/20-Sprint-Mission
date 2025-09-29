@@ -1,5 +1,6 @@
 /** 에러 보이기 */
 const showError = (input, message) => {
+  input.classList.remove("is-valid");
   input.classList.add("is-invalid");
   const next = input.nextElementSibling;
   if (next && next.classList.contains("is-error-message")) {
@@ -13,10 +14,11 @@ const showError = (input, message) => {
 };
 
 /** 에러 클리어 */
-const clearError = (input) => {
+const clearError = (input, type = false) => {
   input.classList.remove("is-invalid");
   const next = input.nextElementSibling;
   if (next && next.classList.contains("is-error-message")) next.remove();
+  if (type) input.classList.add("is-valid");
 };
 
 /** 비밀번호 보이기/숨기기 핸들러 */
@@ -43,7 +45,7 @@ const toggleVisibility = (e) => {
 };
 
 /** input 유효성 검사 */
-const validateField = (fieldEl, rules) => {
+const validateField = (fieldEl, rules, type) => {
   const value = fieldEl.value;
   for (const { test, message } of rules) {
     if (!test(value)) {
@@ -51,7 +53,7 @@ const validateField = (fieldEl, rules) => {
       return;
     }
   }
-  clearError(fieldEl);
+  clearError(fieldEl, type);
 };
 
 export { clearError, showError, toggleVisibility, validateField };

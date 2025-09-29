@@ -20,14 +20,13 @@ const validatePasswordConfirm = () => {
   const confirm = userPasswordCheckInput.value.trim();
 
   if (!confirm) {
-    showError(userPasswordCheckInput, "비밀번호 확인을 입력해주세요.");
     return false;
   }
   if (!isSame(pwd, confirm)) {
     showError(userPasswordCheckInput, "비밀번호가 일치하지 않습니다.");
     return false;
   }
-  clearError(userPasswordCheckInput);
+  clearError(userPasswordCheckInput, true);
   return true;
 };
 
@@ -54,6 +53,7 @@ const FIELDS = [
   {
     el: userPasswordCheckInput,
     rules: [
+      { test: isRequired, message: "비밀번호 확인을 입력해주세요." },
       {
         test: validatePasswordConfirm,
         message: "비밀번호가 일치하지 않습니다.",
@@ -81,15 +81,14 @@ const reevaluate = () => {
 form.addEventListener("focusout", (e) => {
   const field = FIELDS.find((f) => f.el === e.target);
   if (!field) return;
-  validateField(field.el, field.rules);
-  validatePasswordConfirm();
+  validateField(field.el, field.rules, true);
 });
 
 // 입력중 조건 만족시 클리어
 form.addEventListener("input", (e) => {
   const field = FIELDS.find((f) => f.el === e.target);
   if (!field) return;
-  validateField(field.el, field.rules);
+  validateField(field.el, field.rules, true);
   validatePasswordConfirm();
   reevaluate();
 });
