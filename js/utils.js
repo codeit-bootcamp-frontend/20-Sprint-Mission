@@ -7,4 +7,7 @@ const isMin8 = (v) => v.trim().length >= 8;
 /** 공백 확인 */
 const isRequired = (v) => v.trim().length > 0;
 
-export { isMin8, isRequired, isValidEmail };
+/** 문자열 일치 확인 */
+const isSame = (a, b) => String(a) === String(b);
+
+export { isMin8, isRequired, isSame, isValidEmail };

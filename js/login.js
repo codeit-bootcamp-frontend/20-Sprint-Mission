@@ -1,4 +1,4 @@
-import { clearError, showError } from "./auth.js";
+import { toggleVisibility, validateField } from "./auth.js";
 import { isMin8, isRequired, isValidEmail } from "./utils.js";
 
 const form = document.querySelector(".login-container");
@@ -25,19 +25,6 @@ const FIELDS = [
   },
 ];
 
-/** input 유효성 검사 */
-const validateField = (fieldEl, rules) => {
-  const value = fieldEl.value;
-  for (const { test, message } of rules) {
-    if (!test(value)) {
-      showError(fieldEl, message);
-      return;
-    }
-  }
-  clearError(fieldEl);
-};
-
-/** input 태그 조건 만족시 버튼 활성화 */
 const reevaluate = () => {
   // 이메일 유효성 검사 && 문자열 최소 입력 확인
   const ok =
@@ -50,29 +37,6 @@ const reevaluate = () => {
   submitButton.classList.toggle("disabled-button", !ok);
 };
 
-/** 비밀번호 보이기/숨기기 핸들러 */
-const toggleVisibility = (e) => {
-  const btn = e.currentTarget;
-  const container = btn.closest(".password-container");
-  const input = container?.querySelector(
-    'input[type="password"], input[type="text"]'
-  );
-  const img = btn.querySelector("img");
-
-  // input이 없으면 핸들러 종료
-  if (!input) return;
-
-  const toShow = input.type === "password";
-  input.type = toShow ? "text" : "password";
-
-  if (img) {
-    img.src = toShow
-      ? "/imgs/ic_visibility_on.png"
-      : "/imgs/ic_visibility_off.png";
-    img.alt = toShow ? "비밀번호 보이기 버튼" : "비밀번호 숨기기 버튼";
-  }
-};
-
 // 이벤트 위임을 통한 이벤트 리스너 추가
 form.addEventListener("focusout", (e) => {
   const field = FIELDS.find((f) => f.el === e.target);
@@ -80,7 +44,7 @@ form.addEventListener("focusout", (e) => {
   validateField(field.el, field.rules);
 });
 
-// 입력중 조건 만족시 클리어
+// 입력중 조건 만족 확인
 form.addEventListener("input", (e) => {
   const field = FIELDS.find((f) => f.el === e.target);
   if (!field) return;
