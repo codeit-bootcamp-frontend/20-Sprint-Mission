@@ -8,12 +8,18 @@
   font-family: "pretendard", sans-serif;
 }
 
+html {
+  height: 100%;
+  /* html자체의 height이 작았어서 body의 flex가 적용 안됐던 것. */
+}
+
 body {
+  height: 100%;
   background-color: #fcfcfc;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* min-height: 100vh; */
 }
 
 /* 공통 폼 스타일 */
@@ -60,6 +66,10 @@ form {
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
+}
+.auth_button:disabled {
+  background-color: var(--gray-400);
+  cursor: not-allowed;
 }
 
 /* 공통 입력 필드 스타일 */
@@ -154,17 +164,32 @@ form {
   color: var(--blue);
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .auth_container {
     padding: 0 16px;
-    width: 100%;
   }
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .auth_container {
-    padding: 0 16px;
-    width: 100%;
     max-width: 400px;
+    padding: 0;
   }
+}
+
+.empty_input {
+  border: var(--errer-red) solid 1px;
+}
+
+.error-message {
+  color: var(--errer-red);
+  font-size: 14px;
+  margin-top: 8px;
+  margin-left: 16px;
+  font-weight: 600;
+  display: none;
+}
+
+.error-message.show {
+  display: block;
 }

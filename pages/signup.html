@@ -1,8 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <title>판다마켓</title>
+    <title>판다마켓 회원가입</title>
+
+    <!-- 파비콘 -->
+    <link rel="icon" type="image/png" href="../img/panda_face.png" />
+
+    <!-- SNS 공유 미리보기 메타 태그 -->
+    <meta property="og:title" content="판다 마켓 회원가입" />
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta
+      property="og:image"
+      content="https://flexible.img.hani.co.kr/flexible/normal/640/453/imgdb/original/2023/1122/20231122501048.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://dayeon-codeit-sprint-4.netlify.app/pages/signup.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="판다 마켓" />
+
+    <!-- Twitter 카드 메타 태그 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="판다 마켓" />
+    <meta
+      name="twitter:description"
+      content="일상의 모든 물건을 거래해보세요"
+    />
+    <meta
+      name="twitter:image"
+      content="https://flexible.img.hani.co.kr/flexible/normal/640/453/imgdb/original/2023/1122/20231122501048.jpg"
+    />
+
+    <!-- 기본 메타 태그 -->
+    <meta name="description" content="일상의 모든 물건을 거래해보세요" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/auth.css" />
   </head>
@@ -15,58 +48,77 @@
       </div>
       <form>
         <div class="form-field">
-          <label class="auth_label" for="accountEmail">이메일</label>
+          <label class="auth_label" for="signupEmail">이메일</label>
           <input
             class="auth_input"
-            id="accountEmail"
+            id="signupEmail"
             name="accountEmail"
             type="email"
             required
           />
+          <div class="error-message" id="signupEmailError"></div>
         </div>
+
         <div class="form-field">
-          <label class="auth_label" for="nickname">닉네임</label>
+          <label class="auth_label" for="signupNickname">닉네임</label>
           <input
             class="auth_input"
-            id="nickname"
+            id="signupNickname"
             name="nickname"
             type="text"
             required
           />
+          <div class="error-message" id="nicknameError"></div>
         </div>
 
         <div class="form-field">
-          <label class="auth_label" for="userPw">비밀번호</label>
+          <label class="auth_label" for="signupPassword">비밀번호</label>
           <div class="password-input-container">
             <input
               class="auth_input password-input"
-              id="userPw"
+              id="signupPassword"
               name="userPw"
               type="password"
               required
             />
-            <button class="password-toggle" type="button">
+
+            <button
+              class="password-toggle"
+              id="signupPasswordToggle"
+              type="button"
+            >
               <img src="../img/eye_off.svg" alt="eye_off" />
             </button>
           </div>
+          <div class="error-message" id="signupPasswordError"></div>
         </div>
 
         <div class="form-field">
-          <label class="auth_label" for="userPw">비밀번호 확인</label><br />
+          <label class="auth_label" for="signupPasswordCheck"
+            >비밀번호 확인</label
+          ><br />
           <div class="password-input-container">
             <input
               class="auth_input password-input"
-              id="userPwCheck"
+              id="signupPasswordCheck"
               name="userPwCheck"
               type="password"
               required
             />
-            <button class="password-toggle" type="button">
-              <img src="../img/eye_on.svg" alt="eye_on" />
+            <button
+              class="password-toggle"
+              id="passwordCheckToggle"
+              type="button"
+            >
+              <img src="../img/eye_off.svg" alt="eye_off" />
             </button>
           </div>
+          <div class="error-message" id="signupPasswordCheckError"></div>
         </div>
-        <button class="auth_button" type="submit">회원가입</button>
+
+        <button class="auth_button" id="signupButton" type="submit" disabled>
+          회원가입
+        </button>
       </form>
       <div class="easy_auth">
         <div class="easy_auth_left">간편 로그인 하기</div>
@@ -83,5 +135,6 @@
         <p>이미 회원이신가요? <a href="login.html">로그인</a></p>
       </div>
     </div>
+    <script src="../js/auth.js"></script>
   </body>
 </html>
