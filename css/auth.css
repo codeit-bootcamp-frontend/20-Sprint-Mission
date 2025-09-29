@@ -8,12 +8,18 @@
   font-family: "pretendard", sans-serif;
 }
 
+html {
+  height: 100%;
+  /* html자체의 height이 작았어서 body의 flex가 적용 안됐던 것. */
+}
+
 body {
+  height: 100%;
   background-color: #fcfcfc;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 /* 공통 폼 스타일 */
