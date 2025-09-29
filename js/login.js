@@ -52,6 +52,12 @@ form.addEventListener("input", (e) => {
   reevaluate();
 });
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  window.location.href = "../items.html";
+});
+
 // 심화 과제
 for (const btn of visibilityButton) {
   btn.addEventListener("click", toggleVisibility);
