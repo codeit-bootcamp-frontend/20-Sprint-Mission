@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* 공통 폼 스타일 */
@@ -158,18 +158,16 @@ form {
   color: var(--blue);
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .auth_container {
     padding: 0 16px;
-    width: 100%;
   }
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .auth_container {
-    padding: 0 16px;
-    width: 100%;
     max-width: 400px;
+    padding: 0;
   }
 }
 
