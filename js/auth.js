@@ -162,7 +162,7 @@ const SignupButtonClick = (e) => {
   e.preventDefault();
   if (!signupButton.disabled) {
     console.log("회원가입 시도:", signupEmail.value);
-    window.location.href = "../pages/items.html";
+    window.location.href = "../pages/login.html";
   }
 };
 
