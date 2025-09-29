@@ -5,6 +5,7 @@ const form = document.querySelector(".login-container");
 const userEmailInput = document.getElementById("userEmail");
 const userPasswordInput = document.getElementById("userPassword");
 const submitButton = document.getElementById("submit-button");
+const visibilityButton = document.getElementsByClassName("btn_visibility");
 
 // 순서대로 검사 처음 실패한 메시지 노출
 const FIELDS = [
@@ -49,7 +50,30 @@ const reevaluate = () => {
   submitButton.classList.toggle("disabled-button", !ok);
 };
 
-// 이벤트 위임
+/** 비밀번호 보이기/숨기기 핸들러 */
+const toggleVisibility = (e) => {
+  const btn = e.currentTarget;
+  const container = btn.closest(".password-container");
+  const input = container?.querySelector(
+    'input[type="password"], input[type="text"]'
+  );
+  const img = btn.querySelector("img");
+
+  // input이 없으면 핸들러 종료
+  if (!input) return;
+
+  const toShow = input.type === "password";
+  input.type = toShow ? "text" : "password";
+
+  if (img) {
+    img.src = toShow
+      ? "/imgs/ic_visibility_on.png"
+      : "/imgs/ic_visibility_off.png";
+    img.alt = toShow ? "비밀번호 보이기 버튼" : "비밀번호 숨기기 버튼";
+  }
+};
+
+// 이벤트 위임을 통한 이벤트 리스너 추가
 form.addEventListener("focusout", (e) => {
   const field = FIELDS.find((f) => f.el === e.target);
   if (!field) return;
@@ -63,3 +87,8 @@ form.addEventListener("input", (e) => {
   validateField(field.el, field.rules);
   reevaluate();
 });
+
+// 심화 과제
+for (const btn of visibilityButton) {
+  btn.addEventListener("click", toggleVisibility);
+}
