@@ -122,3 +122,121 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
   font-weight:bold;
   line-height:1.4;
 }
+
+
+@media screen and (max-width: 1199px){
+
+  /* 테블릿 영역 */
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+
+  .inner{
+    width:auto;
+    padding:0 24px;
+  }
+  .btn.large{
+    max-width:36rem;
+  }
+  .header_inner{
+    padding: 0 24px;
+  }
+  .sec01{
+    height:auto;
+    min-height:771px;
+  }
+  .sec01>.inner{
+    position:relative;
+    width:100%;
+    padding-top:calc(771 / 744 * 100%);
+    background:url(../img/img_home_top.svg) no-repeat bottom 0 center / contain;
+    background-color:#CFE5FF;
+  }
+  .sec01 .visual_box{
+    position:absolute;
+    width:100%;
+    top: 84px;
+    left:50%;
+    margin-bottom:0;
+    padding:0 24px;
+    transform:translateX(-50%);
+    text-align:center;
+  }
+  .sec01 .visual_box h2{
+    width:auto;
+  }
+
+  section[class^="sec"]:not(.sec01):not(.sec05){
+    margin:2.4rem 0 5.2rem;
+  }
+
+  section[class^="sec"]:not(.sec01) .info_box{
+    width: 100%;
+    height: auto;
+    padding:0;
+    padding-top: calc(524 / 696 * 100%);
+    background-position: top center;
+    background-size: contain;
+  }
+  section[class^="sec"]:not(.sec01) .info_box .tit{
+    margin-top:2.4rem;
+  }
+
+  section[class^="sec"]:not(.sec01).sec03 .info_box{
+    padding: 0;
+    padding-top: calc(524 / 696 * 100%);
+    background-position: top center;
+  }
+
+  .sec05{
+    height:auto;
+    margin-top:5.6rem;
+  }
+  .sec05 .inner{
+    position:relative;
+    width: 100%;
+    padding: 0 24px;
+    padding-top: calc(927 / 744 * 100%);
+    background-position: bottom 0 center;
+    background-size: contain;
+  }
+  .sec05 .inner .brand_box{
+    position:absolute;
+    display:block;
+    width:100%;
+    padding:0 10px;
+    left:50%;
+    transform:translateX(-50%);
+    top:20rem;
+    text-align:center;
+  }
+  .footer .footer_inner{
+    width:100%;
+    padding:0 24px;
+    padding-top:3.2rem;
+  }
+  .footer .footer_inner .footer_list{
+    gap:6.4rem;
+  }
+}
+
+@media screen and (max-width: 767px){
+  /* 모바일 영역 */
+  html {
+    font-size: 50%; /* 1rem = 8px */
+  }
+  .header_inner{
+    padding: 0 16px;
+  }
+  .footer .footer_inner{
+    position:relative;
+  }
+  .footer .footer_list>li:first-child{
+    position:absolute;
+    bottom:3rem;
+  }
+  .sec05 .inner .brand_box{
+    top: 12rem;
+  }
+}
+

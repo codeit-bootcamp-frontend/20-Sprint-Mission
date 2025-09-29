@@ -11,6 +11,7 @@
   display:flex;
   background:#fff;
   justify-content:center;
+  z-index:99999999;
 }
 .header_inner{
   display:flex;
@@ -50,7 +51,7 @@
 }
 .footer .footer_inner{
   width:112rem;
-  padding-top:2rem;
+  padding-top:3.2rem;
 }
 .footer .footer_inner .footer_list{
   display:flex;
