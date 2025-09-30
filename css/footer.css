@@ -23,8 +23,20 @@ footer {
   gap: 12px;
 }
 
+/** 테블릿 사이즈 */
+@media (min-width: 768px) and (max-width: 1199px) {
+  footer {
+    width: 100%;
+    padding: 32px 104px;
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+}
+
 /** 모바일 사이즈 */
-@media (min-width: 375px) and (max-width: 767px) {
+@media (max-width: 767px) {
   footer {
     padding: 32px;
   }
@@ -50,20 +62,4 @@ footer {
   .footer-container > .footer-links {
     justify-content: flex-end;
   }
-}
-
-/** 테블릿 사이즈 */
-@media (min-width: 768px) and (max-width: 1199px) {
-  footer {
-    width: 100%;
-    padding: 32px 104px;
-  }
-
-  .footer-container {
-    width: 100%;
-  }
-}
-
-/** 데스크탑 사이즈 */
-@media (min-width: 1200px) {
 }

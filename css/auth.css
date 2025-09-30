@@ -69,7 +69,6 @@ label {
   font-size: 2rem;
   height: 56px;
   line-height: 3.2rem;
-  background-color: var(--gray400);
 }
 
 .ease-login-container {
@@ -103,17 +102,34 @@ label {
 }
 
 .to-signup a {
-  color: var(--blue);
+  color: var(--btn);
   text-decoration: underline;
   margin-left: 4px;
 }
 
 .to-signup a:hover {
-  color: var(--hover-blue);
+  color: var(--hover-btn);
+}
+
+.is-invalid {
+  border: 1px solid var(--error-red);
+  margin-bottom: 8px;
+}
+
+.is-valid {
+  border: 1px solid var(--btn);
+}
+
+.is-error-message {
+  padding-left: 16px;
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--error-red);
 }
 
 /** 모바일 사이즈 */
-@media (min-width: 375px) and (max-width: 767px) {
+@media (max-width: 767px) {
   section {
     padding: 24px 14px;
     min-height: 100vh;
@@ -142,12 +158,4 @@ label {
     font-size: 1.6rem;
     color: var(--gray800);
   }
-}
-
-/** 테블릿 사이즈 */
-@media (min-width: 768px) and (max-width: 1199px) {
-}
-
-/** 데스크탑 사이즈 */
-@media (min-width: 1200px) {
 }
