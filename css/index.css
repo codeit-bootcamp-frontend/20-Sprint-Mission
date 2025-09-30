@@ -20,16 +20,16 @@
             --gray_700: #374151;
             --gray_800: #1F2937;
             --gray_900: #111827;
+
+            /* login color */
+            --input_bg: #3182f6;
         }
 
         body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'pretendard', 'Abhaya Libre ExtraBold' -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-                'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
-                sans-serif;
-            background-color: var(--body);
+            font-family: 'pretendard', sans-serif;
         }
 
         a {
