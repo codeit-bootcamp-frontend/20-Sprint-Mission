@@ -15,7 +15,7 @@
             <input class="login_input" type="text" placeholder="이메일을 입력해주세요">
             <p class="login_tx">비밀번호</p>
             <div class="input_wrapper">
-                <input class="login_input" type="password" placeholder="비밀번호를 입력해주세요">
+                <input class="login_input password" type="password" placeholder="비밀번호를 입력해주세요">
                 <img class="toggle_pw" src="img/btn_visibility_on.png" alt="비밀번호 보기">
             </div>
             <button class="login_btn">로그인</button>
@@ -34,4 +34,12 @@
         </div>
     </div>
 </body>
+<script>
+    const pwInput = document.querySelector(".password");
+    const toggleBtn = document.querySelector(".toggle_pw");
+
+    toggleBtn.addEventListener("click", () => {
+        pwInput.type = pwInput.type === "password" ? "text" : "password";
+    });
+</script>
 </html>
