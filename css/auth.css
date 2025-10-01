@@ -1,7 +1,9 @@
-
-/* login.html style */
+@import url("reset.css");
+@import url("variables.css");
+@import url("common.css");
 
 #cnt.login_area{
+  margin-top:7rem;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +12,7 @@
 
 
 .inp_box input[type="password"]{
-  background:#F3F4F6 url(../img/btn_visibility_off_24px.svg) no-repeat center right 15px;
+  background:var(--color-secondary100) url(../img/btn_visibility_off_24px.svg) no-repeat center right 15px;
   padding-right:54px;
 }
 
@@ -40,7 +42,7 @@
   border-radius: 0.8rem;
   align-items:center;
   justify-content: space-between;
-  color: #1F2937;
+  color: var(--color-secondary800);
   font-weight: 500;
   
 }
@@ -71,12 +73,12 @@
   gap:1rem;
   font-size:1.4rem;
   font-weight:500;
-  color:#1F2937;
+  color:var(--color-secondary800);
   justify-content: center;
   align-items: center;
 }
 .login_area .signup_desc .signup_link{
-  color:#3692FF;
+  color:var(--color-primary100);
   font-size:1.4rem;
   font-weight:500;
 }
@@ -84,4 +86,31 @@
 .login_area .signup_desc .signup_link:hover,
 .login_area .signup_desc .signup_link:focus{
   text-decoration:underline;
+}
+
+.inp_box input[type="password"]#password_confirm{
+  background-image:url(../img/btn_visibility_on_24px.svg);
+}
+
+
+
+@media screen and (max-width: 1199px){
+
+  /* 테블릿 영역 */
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+}
+
+@media screen and (max-width: 767px){
+  /* 모바일 영역 */
+  html {
+    font-size: 50%; /* 1rem = 8px */
+  }
+  #cnt.login_area{
+    padding:0 16px;
+  }
+  .login_area .login_wrap{
+    max-width:400px;
+  }
 }
