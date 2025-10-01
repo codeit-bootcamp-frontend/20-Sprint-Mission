@@ -35,6 +35,10 @@
   font-size:1px;
 }
 
+.inp_box{
+  position:relative;
+}
+
 .inp_box:not(:last-child){
   margin-bottom:1.5rem;
 }
@@ -58,3 +62,15 @@
   color:var(--color-secondary800);
 }
 
+/* 테블릿 영역 */
+@media screen and (max-width: 1199px){
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+}
+/* 모바일 영역 */
+@media screen and (max-width: 767px){
+  html {
+      font-size: 50%; /* 1rem = 8px */
+    }
+}

@@ -11,7 +11,7 @@
   display:flex;
   background:#fff;
   justify-content:center;
-  z-index:99999999;
+  z-index:999;
 }
 .header_inner{
   display:flex;
@@ -98,4 +98,15 @@
 }
 .sns_list .instagram{
   background-image:url(../img/ic_instagram.svg);
+}
+
+/* 모바일 영역 */
+@media screen and (max-width: 767px){
+
+  .header_inner .logo a{
+    background-position: center left -45px;
+    background-size: calc(100% + 45px) 100%;
+    width: 103px;
+    height: 56px;
+  }
 }

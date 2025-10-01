@@ -12,9 +12,23 @@
 
 
 .inp_box input[type="password"]{
-  background:var(--color-secondary100) url(../img/btn_visibility_off_24px.svg) no-repeat center right 15px;
+  background:var(--color-secondary100);
   padding-right:54px;
 }
+.inp_box .password_toggle_btn{
+  position:absolute;
+  bottom:0;
+  right:0;
+  display:block;
+  width:5.4rem;
+  height:5.6rem;
+  background:url(../img/btn_visibility_off_24px.svg) no-repeat center;
+  color:transparent;
+}
+.inp_box .password_toggle_btn{
+  background-image:url(../img/btn_visibility_on_24px.svg);
+}
+
 
 
 .login_area .login_wrap{
@@ -88,22 +102,10 @@
   text-decoration:underline;
 }
 
-.inp_box input[type="password"]#password_confirm{
-  background-image:url(../img/btn_visibility_on_24px.svg);
-}
 
 
-
-@media screen and (max-width: 1199px){
-
-  /* 테블릿 영역 */
-  html {
-    font-size: 56.25%; /* 1rem = 9px */
-  }
-}
-
-@media screen and (max-width: 767px){
-  /* 모바일 영역 */
+/* 모바일 영역 */
+@media screen and (max-width: 767px){  
   html {
     font-size: 50%; /* 1rem = 8px */
   }
