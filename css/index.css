@@ -20,16 +20,16 @@
             --gray_700: #374151;
             --gray_800: #1F2937;
             --gray_900: #111827;
+
+            /* login color */
+            --input_bg: #3182f6;
         }
 
         body {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'pretendard', 'Abhaya Libre ExtraBold' -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-                'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
-                sans-serif;
-            background-color: var(--body);
+            font-family: 'pretendard', sans-serif;
         }
 
         a {
@@ -53,7 +53,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 60%;
+            width: 100%;
             margin: 0 200px;
         }
 
@@ -102,7 +102,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 1110px;
+            max-width: 1110px;
         }
 
         section .main .main_all span {
@@ -280,11 +280,11 @@
         /* hover */
 
         header .login .logo_bt:hover {
-            background-color: var(--gray_400);
+            background-color: var(--primary_200);
         }
 
         section .main .main_all .items:hover {
-            background-color: var(--gray_400);
+            background-color: var(--primary_200);
         }
 
         /* media query */
