@@ -1,8 +1,9 @@
 @font-face {
-    font-family: 'Pretendard';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
-    font-weight: 100;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
+    format("woff");
+  font-weight: 100;
+  font-display: swap;
 }
 
 * {
@@ -13,7 +14,7 @@
 
 html,
 body {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   width: 100%;
 }
 
@@ -103,6 +104,7 @@ header {
   font-weight: 600;
   font-size: clamp(18px, 1vw, 20px);
   line-height: 32px;
+  white-space: nowrap;
 }
 
 .look-button:hover {
@@ -128,6 +130,7 @@ header {
   height: clamp(359.5px, 23.1vw, 444px);
   background-color: #fcfcfc;
   border-radius: 12px;
+  white-space: nowrap;
 }
 
 .section-item-reverse {
@@ -140,6 +143,7 @@ header {
   height: clamp(359.5px, 23.1vw, 444px);
   background-color: #fcfcfc;
   border-radius: 12px;
+  white-space: nowrap;
 }
 
 .item-text-reverse {
@@ -193,6 +197,7 @@ header {
   line-height: 140%;
   vertical-align: middle;
   color: #374151;
+  white-space: nowrap;
 }
 
 .banner-contents {
