@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +13,7 @@
 
 html,
 body {
-  font-family: Pretendard;
+  font-family: 'Pretendard';
   width: 100%;
 }
 
@@ -53,7 +60,7 @@ header {
   background-color: #1967d6;
 }
 
-/* section-look */
+/* start: section */
 .section-look {
   align-items: flex-end;
   background-color: #cfe5ff;
@@ -62,10 +69,8 @@ header {
 
 .section-look h2 {
   font-weight: 700;
-  font-style: bold;
   font-size: clamp(30px, 2.1vw, 40px);
   line-height: 140%;
-  letter-spacing: 0%;
   vertical-align: middle;
   color: #374151;
 }
@@ -109,7 +114,6 @@ header {
   height: clamp(309px, 17.7vw, 340px);
 }
 
-/* section-item */
 .section-items {
   align-items: center;
   height: clamp(680px, 37.5vw, 720px);
@@ -159,7 +163,6 @@ header {
 .item-text h2 {
   color: #374151;
   font-weight: 700;
-  font-style: bold;
   font-size: clamp(30px, 2.1vw, 40px);
   line-height: 140%;
   padding-bottom: clamp(16px, 1.2vw, 24px);
@@ -168,7 +171,6 @@ header {
 .item-text .item-description {
   color: #374151;
   font-weight: 500;
-  font-style: medium;
   font-size: clamp(16px, 1.2vw, 24px);
   line-height: 32px;
 }
@@ -176,6 +178,7 @@ header {
 .section-items-last {
   margin-bottom: 138px;
 }
+/* end: section */
 
 /* banner */
 .banner {
@@ -186,10 +189,8 @@ header {
 
 .banner h2 {
   font-weight: 700;
-  font-style: bold;
   font-size: clamp(30px, 2.1vw, 40px);
   line-height: 140%;
-  letter-spacing: 0%;
   vertical-align: middle;
   color: #374151;
 }
@@ -233,7 +234,6 @@ header {
 
 footer #footer-license {
   font-weight: 400;
-  font-style: regular;
   font-size: 16px;
   line-height: 100%;
   color: #9ca3af;
@@ -248,7 +248,6 @@ footer #footer-license {
 
 .footer-notice a {
   font-weight: 400;
-  font-style: regular;
   font-size: 16px;
   line-height: 100%;
   color: #e5e7eb;
@@ -266,10 +265,4 @@ footer #footer-license {
 .footer-sns img {
   width: 20px;
   height: 20px;
-}
-
-@media (max-width: 1920px) {
-  .header-bar {
-    padding: 0 200px;
-  }
 }
