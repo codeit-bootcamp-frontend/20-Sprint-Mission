@@ -25,6 +25,11 @@ body {
 
 header {
   background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .header-bar {
@@ -62,6 +67,10 @@ header {
 }
 
 /* start: section */
+main {
+  padding-top: 74px;
+}
+
 .section-look {
   align-items: flex-end;
   background-color: #cfe5ff;
