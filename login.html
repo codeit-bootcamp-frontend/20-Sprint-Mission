@@ -11,6 +11,7 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
+    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/auth.css" />
   </head>
@@ -19,7 +20,7 @@
       <a href="/" class="logo">
         <img src="/images/logo.webp" alt="판다마켓 로고" width="300" />
       </a>
-      <form action="http://127.0.0.1:5500/login.html">
+      <form action="">
         <label for="login-email">이메일</label>
         <input id="login-email" name="email" type="email" />
 
@@ -35,7 +36,7 @@
           </button>
         </div>
 
-        <button type="submit" id="auth-bt" class="button">로그인</button>
+        <button type="submit" class="button auth-bt">로그인</button>
       </form>
 
       <div class="simple-login">

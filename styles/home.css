@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-#login {
+.login {
   padding: 11px 43px;
   border-radius: 8px;
   font-size: 16px;
@@ -21,11 +21,11 @@
   background-size: 40%;
 }
 
-#hero {
+.hero {
   background-image: url("/images/header-img.webp");
 }
 
-#visit {
+.visit {
   padding: 12px 124px;
   border-radius: 40px;
   font-size: 20px;
@@ -84,7 +84,7 @@
   padding: 0 0 0 24px;
 }
 
-#main-footer {
+.main-footer {
   background-image: url("/images/footer-img.webp");
 }
 
