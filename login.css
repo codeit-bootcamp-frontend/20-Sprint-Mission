@@ -1,23 +1,4 @@
-@font-face {
-  font-family: "Pretendard";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff")
-    format("woff");
-  font-weight: 100;
-  font-display: swap;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 /* login.html, signup.html 공통 css */
-
-html,
-body {
-  font-family: "Pretendard";
-  width: 100%;
-}
 
 .container {
   display: flex;
