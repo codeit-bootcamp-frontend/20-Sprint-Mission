@@ -124,13 +124,11 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
 }
 
 
+/* 테블릿 영역 */
 @media screen and (max-width: 1199px){
-
-  /* 테블릿 영역 */
   html {
     font-size: 56.25%; /* 1rem = 9px */
   }
-
   .inner{
     width:auto;
     padding:0 24px;
@@ -148,7 +146,7 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
   .sec01>.inner{
     position:relative;
     width:100%;
-    padding-top:calc(771 / 744 * 100%);
+    aspect-ratio: 744 / 771; /* 가로:세로 */
     background:url(../img/img_home_top.svg) no-repeat bottom 0 center / contain;
     background-color:#CFE5FF;
   }
@@ -174,7 +172,7 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
     width: 100%;
     height: auto;
     padding:0;
-    padding-top: calc(524 / 696 * 100%);
+    padding-top: calc(524 / 696 * 100%); /* 세로:가로 */
     background-position: top center;
     background-size: contain;
   }
@@ -184,7 +182,7 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
 
   section[class^="sec"]:not(.sec01).sec03 .info_box{
     padding: 0;
-    padding-top: calc(524 / 696 * 100%);
+    padding-top: calc(524 / 696 * 100%); /* 세로:가로 */
     background-position: top center;
   }
 
@@ -196,7 +194,7 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
     position:relative;
     width: 100%;
     padding: 0 24px;
-    padding-top: calc(927 / 744 * 100%);
+    padding-top: calc(927 / 744 * 100%); /* 세로:가로 */
     background-position: bottom 0 center;
     background-size: contain;
   }
@@ -220,11 +218,11 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
   }
 }
 
+/* 모바일 영역 */
 @media screen and (max-width: 767px){
-  /* 모바일 영역 */
   html {
-    font-size: 50%; /* 1rem = 8px */
-  }
+      font-size: 50%; /* 1rem = 8px */
+    }
   .header_inner{
     padding: 0 16px;
   }
@@ -239,4 +237,3 @@ section[class^="sec"]:not(.sec01).sec03 .info_box{
     top: 12rem;
   }
 }
-
