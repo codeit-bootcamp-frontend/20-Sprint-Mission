@@ -11,6 +11,7 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
+    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/auth.css" />
   </head>
@@ -21,14 +22,29 @@
       </a>
       <form action="http://127.0.0.1:5500/signup.html">
         <label for="signup-email">이메일</label>
-        <input id="signup-email" name="email" type="email" />
+        <input
+          id="signup-email"
+          name="email"
+          type="email"
+          placeholder="이메일을 입력해주세요"
+        />
 
         <label for="signup-nickname">닉네임</label>
-        <input id="signup-nickname" name="nickname" type="text" />
+        <input
+          id="signup-nickname"
+          name="nickname"
+          type="text"
+          placeholder="닉네임을 입력해주세요"
+        />
 
         <label for="signup-password">비밀번호</label>
         <div class="pw-wrapper">
-          <input id="signup-password" name="password" type="password" />
+          <input
+            id="signup-password"
+            name="password"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+          />
           <button type="button">
             <img
               src="/images/no-view-pw.webp"
@@ -40,7 +56,12 @@
 
         <label for="signup-password-check">비밀번호 확인</label>
         <div class="pw-wrapper">
-          <input id="signup-password-check" name="password-check" type="text" />
+          <input
+            id="signup-password-check"
+            name="password-check"
+            type="text"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+          />
           <button type="button">
             <img
               src="/images/view-pw.webp"
@@ -50,7 +71,7 @@
           </button>
         </div>
 
-        <button type="submit" id="auth-bt" class="button">회원가입</button>
+        <button type="submit" class="button auth-bt">회원가입</button>
       </form>
 
       <div class="simple-login">

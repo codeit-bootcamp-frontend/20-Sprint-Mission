@@ -5,12 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>판다마켓</title>
     <link rel="icon" href="images/favicon.ico" />
+
+    <!-- 메타 태그 -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://meek-froyo-a1b0e7.netlify.app/" />
+    <meta property="og:title" content="판다마켓" />
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta
+      property="og:image"
+      content="https://meek-froyo-a1b0e7.netlify.app/images/header-img.webp"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://meek-froyo-a1b0e7.netlify.app/" />
+    <meta name="twitter:title" content="판다마켓" />
+    <meta
+      name="twitter:description"
+      content="일상의 모든 물건을 거래해보세요"
+    />
+    <meta
+      name="twitter:image"
+      content="https://meek-froyo-a1b0e7.netlify.app/images/header-img.webp"
+    />
+
+    <!-- CSS -->
     <link
       rel="stylesheet"
       as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
+    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/home.css" />
   </head>
@@ -19,13 +44,15 @@
       <a href="/">
         <img src="/images/logo.webp" alt="판다마켓 로고" width="150" />
       </a>
-      <a href="/login.html" id="login" class="button">로그인</a>
+      <a href="/login.html" class="button login">로그인</a>
     </header>
     <main>
-      <section id="hero" class="banner">
+      <section class="banner hero">
         <div class="wrapper">
-          <p class="strong-contents">일상의 모든 물건을<br />거래해 보세요</p>
-          <a href="/items.html" id="visit" class="button">구경하러 가기</a>
+          <p class="strong-contents top">
+            일상의 모든 물건을 <br />거래해 보세요
+          </p>
+          <a href="/items.html" class="button visit">구경하러 가기</a>
         </div>
       </section>
 
@@ -50,6 +77,12 @@
 
       <section class="wrapper main-contents">
         <div class="contents-box">
+          <img
+            class="img-non-desktop"
+            src="/images/contents-img-02.webp"
+            alt="판다마켓 메인 컨텐츠 서치"
+            width="50%"
+          />
           <div class="main-contents-container left">
             <p class="title-contents">Search</p>
             <strong class="strong-contents"
@@ -60,6 +93,7 @@
             </p>
           </div>
           <img
+            class="img-desktop-only"
             src="/images/contents-img-02.webp"
             alt="판다마켓 메인 컨텐츠 서치"
             width="50%"
@@ -86,9 +120,11 @@
         </div>
       </section>
 
-      <section id="main-footer" class="banner">
-        <div class="wrapper">
-          <p class="strong-contents">믿을 수 있는 <br />판다마켓 중고 거래</p>
+      <section class="banner main-footer">
+        <div class="wrapper main-footer">
+          <p class="strong-contents bottom">
+            믿을 수 있는 <br />판다마켓 중고 거래
+          </p>
         </div>
       </section>
     </main>
