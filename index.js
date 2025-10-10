@@ -1,5 +1,6 @@
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
+const passwordConfirm = document.querySelector("#password_confirm");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const checkEmailData = (e) => {
@@ -10,7 +11,7 @@ const checkEmailData = (e) => {
   let emailErrorMsgElement = document.createElement("p");
   emailErrorMsgElement.className = "error_msg";
 
-  const emailExistingErrorMsg = document.querySelector(".error_msg");
+  const emailExistingErrorMsg = emailElementParent.querySelector(".error_msg");
   if (emailExistingErrorMsg) {
     emailExistingErrorMsg.remove();
   }
@@ -38,7 +39,7 @@ const checkPasswordData = (e) => {
   let passwordErrorMsgElement = document.createElement("p");
   passwordErrorMsgElement.className = "error_msg";
 
-  const passwordExistingErrorMsg = document.querySelector(".error_msg");
+  const passwordExistingErrorMsg = passwordElementParent.querySelector(".error_msg");
   if (passwordExistingErrorMsg) {
     passwordExistingErrorMsg.remove();
   }
@@ -58,5 +59,35 @@ const checkPasswordData = (e) => {
   }
 };
 
+const checkPasswordConfirmData = (e) => {
+  const confirmElementParent = e.target.parentNode;
+  const confirmErrorMessegeEmpty = "비밀번호를 입력해주세요.";
+  const confirmErrorMessege = "비밀번호가 일치하지 않습니다..";
+
+  let confirmErrorMsgElement = document.createElement("p");
+  confirmErrorMsgElement.className = "error_msg";
+
+  const confirmExistingErrorMsg = confirmElementParent.querySelector(".error_msg");
+  if (confirmExistingErrorMsg) {
+    confirmExistingErrorMsg.remove();
+  }
+
+  if (passwordConfirm.value === "") {
+    passwordConfirm.classList.add("error");
+    confirmErrorMsgElement.textContent = confirmErrorMessegeEmpty;
+    confirmElementParent.append(confirmErrorMsgElement);
+  } else if (password.value !== passwordConfirm.value) {
+    passwordConfirm.classList.add("error");
+    confirmErrorMsgElement.textContent = confirmErrorMessege;
+    confirmElementParent.append(confirmErrorMsgElement);
+  } else {
+    passwordConfirm.classList.remove("error");
+    const confirmExistingError = confirmElementParent.querySelector(".error_msg");
+    if (confirmExistingError) confirmExistingError.remove();
+  }
+};
+
 email.addEventListener("focusout", checkEmailData);
 password.addEventListener("focusout", checkPasswordData);
+passwordConfirm.addEventListener("focusout", checkPasswordConfirmData);
+// 비밀번호 input과 비밀번호 확인 input의 값이 다른 경우, 비밀번호 확인 input 아래에 “비밀번호가 일치하지 않습니다..” 에러 메세지를 보입니다.
