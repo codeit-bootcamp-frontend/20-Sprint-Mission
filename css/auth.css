@@ -104,13 +104,19 @@
 
 
 #email.error,
-#password.error{
+#password.error,
+#password_confirm.error{
   border:solid 1px var(--color-error);
 }
 
 .inp_box .error_msg{
   margin-top:0.8rem;
   color: var(--color-error);
+}
+
+#loginButton:disabled,
+#signUpButton:disabled{
+  background:var(--color-secondary400);
 }
 
 /* 모바일 영역 */

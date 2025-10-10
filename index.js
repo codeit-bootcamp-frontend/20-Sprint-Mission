@@ -3,6 +3,10 @@ const password = document.querySelector("#password");
 const passwordConfirm = document.querySelector("#password_confirm");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const signUpButton = document.querySelector("#signUpButton");
+const loginButton = document.querySelector("#loginButton");
+signUpButton ? signUpButton.setAttribute("disabled", true) : loginButton.setAttribute("disabled", true);
+
 const checkEmailData = (e) => {
   const emailElementParent = e.target.parentNode;
   const emailErrorMessegeEmpty = "이메일을 입력해 주세요.";
@@ -29,6 +33,8 @@ const checkEmailData = (e) => {
     const emailExistingError = emailElementParent.querySelector(".error_msg");
     if (emailExistingError) emailExistingError.remove();
   }
+
+  submitButtonVisible();
 };
 
 const checkPasswordData = (e) => {
@@ -57,6 +63,8 @@ const checkPasswordData = (e) => {
     const passwordExistingError = passwordElementParent.querySelector(".error_msg");
     if (passwordExistingError) passwordExistingError.remove();
   }
+
+  submitButtonVisible();
 };
 
 const checkPasswordConfirmData = (e) => {
@@ -85,9 +93,26 @@ const checkPasswordConfirmData = (e) => {
     const confirmExistingError = confirmElementParent.querySelector(".error_msg");
     if (confirmExistingError) confirmExistingError.remove();
   }
+
+  submitButtonVisible();
 };
 
-email.addEventListener("focusout", checkEmailData);
-password.addEventListener("focusout", checkPasswordData);
-passwordConfirm.addEventListener("focusout", checkPasswordConfirmData);
-// 비밀번호 input과 비밀번호 확인 input의 값이 다른 경우, 비밀번호 확인 input 아래에 “비밀번호가 일치하지 않습니다..” 에러 메세지를 보입니다.
+function submitButtonVisible() {
+  const emailCheck = email ? emailRegex.test(email.value) : true;
+  const passwordCheck = password ? password.value.length >= 8 : true;
+  const passwordConfirmCheck = passwordConfirm ? password.value === passwordConfirm.value && passwordConfirm.value !== "" : true;
+
+  if (loginButton) {
+    const loginCehck = emailCheck && passwordCheck;
+    loginButton.toggleAttribute("disabled", !loginCehck);
+  }
+
+  if (signUpButton) {
+    const signUpCehck = emailCheck && passwordCheck && passwordConfirmCheck;
+    signUpButton.toggleAttribute("disabled", !signUpCehck);
+  }
+}
+
+email?.addEventListener("focusout", checkEmailData);
+password?.addEventListener("focusout", checkPasswordData);
+passwordConfirm?.addEventListener("focusout", checkPasswordConfirmData);
