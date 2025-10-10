@@ -17,7 +17,7 @@
 }
 .inp_box .password_toggle_btn{
   position:absolute;
-  bottom:0;
+  top:3.6rem;
   right:0;
   display:block;
   width:5.4rem;
@@ -103,6 +103,15 @@
 }
 
 
+#email.error,
+#password.error{
+  border:solid 1px var(--color-error);
+}
+
+.inp_box .error_msg{
+  margin-top:0.8rem;
+  color: var(--color-error);
+}
 
 /* 모바일 영역 */
 @media screen and (max-width: 767px){  
