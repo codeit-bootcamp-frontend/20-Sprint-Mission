@@ -121,9 +121,11 @@ const passwordVisibleFunction = (e) => {
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
     passwordVisibleButton.classList.add("visible");
+    passwordVisibleButton.textContent = "비밀번호 안보이기 버튼";
   } else {
     passwordInput.type = "password";
     passwordVisibleButton.classList.remove("visible");
+    passwordVisibleButton.textContent = "비밀번호 보이기 버튼";
   }
 };
 
