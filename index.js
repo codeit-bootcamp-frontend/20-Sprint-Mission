@@ -7,6 +7,8 @@ const signUpButton = document.querySelector("#signUpButton");
 const loginButton = document.querySelector("#loginButton");
 signUpButton ? signUpButton.setAttribute("disabled", true) : loginButton.setAttribute("disabled", true);
 
+const passwordVisibleButtons = document.querySelectorAll("#passwordVisibleButton");
+
 const checkEmailData = (e) => {
   const emailElementParent = e.target.parentNode;
   const emailErrorMessegeEmpty = "이메일을 입력해 주세요.";
@@ -113,6 +115,21 @@ function submitButtonVisible() {
   }
 }
 
+const passwordVisibleFunction = (e) => {
+  const passwordInput = e.target.parentNode.querySelector("input");
+  const passwordVisibleButton = passwordInput.nextElementSibling;
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    passwordVisibleButton.classList.add("visible");
+  } else {
+    passwordInput.type = "password";
+    passwordVisibleButton.classList.remove("visible");
+  }
+};
+
 email?.addEventListener("focusout", checkEmailData);
 password?.addEventListener("focusout", checkPasswordData);
 passwordConfirm?.addEventListener("focusout", checkPasswordConfirmData);
+passwordVisibleButtons?.forEach((button) => {
+  button.addEventListener("click", passwordVisibleFunction);
+});
