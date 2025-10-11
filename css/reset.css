@@ -9,6 +9,7 @@
 html {
   font-size: 10px;
   line-height: 1.5;
+  color: #374151;
 }
 
 body {
@@ -22,7 +23,6 @@ a {
 
 a:hover {
   cursor: pointer;
-  background-color: #1967d6;
 }
 
 ul,ol {

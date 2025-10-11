@@ -31,3 +31,7 @@ header {
  font-weight: 600;
  margin-right: 200px;
 }
+
+.login:hover {
+ background-color: #1251AA;
+}
