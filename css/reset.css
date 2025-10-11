@@ -20,6 +20,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+  background-color: #1967d6;
+}
+
 ul,ol {
   list-style: none;
 }

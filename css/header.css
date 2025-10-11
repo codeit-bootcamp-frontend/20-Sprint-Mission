@@ -2,6 +2,9 @@
 
 header {
  display: flex; 
+ max-width: 100%;
+ justify-content: space-between;
+ padding: 0;
  width: 100%; 
  height: 70px; 
  background-color: #fff; 
@@ -13,6 +16,7 @@ header {
  width: 148px; 
  margin-top: 10px; 
  background-color: #fff;
+ margin-left: 200px;
 }
 
 .login {
@@ -25,21 +29,5 @@ header {
  line-height: 48px;
  margin-top: 10px;
  font-weight: 600;
-}
-
-@media (max-width: 1919px) {
- header {
-  display: flex;
-  max-width: 100%;
-  justify-content: space-between;
-  padding: 0;
- }
-
- #HDinner {
-  margin-left: 200px;
- }
-
- .login {
-  margin-right: 200px;
- }
+ margin-right: 200px;
 }
