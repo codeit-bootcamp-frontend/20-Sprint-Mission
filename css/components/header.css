@@ -1,0 +1,59 @@
+.header{
+  background: var(--gray50); border-bottom:1px solid var(--line);
+  position: fixed; top:0; left:0; right:0; z-index:1000;
+}
+.header-inner{
+  max-width:var(--content-max); width:100%; height:70px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  gap:clamp(8px,2vw,24px);
+}
+/* 로고 */
+#logo{ display:block; 
+  width:clamp(110px,14vw,153px); 
+  height:clamp(36px,4.6vw,51px); }
+
+/* 로고 기본 스타일 */
+#logo img{ 
+  width:100%; 
+  height:100%; 
+  object-fit:contain; 
+  display:block; 
+}
+
+/* 로고 표시 제어 - 기본적으로 모바일 로고 숨김 */
+#logo .logo-mobile {
+  display: none;
+}
+
+#logo .logo-desktop {
+  display: block;
+}
+
+/* 모바일에서 로고 변경 */
+@media (max-width: 480px) {
+  #logo .logo-desktop {
+    display: none;
+  }
+  
+  #logo .logo-mobile {
+    display: block;
+  }
+}
+
+/* 로그인 버튼 */
+#login-button{
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  width:clamp(84px,11vw,128px); 
+  height:clamp(32px,5vw,48px);
+  background:var(--brand); 
+
+  color: var(--gray50); 
+  font-weight:600; 
+  font-size:16px;
+  line-height:1; 
+  border:0; 
+  border-radius:8px;
+}
+

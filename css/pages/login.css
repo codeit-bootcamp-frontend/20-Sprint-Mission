@@ -1,0 +1,582 @@
+/* 로그인 페이지 스타일 */
+
+/* 메인 컨테이너 */
+.main {
+  min-height: 100vh;
+  background: var(--gray50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  margin-top: 0; /* 헤더가 없으므로 상단 여백 제거 */
+  position: relative;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 480px;
+  height: 520px;
+  max-width: 100%;
+  background: var(--gray50);
+  border-radius: 12px;
+  padding: 32px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 로고 섹션 */
+.login-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-container {
+  position: relative;
+  width: 280px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-container a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo-container a:hover {
+  opacity: 0.8;
+}
+
+/* 폼 컨테이너 */
+.login-form {
+  width: 100%;
+  height: auto;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: auto;
+  min-height: 240px;
+}
+
+/* 입력 그룹 */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  height: auto;
+  min-height: 80px;
+}
+
+.input-label {
+  width: auto;
+  height: 20px;
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--gray800);
+  margin: 0;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  background: var(--gray100);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper {
+  padding: 12px 20px;
+  gap: 8px;
+}
+
+.input-field {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray800);
+}
+
+.input-field::placeholder {
+  color: var(--gray400);
+}
+
+.password-field {
+  padding-right: 50px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* 로그인 버튼 */
+.btn-login-submit {
+  width: 100%;
+  height: 48px;
+  background: var(--blue);
+  border: none;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-login-submit:hover {
+  background: var(--hover-blue);
+}
+
+.btn-text {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--gray100);
+  text-align: center;
+}
+
+/* 소셜 로그인 */
+.social-login {
+  width: 100%;
+  height: 60px;
+  background: #E6F2FF;
+  border-radius: 8px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.social-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+}
+
+.social-title {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--gray800);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  width: 80px;
+  height: 36px;
+}
+
+.social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+}
+
+.google-btn {
+  background: #FFFFFF;
+  border: 1px solid var(--gray50);
+}
+
+.kakao-btn {
+  background: #F5E14B;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* 회원가입 링크 */
+.signup-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.signup-text {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--gray800);
+}
+
+.signup-btn {
+  font-family: 'Pretendard', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--blue);
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.signup-btn:hover {
+  color: var(--hover-blue);
+}
+
+/* 태블릿 반응형 디자인 (iPad mini) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .main {
+    padding: 0px;
+    gap: 40px;
+  }
+  
+  .login-container {
+    width: 640px;
+    height: 618px;
+    gap: 24px;
+    padding: 0px;
+  }
+  
+  .logo-container {
+    width: 396px;
+    height: 132px;
+  }
+  
+  .login-form {
+    width: 640px;
+    height: 300px;
+    gap: 24px;
+  }
+  
+  .form-container {
+    width: 640px;
+    height: 220px;
+    gap: 24px;
+  }
+  
+  .input-group {
+    width: 640px;
+    height: 98px;
+    gap: 16px;
+  }
+  
+  .input-label {
+    font-size: 18px;
+    line-height: 26px;
+    height: 26px;
+  }
+  
+  .input-wrapper {
+    width: 640px;
+    height: 56px;
+    padding: 16px 24px;
+    border-radius: 12px;
+  }
+  
+  .password-wrapper {
+    padding: 16px 24px;
+    gap: 10px;
+  }
+  
+  .input-field {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .input-field::placeholder {
+    color: #9CA3AF;
+  }
+  
+  .btn-login-submit {
+    width: 640px;
+    height: 56px;
+    padding: 16px 124px;
+    border-radius: 40px;
+    background: #9CA3AF;
+  }
+  
+  .btn-text {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  
+  .social-login {
+    width: 640px;
+    height: 74px;
+    padding: 16px 23px;
+  }
+  
+  .social-header {
+    width: 594px;
+    height: 42px;
+    gap: 393px;
+  }
+  
+  .social-title {
+    font-size: 16px;
+    line-height: 26px;
+    width: 101px;
+    height: 26px;
+  }
+  
+  .social-buttons {
+    width: 100px;
+    height: 42px;
+    gap: 16px;
+  }
+  
+  .social-btn {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .social-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .social-icon img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .signup-link {
+    width: 100%;
+    height: 24px;
+    gap: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .signup-text {
+    font-size: 14px;
+    line-height: 24px;
+    width: 144px;
+    height: 24px;
+  }
+  
+  .signup-btn {
+    font-size: 14px;
+    line-height: 17px;
+    width: 49px;
+    height: 17px;
+  }
+}
+
+/* 모바일 반응형 디자인 */
+@media (max-width: 768px) {
+  .main {
+    padding: 0px;
+    gap: 24px;
+  }
+  
+  .login-container {
+    width: 343px;
+    height: 501px;
+    gap: 24px;
+    padding: 0px;
+    top: 80px;
+  }
+  
+  .logo-container {
+    width: 198px;
+    height: 66px;
+  }
+  
+  .login-form {
+    width: 343px;
+    height: 363px;
+    gap: 24px;
+  }
+  
+  .form-container {
+    width: 343px;
+    height: 264px;
+    gap: 16px;
+  }
+  
+  .input-group {
+    width: 343px;
+    height: 88px;
+    gap: 8px;
+  }
+  
+  .input-label {
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+  }
+  
+  .input-wrapper {
+    width: 343px;
+    height: 56px;
+    padding: 16px 24px;
+    border-radius: 12px;
+  }
+  
+  .password-wrapper {
+    padding: 16px 24px;
+    gap: 10px;
+  }
+  
+  .input-field {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .input-field::placeholder {
+    color: #9CA3AF;
+  }
+  
+  .btn-login-submit {
+    width: 343px;
+    height: 56px;
+    padding: 16px 124px;
+    border-radius: 40px;
+    background: #9CA3AF;
+  }
+  
+  .btn-text {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  
+  .social-login {
+    width: 343px;
+    height: 74px;
+    padding: 16px 24px;
+  }
+  
+  .social-header {
+    width: 296px;
+    height: 42px;
+    gap: 95px;
+  }
+  
+  .social-title {
+    font-size: 16px;
+    line-height: 26px;
+    width: 101px;
+    height: 26px;
+  }
+  
+  .social-buttons {
+    width: 100px;
+    height: 42px;
+    gap: 16px;
+  }
+  
+  .social-btn {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .social-icon {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .social-icon img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .signup-link {
+    width: 100%;
+    height: 24px;
+    gap: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .signup-text {
+    font-size: 14px;
+    line-height: 24px;
+    width: 144px;
+    height: 24px;
+  }
+  
+  .signup-btn {
+    font-size: 14px;
+    line-height: 17px;
+    width: 49px;
+    height: 17px;
+    color: #3182F6;
+  }
+}

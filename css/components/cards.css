@@ -1,0 +1,795 @@
+.section.section--hot,
+.section.section--search,
+.section.section--register{
+  background: transparent;
+  padding-block: 138px;
+  padding-inline: clamp(16px, 6vw, 40px);
+}
+
+/* 카드 패널 */
+.section .rail .grid-2{
+  width: 988px;
+  height: 444px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0px;
+  gap: 0px;
+  background: var(--gray50);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  grid-template-columns: none;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.section .rail .grid-2 > * {
+  margin: 0;
+  padding: 0;
+}
+
+/* 왼쪽 이미지 영역 */
+.card--image{
+  width: 579px;
+  height: 444px;
+  background: var(--gray100);
+  border-radius: 12px 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.card--image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 텍스트 영역 - 기본 */
+.card--text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 24px 40px 24px;
+  gap: 12px;
+  width: 409px;
+  height: 444px;
+  flex: 1;
+  order: 1;
+  flex-grow: 1;
+  background: transparent;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  justify-content: center;
+}
+
+/* 첫 번째 카드 (Hot item) 텍스트 영역 */
+.section.section--hot .card--text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 24px 40px 24px;
+  gap: 12px;
+  width: 409px;
+  height: 444px;
+  flex: 1;
+  order: 1;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* 첫 번째 카드 (Hot item) 스타일 */
+.section.section--hot .eyebrow{
+  width: 72px;
+  height: 26px;
+  font-family: 'Abhaya Libre ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  white-space: nowrap;
+}
+
+.section.section--hot .h2{
+  width: auto;
+  height: auto;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: var(--gray700);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.section.section--hot .desc{
+  width: auto;
+  height: auto;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: var(--gray700);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.eyebrow, .card-title, .card-desc{
+  width: 100%;
+  max-width: 100%;
+}
+
+.card-title{
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  color: var(--gray700);
+}
+
+.card-desc{
+  margin: 0;
+  color: var(--gray700);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.eyebrow{
+  font-style: normal;
+}
+
+.eyebrow{
+  width: auto;
+  height: auto;
+  margin: 0;
+  font-family: 'Abhaya Libre ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.card-title{
+  width: auto;
+  height: auto;
+  margin: 0;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: var(--gray700);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.card-desc{
+  width: auto;
+  height: auto;
+  margin: 0;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: var(--gray700);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* 검색 섹션: 글-사진 순서 */
+.section.section--search .grid-2{
+  flex-direction: row;
+}
+
+.section.section--search .card--image{
+  border-radius: 0 12px 12px 0;
+  order: 1;
+}
+
+/* 검색 섹션 텍스트 오른쪽 정렬 */
+.section.section--search .card--text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 40px 24px 40px 24px;
+  gap: 12px;
+  width: 409px;
+  height: 444px;
+  flex: 1;
+  order: 0;
+  flex-grow: 1;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section.section--search .eyebrow{
+  width: auto;
+  height: auto;
+  font-family: 'Abhaya Libre ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: right;
+  color: var(--blue);
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.section.section--search .h2{
+  width: auto;
+  height: auto;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  text-align: right;
+  letter-spacing: 0.02em;
+  color: var(--gray700);
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.section.section--search .desc{
+  width: auto;
+  height: auto;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: right;
+  color: var(--gray700);
+  margin: 0;
+  padding: 0;
+}
+
+/* 세 번째 카드 (Register) 텍스트 영역 */
+.section.section--register .card--text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 24px 40px 24px;
+  gap: 12px;
+  width: 409px;
+  height: 444px;
+  flex: 1;
+  order: 1;
+  flex-grow: 1;
+  background: transparent;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  justify-content: center;
+}
+
+/* 세 번째 카드 (Register) 스타일 */
+.section.section--register .eyebrow{
+  width: 71px;
+  height: 26px;
+  font-family: 'Abhaya Libre ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  white-space: nowrap;
+}
+
+.section.section--register .h2{
+  width: auto;
+  height: auto;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: var(--gray700);
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.section.section--register .desc{
+  width: auto;
+  height: auto;
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: var(--gray700);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1200px){
+  .card-row{ width: min(988px, 92vw); }
+}
+
+@media (max-width: 1024px){
+  .section.section--hot,
+  .section.section--search,
+  .section.section--register{
+    padding-block: 80px;
+    padding-inline: clamp(16px, 4vw, 32px);
+  }
+
+  html body main .section .rail .grid-2{
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    gap: 24px;
+    padding: 0;
+    display: flex;
+    grid-template-columns: none;
+    column-gap: 0;
+    row-gap: 0;
+    margin-right: 0;
+  }
+  
+  .grid-2{
+    flex-direction: column;
+    display: flex;
+    grid-template-columns: none;
+  }
+  
+  .section.section--hot .rail .grid-2,
+  .section.section--search .rail .grid-2,
+  .section.section--register .rail .grid-2{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    display: flex;
+  }
+
+  .section.section--hot .card--image,
+  .section.section--search .card--image,
+  .section.section--register .card--image{
+    width: 100%;
+    height: 524px;
+    border-radius: 14.2041px;
+    order: 0;
+  }
+  
+  .section.section--hot .card--image img,
+  .section.section--search .card--image img,
+  .section.section--register .card--image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section.section--hot .card--text,
+  .section.section--search .card--text,
+  .section.section--register .card--text{
+    width: 100%;
+    height: 160px;
+    padding: 0;
+    align-items: flex-start;
+    text-align: left;
+    order: 1;
+    gap: 24px;
+  }
+  
+  .section.section--hot .card--text{
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    gap: 24px;
+  }
+  
+  .section.section--hot .eyebrow{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--blue);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--hot .h2{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    color: var(--gray700);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--hot .desc{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--gray700);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--search .card--text{
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    gap: 24px;
+  }
+  
+  .section.section--search .eyebrow{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--blue);
+    text-align: right;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--search .h2{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    color: var(--gray700);
+    text-align: right;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--search .desc{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--gray700);
+    text-align: right;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section.section--register .card--text{
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    gap: 24px;
+  }
+  
+  .section.section--register .eyebrow{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--blue);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--register .h2{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+    color: var(--gray700);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--register .desc{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--gray700);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .eyebrow{ 
+    font-size: 16px; 
+    line-height: 22px; 
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px){
+  .section.section--hot,
+  .section.section--search,
+  .section.section--register{
+    padding-block: 60px;
+    padding-inline: 16px;
+  }
+  
+  html body main .section .rail .grid-2{
+    flex-direction: column;
+    width: 100%;
+    max-width: 344px;
+    height: auto;
+    gap: 24px;
+    display: flex;
+    grid-template-columns: none;
+    column-gap: 0;
+    row-gap: 0;
+    margin-right: 0;
+  }
+  
+  .grid-2{
+    flex-direction: column;
+    display: flex;
+    grid-template-columns: none;
+  }
+  
+  .section.section--hot .rail .grid-2,
+  .section.section--search .rail .grid-2,
+  .section.section--register .rail .grid-2{
+    width: 100%;
+    max-width: 344px;
+    height: auto;
+    flex-direction: column;
+    gap: 24px;
+    display: flex;
+  }
+
+  .section.section--hot .card--image,
+  .section.section--search .card--image,
+  .section.section--register .card--image{
+    width: 100%;
+    height: 259px;
+    border-radius: 7.02041px;
+    order: 0;
+  }
+  
+  .section.section--hot .card--image img,
+  .section.section--search .card--image img,
+  .section.section--register .card--image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section.section--hot .card--text,
+  .section.section--search .card--text,
+  .section.section--register .card--text{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    align-items: flex-start;
+    text-align: left;
+    order: 1;
+    gap: 16px;
+  }
+  
+  .section.section--hot .card--text{
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .section.section--hot .eyebrow{
+    width: 240px;
+    height: 26px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--blue);
+    text-align: left;
+  }
+  
+  .section.section--hot .h2{
+    width: 240px;
+    height: 32px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: var(--gray700);
+    text-align: left;
+  }
+  
+  .section.section--hot .desc{
+    width: 183px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+    color: var(--gray700);
+    text-align: left;
+  }
+  
+  .section.section--search .card--text{
+    align-items: flex-end;
+    text-align: right;
+    width: 100%;
+    max-width: 343px;
+    padding: 0;
+    gap: 16px;
+  }
+  
+  .section.section--search .eyebrow{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+    color: var(--blue);
+    text-align: right;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--search .h2{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 700;
+    color: var(--gray700);
+    text-align: right;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--search .desc{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 500;
+    color: var(--gray700);
+    text-align: right;
+    letter-spacing: 0.08em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section.section--register .card--text{
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 343px;
+    padding: 0;
+    gap: 16px;
+  }
+  
+  .section.section--register .eyebrow{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+    color: var(--blue);
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--register .h2{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 700;
+    color: var(--gray700);
+    text-align: left;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section.section--register .desc{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    font-size: 16px;
+    line-height: 120%;
+    font-weight: 500;
+    color: var(--gray700);
+    text-align: left;
+    letter-spacing: 0.08em;
+    margin: 0;
+    padding: 0;
+  }
+}

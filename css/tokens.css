@@ -1,0 +1,29 @@
+:root{
+  /* layout */
+  --content-max: 1120px;
+  --rail-max: 1920px;
+  --side-pad-min: 12px;
+  --side-pad-pc: 200px;
+
+  /* gray */
+  --gray900:#111827; --gray800:#1f2937; --gray700:#374151;
+  --gray600:#4b5563; --gray500:#6b7280; --gray400:#9ca3af;
+  --gray200:#e5e7eb; --gray100:#f3f4f6; --gray50:#f9fafb;
+
+  /* brand */
+  --blue:#3692ff; --hover-blue:#1967d6; --brand: var(--blue);
+
+  /* others */
+  --sky:#CFE4FB; --ink:#0F172A; --muted:#6B7280; --line:#DFDFDF; --panel:#F3F6FA;
+
+  /* scalable sizes */
+  --fs-hero:clamp(28px,2vw,36px);
+  --fs-h2:clamp(22px,1.6vw,28px);
+  --fs-body:clamp(15px,0.95vw,18px);
+  --fs-eyebrow:clamp(12px,0.9vw,14px);
+
+  --btn-h:clamp(44px,3.2vw,56px);
+  --space-xl:clamp(40px,4vw,96px);
+  --space-lg:clamp(28px,3vw,64px);
+  --radius-xl:20px;
+}

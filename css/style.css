@@ -1,0 +1,219 @@
+/* =========================================
+   Panda Market - style.css (final merged)
+========================================= */
+
+/* ---------- Tokens ---------- */
+:root{
+  /* layout */
+  --content-max: 1120px;   /* 내부 콘텐츠 고정 폭 */
+  --rail-max: 1920px;      /* 내부 위치 고정 기준 */
+  --side-pad-min: 12px;    /* 극좁을 때 좌우 최소 여백 */
+  --side-pad-pc: 200px;    /* PC 좌우 여백 */
+
+  /* gray */
+  --gray900: #111827;
+  --gray800: #1f2937;
+  --gray700: #374151;
+  --gray600: #4b5563;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50:  #f9fafb;
+
+  /* brand */
+  --blue: #3692ff;
+  --hover-blue: #1967d6;
+  --brand: var(--blue);
+
+  /* other colors */
+  --sky:   #CFE4FB;        /* 하늘색 배경 */
+  --ink:   #0F172A;        /* 본문 텍스트 */
+  --muted: #6B7280;        /* 보조 텍스트 */
+  --line:  #DFDFDF;        /* 헤더 하단 보더 */
+  --panel: #F3F6FA;        /* 밝은 패널 */
+
+  /* scalable sizes */
+  --fs-hero:    clamp(28px, 2vw, 36px);
+  --fs-h2:      clamp(22px, 1.6vw, 28px);
+  --fs-body:    clamp(15px, 0.95vw, 18px);
+  --fs-eyebrow: clamp(12px, 0.9vw, 14px);
+
+  --btn-h:      clamp(44px, 3.2vw, 56px);
+  --space-xl:   clamp(40px, 4vw, 96px);
+  --space-lg:   clamp(28px, 3vw, 64px);
+  --radius-xl:  20px;
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }  /* 오버플로우 방지 */
+html, body{
+  margin:0; padding:0;
+  font-family: ui-sans-serif, system-ui, "Noto Sans KR", "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  font-size: var(--fs-body);
+  overflow-x: hidden;  /* 안전장치 */
+}
+img, svg{ display:block; max-width:100%; height:auto; }
+a, button{ color:inherit; text-decoration:none; cursor:pointer; }
+:focus-visible{ outline:2px solid var(--brand); outline-offset:2px; }
+
+/* ---------- Layout ---------- */
+/* 레일: 좌우 패딩이 폭에 맞춰 자동 축소 */
+.rail{
+  width: 100%;
+  max-width: var(--rail-max);
+  margin: 0 auto;
+  padding-inline: clamp(var(--side-pad-min),
+                        (100% - var(--content-max)) / 2,
+                        var(--side-pad-pc));
+}
+.container{
+  max-width: var(--content-max);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---------- Utilities ---------- */
+/* 파란 버튼 유틸 (컴포넌트에서 크기/모서리 덮어씀) */
+.blue-button{
+  display:flex; align-items:center; justify-content:center;
+  background-color: var(--blue);
+  color: var(--gray100);
+  font-weight:600;
+  font-size:1rem;       /* 16px */
+  line-height:2rem;
+  border-radius:40px;   /* 기본 pill */
+  text-decoration:none;
+  transition: background-color .15s ease;
+}
+.blue-button:hover{ background-color: var(--hover-blue); }
+
+/* ---------- Header ---------- */
+.header{
+  background: var(--gray50);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-inner{
+  max-width: var(--content-max);
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content: space_between; /* (오타 방지용 아래 줄이 실제 적용) */
+  justify-content: space-between; /* 로고 왼쪽 / 버튼 오른쪽 */
+  gap: clamp(8px, 2vw, 24px);
+}
+/* 로고: 기본 153×51, 좁을수록 부드럽게 축소 */
+#logo{
+  display:block;
+  width: clamp(110px, 14vw, 153px);
+  height: clamp(36px, 4.6vw, 51px);
+}
+#logo img{
+  width:100%; height:100%;
+  object-fit:contain; display:block;
+}
+/* 로그인 버튼: 기본 128×48, 좁을수록 축소. 모서리 8px */
+#login-button{
+  display:flex; align-items:center; justify-content:center;
+  width: clamp(84px, 11vw, 128px);
+  height: clamp(32px, 5vw, 48px);
+  background: var(--brand);
+  color: var(--gray50); font-weight:700;
+  font-size: clamp(12px, 1.4vw, 16px);
+  line-height:1;
+  border:0; border-radius:8px;
+}
+/* 초좁은 폭에서 버튼이 아래 줄로 내려가도 우측 정렬 유지 */
+@media (max-width: 360px){
+  .header-inner{ flex-wrap: wrap; row-gap:8px; }
+  #login-button{ margin-left:auto; }
+}
+
+/* ---------- Hero ---------- */
+.hero{ background: var(--sky); }
+.hero .container{
+  display:flex; align-items:center; justify-content:space-between;
+  min-height: 440px;
+  gap: 40px;
+  padding-block: var(--space-lg);
+}
+.hero__title{
+  font-size: var(--fs-hero);
+  line-height: 1.25;
+  margin: 0 0 20px;
+}
+.btn-cta{
+  display:flex; align-items:center; justify-content:center;
+  width: 180px; height: 52px;             /* 필요시 피그마 수치로 조정 */
+  border:0; border-radius:999px;
+  font-weight:700;
+  background: var(--brand); color: var(--gray50);    /* 유틸 없이 단독 사용해도 OK */
+}
+.hero__art img{ width: clamp(560px, 36vw, 760px); }
+
+/* ---------- Sections ---------- */
+.section{ padding-block: var(--space-xl); }
+.grid-2{
+  display:grid; grid-template-columns: 1fr 1fr; align-items:center;
+  gap: 32px;
+}
+/* 이미지 카드: 밝은 배경, 그림자/그라데이션 없음 */
+.card--image{
+  background: var(--panel);
+  border-radius: var(--radius-xl);
+  padding: 16px;
+  box-shadow: none;
+}
+.card--text .eyebrow{
+  color: var(--brand);
+  font-size: var(--fs-eyebrow);
+  margin-bottom: 8px;
+  display:inline-block;
+}
+.card--text .h2{
+  font-size: var(--fs-h2);
+  line-height: 1.35;
+  margin: 0 0 10px;
+}
+.card--text .desc{
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ---------- Trust Banner ---------- */
+.section--trust.hero{ background: var(--sky); }
+.section--trust .container{
+  display:flex; align-items:center; justify-content:space-between;
+  gap: 40px;
+  padding-block: var(--space-xl);
+}
+.section--trust .h2{ margin:0 0 12px; }
+
+/* ---------- Footer (your snippet merged) ---------- */
+/* tag 선택자와 .footer 클래스 둘 다 대응 */
+footer, .footer{
+  background-color: var(--gray900);
+  color: var(--gray200);
+  height: 160px;
+  padding: 32px 8px;
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+}
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--content-max); /* 1120px */
+}
+.footer-links{
+  display: flex;
+  gap: 12px;
+  font-weight: 400;
+}
+.icon{ width:22px; height:22px; display:inline-block; }
