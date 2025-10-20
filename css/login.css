@@ -36,7 +36,7 @@
   margin-bottom: 16px;
 }
 .input-text input {
-  background-color: #f3f4f6;
+  background-color: var(--gray-100);
   border-radius: 12px;
   border-style: none;
   width: 100%;
@@ -44,7 +44,7 @@
   padding: 16px 24px;
 }
 .input-text input:focus {
-  outline: 2px solid #3692ff;
+  outline: 2px solid var(--blue);
   background-color: #fff;
 }
 .input-wrapper {
@@ -63,7 +63,7 @@
   border-radius: 40px;
   font-size: 20px;
   border-style: none;
-  background-color: #3692ff;
+  background-color: var(--blue);
   color: #ffffff;
   line-height: 50%;
 }
@@ -103,9 +103,9 @@
   justify-content: center;
 }
 .join span {
-  color: #1f2937;
+  color: var(--gray-800);
 }
 .join a {
-  color: #3692ff;
+  color: var(--blue);
   margin-left: 4px;
 }

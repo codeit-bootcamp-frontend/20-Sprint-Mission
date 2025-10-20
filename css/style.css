@@ -28,7 +28,7 @@ header {
 .header-bar .login {
   width: 128px;
   height: 48px;
-  background-color: #3692ff;
+  background-color: var(--blue);
   padding: 12px 23px;
   border-radius: 8px;
   color: #f2f4f6;
@@ -62,7 +62,7 @@ main {
   font-size: clamp(30px, 2.1vw, 40px);
   line-height: 140%;
   vertical-align: middle;
-  color: #374151;
+  color: var(--gray-700);
 }
 
 .section-look-contents {
@@ -80,7 +80,7 @@ main {
 }
 
 .look-button {
-  background-color: #3692ff;
+  background-color: var(--blue);
   padding: clamp(10px, 1.5vw, 16px) clamp(100px, 6.4vw, 124px);
   border-radius: 40px;
   margin: 20px 0;
@@ -89,7 +89,7 @@ main {
 
 .look-button a {
   text-decoration: none;
-  color: #f9fafb;
+  color: var(--gray-50);
   font-weight: 600;
   font-size: clamp(18px, 1vw, 20px);
   line-height: 32px;
@@ -146,7 +146,7 @@ main {
 }
 
 .item-text .item-hot {
-  color: #3692ff;
+  color: var(--blue);
   font-weight: 800;
   font-size: clamp(16px, 0.9vw, 18px);
   line-height: 26px;
@@ -154,7 +154,7 @@ main {
 }
 
 .item-text h2 {
-  color: #374151;
+  color: var(--gray-700);
   font-weight: 700;
   font-size: clamp(30px, 2.1vw, 40px);
   line-height: 140%;
@@ -162,7 +162,7 @@ main {
 }
 
 .item-text .item-description {
-  color: #374151;
+  color: var(--gray-700);
   font-weight: 500;
   font-size: clamp(16px, 1.2vw, 24px);
   line-height: 32px;
@@ -185,7 +185,7 @@ main {
   font-size: clamp(30px, 2.1vw, 40px);
   line-height: 140%;
   vertical-align: middle;
-  color: #374151;
+  color: var(--gray-700);
   white-space: nowrap;
 }
 
@@ -214,7 +214,7 @@ main {
   align-items: flex-start;
   width: 100%;
   height: 160px;
-  background-color: #111827;
+  background-color: var(--gray-900);
 }
 
 .footer-content {
@@ -230,7 +230,7 @@ footer #footer-license {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
-  color: #9ca3af;
+  color: var(--gray-400);
 }
 
 .footer-notice {
@@ -244,7 +244,7 @@ footer #footer-license {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
-  color: #e5e7eb;
+  color: var(--gray-200);
   text-decoration: none;
 }
 
