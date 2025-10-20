@@ -47,6 +47,18 @@
   outline: 2px solid #3692ff;
   background-color: #fff;
 }
+.input-wrapper {
+  position: relative;
+}
+.input-wrapper img {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
 #login-button {
   border-radius: 40px;
   font-size: 20px;
