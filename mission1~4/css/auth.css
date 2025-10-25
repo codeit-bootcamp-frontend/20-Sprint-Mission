@@ -1,0 +1,166 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  width: 640px;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.logo {
+  display: block;
+  width: 396px;
+  height: 132px;
+}
+
+.login-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.input-label {
+  display: inline-block;
+  color: var(--gray800);
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  margin-bottom: 16px;
+}
+
+.login-input {
+  width: 100%;
+  height: 56px;
+  padding: 16px 48px 16px 24px;
+  border-radius: 10px;
+  background-color: var(--gray100);
+  font-size: 1.6rem;
+  color: var(--gray800);
+}
+
+.input-container {
+  margin-bottom: 24px;
+  /* margin-bottom: 16px; */
+}
+
+.visibility-container {
+  position: relative;
+}
+
+.btn-visibility {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 24px;
+}
+
+.visibility-container img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.login-button {
+  font-size: 2rem;
+  height: 56px;
+  line-height: 3.2rem;
+}
+
+.ease-login-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 23px;
+  width: 100%;
+  height: 74px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background-color: #e6f2ff;
+  font-weight: 500;
+  color: var(--gray800);
+}
+
+.ease-login-container ul {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.ease-login-container ul img {
+  width: 42px;
+  height: auto;
+}
+
+.to-signup {
+  color: var(--gray800);
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.to-signup a {
+  color: var(--blue100);
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+.to-signup a:hover {
+  color: var(--blue200);
+}
+
+.is-invalid {
+  border: 1px solid var(--error-red);
+}
+
+.is-valid {
+  border: 1px solid var(--blue100);
+}
+
+.is-error-message {
+  padding-left: 16px;
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--error-red);
+}
+
+/** 모바일 사이즈 */
+@media (max-width: 767px) {
+  section {
+    padding: 24px 14px;
+    min-height: 100vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    display: block;
+    width: 198px;
+    height: 66px;
+  }
+
+  label {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .login-input {
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    color: var(--gray800);
+  }
+}

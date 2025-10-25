@@ -1,0 +1,65 @@
+footer {
+  background-color: var(--gray900);
+  height: 160px;
+  padding: 32px 8px;
+  display: flex;
+  justify-content: center;
+  color: var(--gray200);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-items: center;
+  width: 1120px;
+}
+
+.footer-links {
+  font-weight: 400;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+}
+
+/** 테블릿 사이즈 */
+@media (min-width: 768px) and (max-width: 1199px) {
+  footer {
+    width: 100%;
+    padding: 32px 104px;
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+}
+
+/** 모바일 사이즈 */
+@media (max-width: 767px) {
+  footer {
+    padding: 32px;
+  }
+
+  .footer-container {
+    width: 100%;
+    grid-template-columns: 1fr auto;
+  }
+
+  .footer-items {
+    width: 100%;
+  }
+
+  .footer-items:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 2/3;
+  }
+
+  .footer-nav > .footer-links {
+    gap: 30px;
+  }
+
+  .footer-container > .footer-links {
+    justify-content: flex-end;
+  }
+}
