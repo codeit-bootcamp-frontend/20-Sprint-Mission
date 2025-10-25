@@ -1,0 +1,52 @@
+@import "../variable.css";
+
+.best-product-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.best-product-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 정사각형 - 카드 크기에 따라 자동 조정 */
+  object-fit: cover; /* 비율 유지하며 꽉 채우기 */
+  display: block; /* 이미지 아래 여백 제거 */
+  border-radius: 16px;
+}
+
+.best-product-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.best-product-item-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.best-product-item-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.best-product-item-like-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.best-product-item-like-container img {
+  width: 16px;
+  height: 16px;
+}
+
+.best-product-item-like {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gray-600);
+}

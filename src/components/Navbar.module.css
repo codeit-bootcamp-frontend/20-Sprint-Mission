@@ -1,0 +1,64 @@
+@import "../variable.css";
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+  height: 70px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.navbar-left {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 153px;
+  height: 51px;
+}
+
+.logo-container img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo-container p {
+  font-family: "ROKAF Sans";
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--blue);
+}
+
+.nav-container {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-container ul li a {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray-600);
+  text-decoration: none;
+  padding: 21px 15px;
+  text-align: center;
+}
+
+.profile-container img {
+  width: 40px;
+  height: 40px;
+}
