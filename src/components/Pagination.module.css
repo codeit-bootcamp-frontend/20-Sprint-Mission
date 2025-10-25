@@ -1,0 +1,33 @@
+@import "../variable.css";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.pageButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--gray-200);
+  background-color: #ffffff;
+  color: var(--gray-500);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 현재 페이지: 파란색 배경으로 강조 */
+.pageButton.active {
+  background-color: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+  font-weight: 600;
+}

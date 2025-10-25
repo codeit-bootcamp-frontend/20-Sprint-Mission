@@ -124,17 +124,20 @@
   }
 }
 
+/* 모바일 반응형 (480px 이하) */
 @media (max-width: 480px) {
+  /* 상품 그리드: 2열로 변경 */
   .all-products {
-    grid-template-columns: repeat(2, 1fr); /* 2열 */
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
+  /* 타이틀 영역: 세로 배치로 변경 */
   .all-title-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* "전체 상품", "등록 버튼 + 검색창"을 세로로 배치 */
     gap: 8px;
-    align-items: flex-start;
+    align-items: flex-start; /* 왼쪽 정렬 */
   }
 
   .all-title {
@@ -142,11 +145,13 @@
     width: 100%;
   }
 
+  /* 검색창과 버튼들의 부모 (relative로 absolute 자식들의 기준점) */
   .all-title-right-container {
     width: 100%;
-    position: relative;
+    position: relative; /* absolute 자식들의 기준점 */
   }
 
+  /* 검색창: 80% 너비 (나머지 20%는 정렬 아이콘 공간) */
   .all-title-right-container-left {
     width: 80%;
   }
@@ -155,18 +160,21 @@
     width: 100%;
   }
 
+  /* 상품 등록 버튼: absolute로 위 줄 오른쪽에 배치 */
   .all-title-right-container-middle {
     position: absolute;
-    top: -50px;
-    right: 0;
-    white-space: nowrap;
+    top: -50px; /* 검색창보다 위로 이동 */
+    right: 0; /* 오른쪽 끝 */
+    white-space: nowrap; /* 줄바꿈 방지 */
   }
 
+  /* 정렬 아이콘: absolute로 검색창 오른쪽에 배치 */
   .all-title-right-container-right {
     position: absolute;
-    right: 8px;
+    right: 8px; /* 검색창 오른쪽 끝에서 8px 떨어진 위치 */
   }
 
+  /* 정렬 select: 아이콘만 보이도록 스타일링 */
   .all-title-right-container-right-select {
     width: 42px;
     height: 42px;
@@ -174,14 +182,15 @@
     border: 1px solid var(--gray-200);
     border-radius: 8px;
     background-color: #ffffff;
-    background-image: url("../assets/sort.png");
+    background-image: url("../assets/sort.png"); /* sort.png 아이콘 사용 */
     background-position: center;
     background-size: 24px 24px;
     background-repeat: no-repeat;
-    color: transparent;
+    color: transparent; /* 텍스트 숨김 */
     cursor: pointer;
   }
 
+  /* 드롭다운 옵션은 정상 표시 */
   .all-title-right-container-right-select option {
     color: var(--gray-800);
     font-size: 16px;

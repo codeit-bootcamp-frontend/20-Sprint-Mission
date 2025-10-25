@@ -1,38 +1,74 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import styles from "./AllSection.module.css";
 import ProductCard from "./ProductCard";
+import Pagination from "./Pagination";
 import search from "../assets/search.png";
 
 const AllSection = () => {
-  const [allProducts, setAllProducts] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [totalCount, setTotalCount] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   const [orderByOption, setOrderByOption] = useState("recent");
+  const [searchKeyword, setSearchKeyword] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [searchKeyword, setSearchKeyword] = useState("");
-  const sortedProducts = useMemo(() => {
-    return [...allProducts]
-      .sort((a, b) => {
-        if (orderByOption === "recent") {
-          return new Date(b.createdAt) - new Date(a.createdAt);
-        } else if (orderByOption === "favorite") {
-          return b.favoriteCount - a.favoriteCount;
-        }
-      })
-      .filter((product) =>
-        product.name.toLowerCase().includes(searchKeyword.toLowerCase())
-      );
-  }, [allProducts, orderByOption, searchKeyword]);
 
+  // 반응형 pageSize 설정
+  const [pageSize, setPageSize] = useState(10);
+
+  // 화면 크기에 따라 pageSize 변경
   useEffect(() => {
-    const fetchAllProducts = async () => {
+    const updatePageSize = () => {
+      const width = window.innerWidth;
+      if (width <= 480) {
+        setPageSize(4); // 모바일: 2열 * 2행
+      } else if (width <= 768) {
+        setPageSize(6); // 태블릿: 3열 * 2행
+      } else {
+        setPageSize(10); // 데스크톱: 5열 * 2행
+      }
+    };
+
+    updatePageSize();
+    const mobile = window.matchMedia("(max-width: 480px)");
+    const tablet = window.matchMedia("(max-width: 768px)");
+
+    const handleChange = () => updatePageSize();
+    mobile.addEventListener("change", handleChange);
+    tablet.addEventListener("change", handleChange);
+
+    return () => {
+      mobile.removeEventListener("change", handleChange);
+      tablet.removeEventListener("change", handleChange);
+    };
+  }, []);
+
+  // pageSize 변경 시 1페이지로 리셋
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [pageSize]);
+
+  // API 호출: 서버에서 정렬, 검색, 페이징 처리
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true);
       try {
         const response = await axios.get(
-          "https://panda-market-api.vercel.app/products"
+          "https://panda-market-api.vercel.app/products",
+          {
+            params: {
+              page: currentPage,
+              pageSize: pageSize,
+              orderBy: orderByOption,
+              keyword: searchKeyword,
+            },
+          }
         );
 
-        setAllProducts(response.data.list);
+        setProducts(response.data.list);
+        setTotalCount(response.data.totalCount);
       } catch (error) {
         console.error(error);
         setError(error);
@@ -41,10 +77,14 @@ const AllSection = () => {
       }
     };
 
-    fetchAllProducts();
-  }, []);
+    fetchProducts();
+  }, [currentPage, pageSize, orderByOption, searchKeyword]);
+  // 전체 페이지 수 계산
+  const totalPages = Math.ceil(totalCount / pageSize);
+
   if (loading) return <div>로딩 중...</div>;
   if (error) return <div>에러 발생: {error.message}</div>;
+
   return (
     <div className={styles["all-container"]}>
       <div className={styles["all-title-container"]}>
@@ -74,6 +114,7 @@ const AllSection = () => {
           <div className={styles["all-title-right-container-right"]}>
             <select
               name="orderBy"
+              value={orderByOption}
               onChange={(e) => setOrderByOption(e.target.value)}
               className={styles["all-title-right-container-right-select"]}
             >
@@ -84,10 +125,17 @@ const AllSection = () => {
         </div>
       </div>
       <div className={styles["all-products"]}>
-        {sortedProducts.map((product) => (
+        {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+
+      {/* 페이지네이션 */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };
