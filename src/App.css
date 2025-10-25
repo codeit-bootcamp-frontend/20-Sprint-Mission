@@ -2,8 +2,22 @@
 
 .main-container {
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 40px;
   padding: 24px 360px 0;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 24px 24px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 16px 16px 0;
+  }
 }

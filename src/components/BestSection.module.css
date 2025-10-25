@@ -15,4 +15,19 @@
   display: grid;
   grid-template-columns: repeat(4, 282px);
   gap: 24px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .best-products {
+    grid-template-columns: repeat(2, 1fr); /* 2열 - 화면에 맞게 자동 조절 */
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .best-products {
+    grid-template-columns: 1fr; /* 1열 */
+    gap: 16px;
+  }
 }

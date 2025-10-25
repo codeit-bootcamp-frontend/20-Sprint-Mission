@@ -5,8 +5,38 @@ import axios from "axios";
 
 const BestSection = () => {
   const [bestProducts, setBestProducts] = useState([]);
+  const [itemCount, setItemCount] = useState(4); // 표시할 개수
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // 화면 크기 감지 (matchMedia 사용)
+  useEffect(() => {
+    const mobile = window.matchMedia("(max-width: 480px)");
+    const tablet = window.matchMedia("(max-width: 768px)");
+
+    const handleMediaChange = () => {
+      if (mobile.matches) {
+        setItemCount(1); // 모바일
+      } else if (tablet.matches) {
+        setItemCount(2); // 태블릿
+      } else {
+        setItemCount(4); // 데스크톱
+      }
+    };
+
+    // 초기 실행
+    handleMediaChange();
+
+    // 미디어 쿼리 리스너 등록
+    mobile.addEventListener("change", handleMediaChange);
+    tablet.addEventListener("change", handleMediaChange);
+
+    // 클린업
+    return () => {
+      mobile.removeEventListener("change", handleMediaChange);
+      tablet.removeEventListener("change", handleMediaChange);
+    };
+  }, []);
 
   useEffect(() => {
     const fetchBestProducts = async () => {
@@ -34,6 +64,8 @@ const BestSection = () => {
   }, []);
   if (loading) return <div>로딩 중...</div>;
   if (error) return <div>에러 발생: {error.message}</div>;
+
+  const displayProducts = bestProducts.slice(0, itemCount); //렌더링시 개수 조절
   return (
     <>
       <div className={styles["best-container"]}>
@@ -41,7 +73,7 @@ const BestSection = () => {
           <p>베스트 상품</p>
         </div>
         <div className={styles["best-products"]}>
-          {bestProducts.map((product) => (
+          {displayProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: repeat(5, 220px); /* 5열 */
   gap: 24px;
+  justify-content: center;
 }
 
 .all-title-container {
@@ -83,7 +84,7 @@
   width: 130px;
   height: 42px;
   padding: 0 20px;
-  border: none;
+  border: 1px solid var(--gray-200);
   border-radius: 8px;
   background-color: #ffffff;
   background-image: url("../assets/arrow_down.png");
@@ -103,4 +104,86 @@
 .all-title-text {
   font-size: 20px;
   font-weight: 700;
+}
+
+.all-title-right-container-right-select option {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray-800);
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .all-products {
+    grid-template-columns: repeat(3, 1fr); /* 3열 - 화면에 맞게 자동 조절 */
+    gap: 16px;
+  }
+
+  .all-title-right-container-left {
+    width: 242px;
+  }
+}
+
+@media (max-width: 480px) {
+  .all-products {
+    grid-template-columns: repeat(2, 1fr); /* 2열 */
+    gap: 16px;
+  }
+
+  .all-title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .all-title {
+    display: block;
+    width: 100%;
+  }
+
+  .all-title-right-container {
+    width: 100%;
+    position: relative;
+  }
+
+  .all-title-right-container-left {
+    width: 80%;
+  }
+
+  .all-title-right-container-left input {
+    width: 100%;
+  }
+
+  .all-title-right-container-middle {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    white-space: nowrap;
+  }
+
+  .all-title-right-container-right {
+    position: absolute;
+    right: 8px;
+  }
+
+  .all-title-right-container-right-select {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    background-color: #ffffff;
+    background-image: url("../assets/sort.png");
+    background-position: center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    color: transparent;
+    cursor: pointer;
+  }
+
+  .all-title-right-container-right-select option {
+    color: var(--gray-800);
+    font-size: 16px;
+  }
 }

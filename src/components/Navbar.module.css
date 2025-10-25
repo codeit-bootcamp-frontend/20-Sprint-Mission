@@ -62,3 +62,39 @@
   width: 40px;
   height: 40px;
 }
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding-left: 24px;
+    padding-right: 15px;
+  }
+
+  .navbar-left {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    width: 80px;
+    gap: 0;
+  }
+  .logo-container p {
+    font-size: 20px;
+  }
+
+  .navbar-container {
+    padding-left: 16px;
+  }
+  .navbar-left {
+    gap: 0;
+  }
+  .nav-container ul {
+    gap: 8px;
+    margin-left: 8px;
+  }
+  .nav-container ul li a {
+    font-size: 16px;
+    padding: 22px 0;
+  }
+}
