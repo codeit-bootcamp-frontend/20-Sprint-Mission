@@ -29,7 +29,6 @@ const SchemaForm = ({ fields, onSubmit, className, submitText }) => {
     [setFormValues]
   );
 
-  // 유효성 검사 및 오류 메시지 계산
   const { isFormValid, errorMessages } = useMemo(() => {
     let isValid = true;
     const errors = {};
@@ -39,7 +38,7 @@ const SchemaForm = ({ fields, onSubmit, className, submitText }) => {
         const fieldId = rule.attribute.id;
         const value = formValues[fieldId] || "";
 
-        const result = rule.checkValue(value);
+        const result = rule.checkValue(value, formValues);
 
         if (!result.isValid) {
           isValid = false;
