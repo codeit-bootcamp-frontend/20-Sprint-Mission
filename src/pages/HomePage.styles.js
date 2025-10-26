@@ -84,3 +84,21 @@ export const Cta = styled(BaseButton).attrs({ as: Link })`
     line-height: 2.6rem;
   }
 `;
+
+export const FeatureWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 138px;
+
+  @media ${media.tablet} {
+    padding: 24px;
+    padding-bottom: 56px;
+    margin-bottom: 0;
+    gap: 52px;
+  }
+
+  @media ${media.mobile} {
+    padding: 52px 0 83px;
+    gap: 40px;
+  }
+`;

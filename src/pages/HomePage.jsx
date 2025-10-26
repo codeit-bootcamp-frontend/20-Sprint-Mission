@@ -6,6 +6,7 @@ import part3Img from "@/assets/Img_home_02.png";
 import part4Img from "@/assets/Img_home_03.png";
 import part5Img from "@/assets/Img_home_bottom.png";
 import part1Img from "@/assets/Img_home_top.png";
+import FeatureSection from "@/components/home/FeatureSection";
 
 const HOME_CONTENT = {
   heroTop: {
@@ -30,7 +31,6 @@ const HOME_CONTENT = {
       ),
       image: part2Img,
       imageAlt: "판다 이미지 1",
-      imageFirst: true, // 이미지 왼쪽, 텍스트 오른쪽
     },
     {
       key: "p3",
@@ -43,7 +43,7 @@ const HOME_CONTENT = {
       ),
       image: part3Img,
       imageAlt: "판다 이미지 2",
-      imageFirst: false, // 텍스트 먼저, 이미지 오른쪽
+      textFirst: true,
     },
     {
       key: "p4",
@@ -58,17 +58,16 @@ const HOME_CONTENT = {
       ),
       image: part4Img,
       imageAlt: "판다 이미지 3",
-      imageFirst: true,
     },
   ],
   heroBottom: {
     image: part5Img,
     imageAlt: "언덕위 판다",
     children: (
-      <HeroBottomTitle>
+      <S.HeroBottomTitle>
         믿을 수 있는 <br />
         판다마켓 중고 거래
-      </HeroBottomTitle>
+      </S.HeroBottomTitle>
     ),
   },
 };
@@ -81,17 +80,19 @@ const HomePage = () => {
       <HeroSection image={heroTop.image} imageAlt={heroTop.imageAlt}>
         {heroTop.children}
       </HeroSection>
-      {/* {features.map((sec) => (
-        <FeatureSection
-          key={sec.key}
-          highlight={sec.highlight}
-          title={sec.title}
-          description={sec.description}
-          image={sec.image}
-          imageAlt={sec.imageAlt}
-          imageFirst={sec.imageFirst}
-        />
-      ))} */}
+      <S.FeatureWrap>
+        {features.map((sec) => (
+          <FeatureSection
+            key={sec.key}
+            highlight={sec.highlight}
+            title={sec.title}
+            description={sec.description}
+            image={sec.image}
+            imageAlt={sec.imageAlt}
+            textFirst={sec.textFirst}
+          />
+        ))}
+      </S.FeatureWrap>
       <HeroSection
         variant="bottom"
         image={heroBottom.image}
