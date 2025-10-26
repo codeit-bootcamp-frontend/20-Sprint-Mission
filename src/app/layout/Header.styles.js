@@ -1,5 +1,5 @@
+import { BaseButton } from "@/components/common";
 import styled from "styled-components";
-import { BaseButton } from "../../components/common";
 import { media } from "../../styles/media";
 
 export const Header = styled.header`
