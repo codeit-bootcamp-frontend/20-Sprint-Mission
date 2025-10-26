@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { BaseButton } from "@/components/common";
+import { BaseButton } from "@/components/common.styles";
 import { media } from "@/styles/media";
 import { SubTitle } from "@/styles/typography";
 

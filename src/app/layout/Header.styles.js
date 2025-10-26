@@ -1,4 +1,4 @@
-import { BaseButton } from "@/components/common";
+import { BaseButton } from "@/components/common.styles";
 import styled from "styled-components";
 import { media } from "../../styles/media";
 
