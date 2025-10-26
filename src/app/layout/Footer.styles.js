@@ -1,4 +1,3 @@
-// src/app/layouts/Footer/Footer.styles.ts
 import styled from "styled-components";
 import { media } from "../../styles/media";
 
