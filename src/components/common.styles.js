@@ -15,10 +15,6 @@ export const BaseButton = styled.button`
   }
 
   &:disabled {
-    font-weight: 600;
-    font-size: 1.6rem;
-    line-height: 3.2rem;
-    background: var(--gray400);
-    color: var(--gray100);
+    background-color: var(--gray400);
   }
 `;
