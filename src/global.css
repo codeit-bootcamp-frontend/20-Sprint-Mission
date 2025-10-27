@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "ROKAF Sans";
+  src: url("/fonts/ROKAF Sans Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  font-family: "Pretendard", sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
