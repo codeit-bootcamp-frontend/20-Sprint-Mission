@@ -3,6 +3,7 @@ import lgKakao from "@/assets/ic_kakao.png";
 import lgLogo from "@/assets/lgLogo.png";
 import AuthShell from "@/components/AuthShell";
 import SchemaForm from "@/components/SchemaForm";
+import InputContainer from "@/components/SchemaForm/InputContainer";
 import { isEmpty, isMinLength, isSameString, isValidEmail } from "@/utils";
 import { useNavigate } from "react-router-dom";
 
@@ -96,6 +97,7 @@ const FIELDS = [
           placeholder: "비밀번호를 입력해주세요",
         },
         isVisibility: true,
+        ContainerAttribute: {},
         checkValue: (value) => {
           const length = 12;
 
@@ -104,6 +106,43 @@ const FIELDS = [
               return {
                 isValid: false,
                 message: "비밀번호를 입력해주세요.",
+              };
+
+            case isMinLength(value, length):
+              // console.log(isMinLength(value, length));
+              return {
+                isValid: false,
+                message: `비밀번호를 ${length}자 이상 입력해주세요.`,
+              };
+
+            default:
+              return {
+                isValid: true,
+                message: "",
+              };
+          }
+        },
+      },
+      {
+        element: "input",
+        label: {
+          contents: "비밀번호1",
+        },
+        attribute: {
+          type: "password",
+          id: "userPassword1",
+          placeholder: "비밀번호1를 입력해주세요",
+          className: "test",
+        },
+        isVisibility: true,
+        checkValue: (value) => {
+          const length = 12;
+
+          switch (true) {
+            case isEmpty(value):
+              return {
+                isValid: false,
+                message: "비밀번호1를 입력해주세요.",
               };
 
             case isMinLength(value, length):

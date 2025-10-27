@@ -45,7 +45,7 @@ const VisbilityInputContainer = ({
   return (
     <>
       <S.Label htmlFor={fieldId}>{rule.label.contents}</S.Label>
-      <S.PassWordWrap>
+      <S.PassWordWrap {...rule.ContainerAttribute}>
         <S.Input
           onChange={handleChange}
           onBlur={handleBlur}

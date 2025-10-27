@@ -98,7 +98,7 @@ const SchemaForm = ({ fields, onSubmit, className, submitText }) => {
   return (
     <S.Form className={className} onSubmit={handleSubmit}>
       {fields.map((field) => (
-        <S.Fieldset key={field.index}>
+        <S.Fieldset {...field.attribute} key={field.index}>
           {field.rules.map((rule) => {
             const ContainerProps = {
               rule: rule,
