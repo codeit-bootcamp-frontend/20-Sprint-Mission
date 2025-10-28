@@ -28,6 +28,11 @@ export const ITEMS_DATA = {
         alt: "검색",
         searchPlaceholder: "검색할 상품을 입력해주세요",
       },
+      itemsPerPage: {
+        disktop: 10,
+        tablet: 6,
+        mobile: 4,
+      }, // 한 페이지당 아이템 수
       addItem: "상품 등록하기",
       sortOptions: { recent: "최신순", favorite: "좋아요순" },
       sortSrc: icArrowDown,
@@ -52,11 +57,6 @@ export const PAGINATION_ITEMS = {
     alt: "오른쪽 버튼",
   },
   currentPage: 1, // 시작할 페이지
-  itemsPerPage: {
-    disktop: 10,
-    tablet: 6,
-    mobile: 4,
-  }, // 한 페이지당 아이템 수
   pageRange: 5, // 페이지 버튼 표시 개수
 };
 
@@ -104,7 +104,7 @@ const ItemsPage = () => {
         </S.BestProductContainer>
       </S.BestSection>
       <S.AllSection>
-        <AllProductSection data={MOCK.list} />
+        <AllProductSection />
       </S.AllSection>
     </S.Main>
   );

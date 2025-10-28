@@ -1,9 +1,38 @@
-import MOCK from "@/MOCK.json";
+import api, { ENDPOINTS } from "@/api";
+import useBreakpoint from "@/hooks/useBreakpoint";
 import { ITEMS_DATA, PAGINATION_ITEMS } from "@/pages/ItemsPage";
+import { useEffect, useState } from "react";
 import AllProductCard from "./AllProductCard";
 import * as S from "./AllProductSection.styles";
 
 const AllProductSection = () => {
+  const [ProductItems, setProductItems] = useState([]);
+  const bp = useBreakpoint();
+
+  useEffect(() => {
+    const parm = {
+      params: {
+        page: 1,
+        pageSize: 10,
+        orderBy: "favorite",
+      },
+    };
+
+    (async () => {
+      const getBestProductItems = await api.get(ENDPOINTS.products, parm);
+
+      setProductItems(getBestProductItems.list);
+    })();
+  }, []);
+
+  const disktop = ITEMS_DATA.sections.all.itemsPerPage.disktop;
+  const tablet = ITEMS_DATA.sections.all.itemsPerPage.tablet;
+  const mobile = ITEMS_DATA.sections.all.itemsPerPage.mobile;
+
+  const showCount =
+    bp === "mobile" ? mobile : bp === "tablet" ? tablet : disktop;
+  const ProductItemsdata = ProductItems.slice(0, showCount);
+
   return (
     <>
       <S.Nav>
@@ -26,7 +55,7 @@ const AllProductSection = () => {
         </S.SortButton>
       </S.Nav>
       <S.AllProductContainer>
-        {MOCK.list.map((item) => (
+        {ProductItemsdata.map((item) => (
           <AllProductCard
             key={item.id}
             item={item}
