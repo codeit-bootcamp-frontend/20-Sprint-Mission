@@ -1,6 +1,7 @@
 import HeroSection from "@/components/home/HeroSection";
 import * as S from "./HomePage.styles";
 
+import { PATH } from "@/app/router";
 import part2Img from "@/assets/img_home_01.png";
 import part3Img from "@/assets/img_home_02.png";
 import part4Img from "@/assets/img_home_03.png";
@@ -15,7 +16,7 @@ const HOME_CONTENT = {
     children: (
       <S.Wrap>
         <S.HeroTopTitle>일상의 모든 물건을 거래해보세요</S.HeroTopTitle>
-        <S.Cta to="/items">구경하러 가기</S.Cta>
+        <S.Cta to={PATH.ITEMS}>구경하러 가기</S.Cta>
       </S.Wrap>
     ),
   },

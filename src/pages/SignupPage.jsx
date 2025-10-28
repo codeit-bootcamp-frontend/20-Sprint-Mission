@@ -1,3 +1,4 @@
+import { PATH } from "@/app/router";
 import lgGoogle from "@/assets/ic_google.png";
 import lgKakao from "@/assets/ic_kakao.png";
 import lgLogo from "@/assets/lgLogo.png";
@@ -7,7 +8,7 @@ import { isEmpty, isMinLength, isSameString, isValidEmail } from "@/utils";
 import { useNavigate } from "react-router-dom";
 
 const AUTHSHELL_CONTENT = {
-  logo: { href: "/", image: lgLogo, imageAlt: "판다마켓 로고" },
+  logo: { href: PATH.INDEX, image: lgLogo, imageAlt: "판다마켓 로고" },
   easeLogin: {
     title: "간편 로그인 하기",
     items: [
@@ -21,7 +22,7 @@ const AUTHSHELL_CONTENT = {
   },
   bottom: {
     text: "이미 회원이신가요?",
-    link: { to: "/login", text: "로그인" },
+    link: { to: PATH.LOGIN, text: "로그인" },
   },
 };
 
@@ -158,7 +159,7 @@ const SignupPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (formValues) => {
-    navigate("/login");
+    navigate(PATH.LOGIN);
     console.log("제출 값:", formValues);
   };
 

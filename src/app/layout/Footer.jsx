@@ -3,6 +3,7 @@ import icFacebook from "../../assets/ic_facebook.png";
 import icInsta from "../../assets/ic_instagram.png";
 import icTwitter from "../../assets/ic_twitter.png";
 import icYoutube from "../../assets/ic_youtube.png";
+import { PATH } from "../router";
 import * as S from "./Footer.styles";
 
 export default function Footer() {
@@ -10,18 +11,16 @@ export default function Footer() {
     <S.FooterWrap>
       <S.FooterContainer>
         <S.Copy>© codeit · 2024</S.Copy>
-
         <S.FooterNav aria-label="푸터 내비게이션">
           <S.NavLinks>
             <li>
-              <Link to="/privacy">Privacy Policy</Link>
+              <Link to={PATH.PRIVACY}>Privacy Policy</Link>
             </li>
             <li>
-              <Link to="/faq">FAQ</Link>
+              <Link to={PATH.FAQ}>FAQ</Link>
             </li>
           </S.NavLinks>
         </S.FooterNav>
-
         <S.SocialLinks>
           <li>
             <a

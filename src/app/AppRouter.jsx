@@ -6,20 +6,21 @@ import LoginPage from "../pages/LoginPage";
 import PrivacyPage from "../pages/PrivacyPage";
 import SignupPage from "../pages/SignupPage";
 import RootLayout from "./layout/RootLayout";
+import { PATH } from "./router";
 
 const router = createBrowserRouter([
   {
     element: <RootLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "items", element: <ItemsPage /> },
-      { path: "faq", element: <FaqPage /> },
-      { path: "privacy", element: <PrivacyPage /> },
+      { path: PATH.ITEMS, element: <ItemsPage /> },
+      { path: PATH.FAQ, element: <FaqPage /> },
+      { path: PATH.PRIVACY, element: <PrivacyPage /> },
       { path: "*", element: <div>404</div> },
     ],
   },
-  { path: "/login", element: <LoginPage /> },
-  { path: "/signup", element: <SignupPage /> },
+  { path: `${PATH.LOGIN}`, element: <LoginPage /> },
+  { path: `${PATH.SIGNUP}`, element: <SignupPage /> },
   { path: "*", element: <div>404</div> },
 ]);
 
