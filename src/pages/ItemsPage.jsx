@@ -6,6 +6,7 @@ import icHeart from "@/assets/ic_heart.png";
 import icSearch from "@/assets/ic_search.png";
 import AllProductSection from "@/components/items/AllProductSection";
 import BestProductCard from "@/components/items/BestProductCard";
+import useBreakpoint from "@/hooks/useBreakpoint";
 import MOCK from "@/MOCK.json";
 import { useEffect, useState } from "react";
 import * as S from "./ItemsPage.styles";
@@ -61,6 +62,7 @@ export const PAGINATION_ITEMS = {
 
 const ItemsPage = () => {
   const [bestProductItems, setBestProductItems] = useState([]);
+  const bp = useBreakpoint();
 
   useEffect(() => {
     const parm = {
@@ -78,12 +80,20 @@ const ItemsPage = () => {
     })();
   }, []);
 
+  const disktop = ITEMS_DATA.sections.best.itemsPerPage.disktop;
+  const tablet = ITEMS_DATA.sections.best.itemsPerPage.tablet;
+  const mobile = ITEMS_DATA.sections.best.itemsPerPage.mobile;
+
+  const showCount =
+    bp === "mobile" ? mobile : bp === "tablet" ? tablet : disktop;
+  const bestProductdata = bestProductItems.slice(0, showCount);
+
   return (
     <S.Main>
       <S.BestSection>
         <S.SubTitle>{ITEMS_DATA.sections.best.title}</S.SubTitle>
         <S.BestProductContainer>
-          {bestProductItems.slice(0, 4).map((item) => (
+          {bestProductdata.map((item) => (
             <BestProductCard
               key={item.id}
               item={item}
