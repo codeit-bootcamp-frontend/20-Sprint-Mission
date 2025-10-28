@@ -1,5 +1,3 @@
-import { BASE_URL } from ".";
-
 const fetchWrapper = async (url, options = {}) => {
   const defaultHeaders = {
     "Content-Type": "application/json",
