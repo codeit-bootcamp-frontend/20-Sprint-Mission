@@ -1,14 +1,19 @@
 import icHeart from "@/assets/ic_heart.png";
+import icSearch from "@/assets/ic_search.png";
+import AllProductSection from "@/components/items/AllProductSection";
 import BestProductCard from "@/components/items/BestProductCard";
 import MOCK from "@/MOCK.json";
 import * as S from "./ItemsPage.styles";
-
-const ITEMS_DATA = {
+export const ITEMS_DATA = {
   sections: {
     best: { title: "베스트 상품" },
     all: {
       title: "전체 상품",
-      searchPlaceholder: "검색할 상품을 입력해주세요",
+      search: {
+        src: icSearch,
+        alt: "검색",
+        searchPlaceholder: "검색할 상품을 입력해주세요",
+      },
     },
   },
   actions: {
@@ -22,12 +27,12 @@ const ITEMS_DATA = {
   },
 };
 
-const ITEMS_UI = {
-  pageSize: 10,
+export const ITEMS_UI = {
   sortOptions: [
     { key: "recent", label: "최신순" },
     { key: "favorite", label: "좋아요순" },
   ],
+  pageSize: 5,
   pagination: { siblingCount: 1, boundaryCount: 1 },
 };
 
@@ -47,6 +52,9 @@ const ItemsPage = () => {
           ))}
         </S.BestProductContainer>
       </S.BestSection>
+      <S.AllSection>
+        <AllProductSection data={MOCK.list} />
+      </S.AllSection>
     </S.Main>
   );
 };

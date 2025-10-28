@@ -2,20 +2,26 @@ import { media } from "@/styles/media";
 import styled from "styled-components";
 
 export const Main = styled.main`
-  padding-top: 24px;
-  /* width: 1200px; */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 24px;
+  padding-bottom: 58px;
 
-  @media ${media.tablet} {
-    /* width: 696px; */
-    padding: 24px;
-  }
   @media ${media.mobile} {
-    /* width: 696px; */
-    padding: 17px 16px 0;
+    padding: 17px 16px;
   }
 `;
 
 export const BestSection = styled.section`
+  margin: 0 auto;
+  width: fit-content;
+`;
+
+export const AllSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   width: fit-content;
 `;
@@ -30,9 +36,6 @@ export const BestProductContainer = styled.div`
   gap: 24px;
 
   @media ${media.tablet} {
-    /* width: 696px; */
     gap: 10px;
-  }
-  @media ${media.mobile} {
   }
 `;
