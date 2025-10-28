@@ -1,8 +1,5 @@
-import icLeftArrow from "@/assets/arrow_left.png";
-import icRightArrow from "@/assets/arrow_right.png";
-import icArrowDown from "@/assets/ic_arrow_down.png";
 import MOCK from "@/MOCK.json";
-import { ITEMS_DATA, ITEMS_UI } from "@/pages/ItemsPage";
+import { ITEMS_DATA, PAGINATION_ITEMS } from "@/pages/ItemsPage";
 import AllProductCard from "./AllProductCard";
 import * as S from "./AllProductSection.styles";
 
@@ -20,9 +17,12 @@ const AllProductSection = () => {
             placeholder={ITEMS_DATA.sections.all.search.searchPlaceholder}
           />
         </S.SearchInputContainer>
-        <S.AddProductButton>{ITEMS_DATA.actions.addItem}</S.AddProductButton>
+        <S.AddProductButton>
+          {ITEMS_DATA.sections.all.addItem}
+        </S.AddProductButton>
         <S.SortButton>
-          {ITEMS_UI.sortOptions[0].label} <img src={icArrowDown} />
+          {ITEMS_DATA.sections.all.sortOptions.favorite}
+          <img src={ITEMS_DATA.sections.all.sortSrc} />
         </S.SortButton>
       </S.Nav>
       <S.AllProductContainer>
@@ -37,7 +37,10 @@ const AllProductSection = () => {
       </S.AllProductContainer>
       <S.PageButtonContainer>
         <S.PageButton>
-          <img src={icLeftArrow} />
+          <img
+            src={PAGINATION_ITEMS.icLeft.src}
+            alt={PAGINATION_ITEMS.icLeft.alt}
+          />
         </S.PageButton>
         <S.PageButton $current={true}>1</S.PageButton>
         <S.PageButton>2</S.PageButton>
@@ -45,7 +48,10 @@ const AllProductSection = () => {
         <S.PageButton>4</S.PageButton>
         <S.PageButton>5</S.PageButton>
         <S.PageButton>
-          <img src={icRightArrow} />
+          <img
+            src={PAGINATION_ITEMS.icRigit.src}
+            alt={PAGINATION_ITEMS.icRigit.alt}
+          />
         </S.PageButton>
       </S.PageButtonContainer>
     </>

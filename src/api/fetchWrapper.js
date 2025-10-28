@@ -9,6 +9,11 @@ const fetchWrapper = async (url, options = {}) => {
     headers: { ...defaultHeaders, ...(options.headers || {}) },
   };
 
+  if (options.params) {
+    const query = new URLSearchParams(options.params).toString();
+    url += `?${query}`;
+  }
+
   try {
     const res = await fetch(url, config);
     // 상태 코드별 처리
