@@ -4,10 +4,17 @@ import { ITEMS_DATA, PAGINATION_ITEMS } from "@/pages/ItemsPage";
 import { useEffect, useState } from "react";
 import AllProductCard from "./AllProductCard";
 import * as S from "./AllProductSection.styles";
+import SortButtonContainer from "./SortButtonContainer";
 
 const AllProductSection = () => {
+  const defaultSort = ITEMS_DATA.sections.all.sort.options[0].text;
   const [ProductItems, setProductItems] = useState([]);
+  const [sortBy, setSortBy] = useState(defaultSort);
   const bp = useBreakpoint();
+
+  const disktop = ITEMS_DATA.sections.all.itemsPerPage.disktop;
+  const tablet = ITEMS_DATA.sections.all.itemsPerPage.tablet;
+  const mobile = ITEMS_DATA.sections.all.itemsPerPage.mobile;
 
   useEffect(() => {
     const parm = {
@@ -25,13 +32,13 @@ const AllProductSection = () => {
     })();
   }, []);
 
-  const disktop = ITEMS_DATA.sections.all.itemsPerPage.disktop;
-  const tablet = ITEMS_DATA.sections.all.itemsPerPage.tablet;
-  const mobile = ITEMS_DATA.sections.all.itemsPerPage.mobile;
-
   const showCount =
     bp === "mobile" ? mobile : bp === "tablet" ? tablet : disktop;
   const ProductItemsdata = ProductItems.slice(0, showCount);
+
+  const handleSelectSort = (value) => {
+    setSortBy(value);
+  };
 
   return (
     <>
@@ -49,10 +56,12 @@ const AllProductSection = () => {
         <S.AddProductButton>
           {ITEMS_DATA.sections.all.addItem}
         </S.AddProductButton>
-        <S.SortButton>
-          {ITEMS_DATA.sections.all.sortOptions.favorite}
-          <img src={ITEMS_DATA.sections.all.sortSrc} />
-        </S.SortButton>
+        <SortButtonContainer onClick={handleSelectSort}>
+          <S.SortButton>
+            {sortBy}
+            <img src={ITEMS_DATA.sections.all.sortSrc} />
+          </S.SortButton>
+        </SortButtonContainer>
       </S.Nav>
       <S.AllProductContainer>
         {ProductItemsdata.map((item) => (

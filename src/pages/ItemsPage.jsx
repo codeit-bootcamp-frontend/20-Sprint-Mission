@@ -7,7 +7,6 @@ import icSearch from "@/assets/ic_search.png";
 import AllProductSection from "@/components/items/AllProductSection";
 import BestProductCard from "@/components/items/BestProductCard";
 import useBreakpoint from "@/hooks/useBreakpoint";
-import MOCK from "@/MOCK.json";
 import { useEffect, useState } from "react";
 import * as S from "./ItemsPage.styles";
 
@@ -34,8 +33,11 @@ export const ITEMS_DATA = {
         mobile: 4,
       }, // 한 페이지당 아이템 수
       addItem: "상품 등록하기",
-      sortOptions: { recent: "최신순", favorite: "좋아요순" },
-      sortSrc: icArrowDown,
+      sort: {
+        modalRootId: "sortModal",
+        options: [{ text: "최신순" }, { text: "좋아요순" }],
+        src: icArrowDown,
+      },
     },
   },
   actions: {

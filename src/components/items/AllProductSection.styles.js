@@ -39,6 +39,9 @@ export const Nav = styled.nav`
 export const SubTitle = styled.h2`
   color: var(--gray900);
   flex: 1;
+  @media ${media.mobile} {
+    order: 0;
+  }
 `;
 
 export const SearchInputContainer = styled.div`
