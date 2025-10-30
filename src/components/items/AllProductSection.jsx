@@ -7,9 +7,8 @@ import AllProductCard from "./AllProductCard";
 import * as S from "./AllProductSection.styles";
 import SortButtonContainer from "./SortButtonContainer";
 
-const fetchProducts = async (params, signal) => {
-  // api.get에서 AbortController의 signal을 옵션으로 전달할 수 있게 해두셨다면 아래처럼 넘겨주세요.
-  return await api.get(ENDPOINTS.products, { ...params, signal });
+const fetchProducts = async (params) => {
+  return await api.get(ENDPOINTS.products, { ...params });
 };
 
 const AllProductSection = () => {
@@ -19,14 +18,14 @@ const AllProductSection = () => {
   const [totalPage, setTotalPage] = useState([]);
   const [currentPage, setCurrentPage] = useState({
     minPage: 1,
-    maxPage: 5,
+    maxPage: PAGINATION_ITEMS.pageRange,
     current: 1,
   });
   const bp = useBreakpoint();
 
   // 뷰포트별 pageSize를 서버에 그대로 전달
   const showCount = useMemo(() => {
-    const { disktop, tablet, mobile } = ITEMS_DATA.sections.all.itemsPerPage;
+    const { disktop, tablet, mobile } = PAGINATION_ITEMS.itemsPerPage;
     return bp === "mobile" ? mobile : bp === "tablet" ? tablet : disktop;
   }, [bp]);
 
@@ -94,7 +93,7 @@ const AllProductSection = () => {
       })();
     }
 
-    // 4) 인접 페이지 프리패치 (다음 페이지 정도)
+    // 다음 페이지 프리패치
     const prefetch = async (pageToPrefetch) => {
       const preKey = JSON.stringify({
         sort,
@@ -200,8 +199,8 @@ const AllProductSection = () => {
       <S.PageButtonContainer>
         <S.PageButton onClick={handlePrevPage}>
           <img
-            src={PAGINATION_ITEMS.icLeft.src}
-            alt={PAGINATION_ITEMS.icLeft.alt}
+            src={ITEMS_DATA.sections.all.icLeft.src}
+            alt={ITEMS_DATA.sections.all.icLeft.alt}
           />
         </S.PageButton>
         {totalPage
@@ -217,8 +216,8 @@ const AllProductSection = () => {
           ))}
         <S.PageButton onClick={handleNextPage}>
           <img
-            src={PAGINATION_ITEMS.icRigit.src}
-            alt={PAGINATION_ITEMS.icRigit.alt}
+            src={ITEMS_DATA.sections.all.icRigit.src}
+            alt={ITEMS_DATA.sections.all.icRigit.alt}
           />
         </S.PageButton>
       </S.PageButtonContainer>

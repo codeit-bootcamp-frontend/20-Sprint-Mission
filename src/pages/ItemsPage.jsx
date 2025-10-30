@@ -8,18 +8,13 @@ import icSearch from "@/assets/ic_search.png";
 import AllProductSection from "@/components/items/AllProductSection";
 import BestProductCard from "@/components/items/BestProductCard";
 import useBreakpoint from "@/hooks/useBreakpoint";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import * as S from "./ItemsPage.styles";
 
 export const ITEMS_DATA = {
   sections: {
     best: {
       title: "베스트 상품",
-      itemsPerPage: {
-        disktop: 4,
-        tablet: 2,
-        mobile: 1,
-      }, // 한 페이지당 아이템 수
     },
     all: {
       title: "전체 상품",
@@ -28,11 +23,6 @@ export const ITEMS_DATA = {
         alt: "검색",
         searchPlaceholder: "검색할 상품을 입력해주세요",
       },
-      itemsPerPage: {
-        disktop: 10,
-        tablet: 6,
-        mobile: 4,
-      }, // 한 페이지당 아이템 수
       addItem: { text: "상품 등록하기", to: PATH.ADDITEM },
       sort: {
         modalRootId: "sortModal",
@@ -41,6 +31,14 @@ export const ITEMS_DATA = {
           { text: "좋아요순", value: "favorite" },
         ],
         src: icArrowDown,
+      },
+      icLeft: {
+        src: icLeftArrow,
+        alt: "왼쪽 버튼",
+      },
+      icRigit: {
+        src: icRightArrow,
+        alt: "오른쪽 버튼",
       },
     },
   },
@@ -54,16 +52,19 @@ export const ITEMS_DATA = {
 };
 
 export const PAGINATION_ITEMS = {
-  icLeft: {
-    src: icLeftArrow,
-    alt: "왼쪽 버튼",
-  },
-  icRigit: {
-    src: icRightArrow,
-    alt: "오른쪽 버튼",
-  },
   currentPage: 1, // 시작할 페이지
   pageRange: 5, // 페이지 버튼 표시 개수
+  itemsPerPage: {
+    disktop: 10,
+    tablet: 6,
+    mobile: 4,
+  },
+};
+
+const BestPerItems = {
+  disktop: 4,
+  tablet: 2,
+  mobile: 1,
 };
 
 const ItemsPage = () => {
@@ -86,12 +87,11 @@ const ItemsPage = () => {
     })();
   }, []);
 
-  const disktop = ITEMS_DATA.sections.best.itemsPerPage.disktop;
-  const tablet = ITEMS_DATA.sections.best.itemsPerPage.tablet;
-  const mobile = ITEMS_DATA.sections.best.itemsPerPage.mobile;
+  const showCount = useMemo(() => {
+    const { disktop, tablet, mobile } = BestPerItems;
+    return bp === "mobile" ? mobile : bp === "tablet" ? tablet : disktop;
+  }, [bp]);
 
-  const showCount =
-    bp === "mobile" ? mobile : bp === "tablet" ? tablet : disktop;
   const bestProductdata = bestProductItems.slice(0, showCount);
 
   return (

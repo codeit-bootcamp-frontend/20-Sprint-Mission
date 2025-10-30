@@ -3,10 +3,37 @@ import { ITEMS_DATA } from "@/pages/ItemsPage";
 import styled from "styled-components";
 import Modal from "../Modal";
 
+const SortButtonView = ({
+  id,
+  isOpen,
+  onToggle,
+  onSelect,
+  options,
+  buttonRef,
+  contentRef,
+  children,
+}) => (
+  <div style={{ order: "4", position: "relative" }}>
+    <div ref={buttonRef} onClick={onToggle}>
+      {children}
+    </div>
+    <ModalContainer ref={contentRef} id={id} />
+    {isOpen && (
+      <Modal modalRoot={id} isOpen={isOpen}>
+        {options.map((el) => (
+          <ModalItem onClick={() => onSelect(el.text)} key={el.text}>
+            {el.text}
+          </ModalItem>
+        ))}
+      </Modal>
+    )}
+  </div>
+);
+
 const SortButtonContainer = ({ children, onClick }) => {
   const { isOpen, close, toggle, buttonRef, contentRef } = usePopoverToggle();
-
-  const rootId = "sortModal";
+  const options = ITEMS_DATA.sections.all.sort.options;
+  const id = ITEMS_DATA.sections.all.sort.modalRootId;
 
   const handleSelect = (value) => {
     onClick(value);
@@ -14,25 +41,19 @@ const SortButtonContainer = ({ children, onClick }) => {
   };
 
   return (
-    <div style={{ order: "4", position: "relative" }}>
-      <div ref={buttonRef} onClick={toggle}>
-        {children}
-      </div>
-      {/* 포탈 루트(위치 기준용) */}
-      <ModalContainer ref={contentRef} id={rootId} />
-      {isOpen && (
-        <Modal modalRoot={rootId} isOpen={isOpen}>
-          {ITEMS_DATA.sections.all.sort.options.map((el) => (
-            <ModalItem onClick={() => handleSelect(el.text)} key={el.text}>
-              {el.text}
-            </ModalItem>
-          ))}
-        </Modal>
-      )}
-    </div>
+    <SortButtonView
+      id={id}
+      isOpen={isOpen}
+      onToggle={toggle}
+      onSelect={handleSelect}
+      options={options}
+      buttonRef={buttonRef}
+      contentRef={contentRef}
+    >
+      {children}
+    </SortButtonView>
   );
 };
-
 export default SortButtonContainer;
 
 const ModalContainer = styled.div`
