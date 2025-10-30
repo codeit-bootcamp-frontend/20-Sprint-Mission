@@ -2,7 +2,12 @@ import { media } from "@/styles/media";
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 211px;
   color: var(--gray800);
+
+  @media ${media.mobile} {
+    width: 168px;
+  }
 `;
 
 export const ProductImgBox = styled.div`
@@ -32,6 +37,9 @@ export const ProductDescription = styled.div`
 `;
 
 export const ProductTitle = styled.h3`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2.4rem;

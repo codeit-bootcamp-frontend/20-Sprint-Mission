@@ -57,7 +57,7 @@ const AllProductSection = () => {
 
     // 캐시에 있으면 즉시 보여주기
     const cached = cacheRef.current.get(cacheKey);
-    console.log(cached);
+
     if (cached) {
       setProductItems(cached.list);
       setTotalPage(
