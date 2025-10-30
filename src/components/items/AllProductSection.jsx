@@ -2,6 +2,7 @@ import api, { ENDPOINTS } from "@/api";
 import useBreakpoint from "@/hooks/useBreakpoint";
 import { ITEMS_DATA, PAGINATION_ITEMS } from "@/pages/ItemsPage";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import AllProductCard from "./AllProductCard";
 import * as S from "./AllProductSection.styles";
 import SortButtonContainer from "./SortButtonContainer";
@@ -176,8 +177,8 @@ const AllProductSection = () => {
             placeholder={ITEMS_DATA.sections.all.search.searchPlaceholder}
           />
         </S.SearchInputContainer>
-        <S.AddProductButton>
-          {ITEMS_DATA.sections.all.addItem}
+        <S.AddProductButton to={ITEMS_DATA.sections.all.addItem.to} as={Link}>
+          {ITEMS_DATA.sections.all.addItem.text}
         </S.AddProductButton>
         <SortButtonContainer onClick={handleSelectSort}>
           <S.SortButton>
@@ -186,7 +187,6 @@ const AllProductSection = () => {
           </S.SortButton>
         </SortButtonContainer>
       </S.Nav>
-
       <S.AllProductContainer>
         {productItems.map((item) => (
           <AllProductCard

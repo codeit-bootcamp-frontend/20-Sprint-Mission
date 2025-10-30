@@ -1,4 +1,5 @@
 import api, { ENDPOINTS } from "@/api";
+import { PATH } from "@/app/router";
 import icLeftArrow from "@/assets/arrow_left.png";
 import icRightArrow from "@/assets/arrow_right.png";
 import icArrowDown from "@/assets/ic_arrow_down.png";
@@ -32,7 +33,7 @@ export const ITEMS_DATA = {
         tablet: 6,
         mobile: 4,
       }, // 한 페이지당 아이템 수
-      addItem: "상품 등록하기",
+      addItem: { text: "상품 등록하기", to: PATH.ADDITEM },
       sort: {
         modalRootId: "sortModal",
         options: [
