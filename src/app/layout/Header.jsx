@@ -1,5 +1,5 @@
 import user from "@/assets/user.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { PATH } from "../router";
 import * as S from "./Header.styles";
@@ -24,8 +24,8 @@ const HEADER_DATA = {
 };
 
 const Header = () => {
+  const location = useLocation();
   const { logo, userImg, navLinks, loginButton } = HEADER_DATA;
-
   const isLogin = true;
 
   return (
@@ -37,7 +37,14 @@ const Header = () => {
           </Link>
           <S.Ul>
             {navLinks.map((item) => (
-              <li key={item.name}>
+              <li
+                style={
+                  location.pathname === item.href
+                    ? { color: "var(--blue100)" }
+                    : {}
+                }
+                key={item.name}
+              >
                 <Link to={item.href}>{item.name}</Link>
               </li>
             ))}
