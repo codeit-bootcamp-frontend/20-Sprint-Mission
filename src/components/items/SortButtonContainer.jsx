@@ -1,6 +1,5 @@
 import usePopoverToggle from "@/hooks/usePopoverToggle";
 import { ITEMS_DATA } from "@/pages/ItemsPage";
-import { useCallback } from "react";
 import styled from "styled-components";
 import Modal from "../Modal";
 
@@ -9,13 +8,10 @@ const SortButtonContainer = ({ children, onClick }) => {
 
   const rootId = "sortModal";
 
-  const handleSelect = useCallback(
-    (value) => {
-      onClick(value);
-      close();
-    },
-    [close]
-  );
+  const handleSelect = (value) => {
+    onClick(value);
+    close();
+  };
 
   return (
     <div style={{ order: "4", position: "relative" }}>

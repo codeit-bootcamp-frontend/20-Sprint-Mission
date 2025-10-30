@@ -35,7 +35,10 @@ export const ITEMS_DATA = {
       addItem: "상품 등록하기",
       sort: {
         modalRootId: "sortModal",
-        options: [{ text: "최신순" }, { text: "좋아요순" }],
+        options: [
+          { text: "최신순", value: "recent" },
+          { text: "좋아요순", value: "favorite" },
+        ],
         src: icArrowDown,
       },
     },
