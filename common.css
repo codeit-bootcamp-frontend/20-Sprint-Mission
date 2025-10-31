@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blue-button {
+    background-color: #3692FF;
+}
+
+.blue-button:hover {
+    background-color: #1967D6;
+}
+
+.blue-button:active {
+    background-color: #1251AA;
+}
+
+.blue-button:disabled {
+    background-color: #9CA3AF;
+}
