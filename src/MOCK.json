@@ -1,0 +1,164 @@
+{
+  "list": [
+    {
+      "id": 886,
+      "name": "기타님 ㅎㅇ",
+      "description": "22",
+      "price": 3000,
+      "tags": [
+        "태그다",
+        "태그다나"
+      ],
+      "images": [],
+      "ownerId": 1298,
+      "favoriteCount": 1,
+      "createdAt": "2025-10-05T16:05:28.426Z",
+      "updatedAt": "2025-10-08T12:31:14.456Z"
+    },
+    {
+      "id": 882,
+      "name": "한 번 올려보기",
+      "description": "예시",
+      "price": 500,
+      "tags": [],
+      "images": [
+        "https://st.depositphotos.com/2935381/4189/i/450/depositphotos_41897159-stock-photo-example-concept.jpg"
+      ],
+      "ownerId": 1287,
+      "favoriteCount": 2,
+      "createdAt": "2025-09-10T02:54:01.750Z",
+      "updatedAt": "2025-10-04T13:47:22.262Z"
+    },
+    {
+      "id": 850,
+      "name": "테스트",
+      "description": "테스트",
+      "price": 16854983,
+      "tags": [],
+      "images": [
+        "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/19/1755774254097/free-icon-coding-4685588.png"
+      ],
+      "ownerId": 19,
+      "favoriteCount": 3,
+      "createdAt": "2025-08-21T11:04:28.338Z",
+      "updatedAt": "2025-10-04T11:43:34.952Z"
+    },
+    {
+      "id": 848,
+      "name": "상품 이름",
+      "description": "string",
+      "price": 0,
+      "tags": [
+        "전자제품"
+      ],
+      "images": [
+        "https://example.com/..."
+      ],
+      "ownerId": 19,
+      "favoriteCount": 0,
+      "createdAt": "2025-08-08T01:15:59.253Z",
+      "updatedAt": "2025-08-21T11:05:15.028Z"
+    },
+    {
+      "id": 840,
+      "name": "상품명",
+      "description": "상품소개",
+      "price": 100025500,
+      "tags": [
+        "헤헤"
+      ],
+      "images": [
+        "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/1203/1747688461587/05.png"
+      ],
+      "ownerId": 1203,
+      "favoriteCount": 2,
+      "createdAt": "2025-05-19T21:01:26.567Z",
+      "updatedAt": "2025-08-28T03:08:00.244Z"
+    },
+    {
+      "id": 839,
+      "name": "상품명",
+      "description": "상품소개",
+      "price": 2000000000,
+      "tags": [
+        "히"
+      ],
+      "images": [
+        "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/1203/1747688329354/08.png"
+      ],
+      "ownerId": 1203,
+      "favoriteCount": 5,
+      "createdAt": "2025-05-19T20:59:21.534Z",
+      "updatedAt": "2025-10-04T10:29:56.297Z"
+    },
+    {
+      "id": 838,
+      "name": "로봇 청소기",
+      "description": ".",
+      "price": 15100000,
+      "tags": [],
+      "images": [
+        "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/1203/1747511376179/img_3.jpg"
+      ],
+      "ownerId": 1203,
+      "favoriteCount": 3,
+      "createdAt": "2025-05-17T19:50:16.519Z",
+      "updatedAt": "2025-10-04T10:28:26.973Z"
+    },
+    {
+      "id": 837,
+      "name": "상품명",
+      "description": "상품소개",
+      "price": 1000000,
+      "tags": [
+        "상품",
+        "풀"
+      ],
+      "images": [
+        "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/1206/1747138633367/img_2.jpg"
+      ],
+      "ownerId": 1206,
+      "favoriteCount": 4,
+      "createdAt": "2025-05-13T12:17:19.665Z",
+      "updatedAt": "2025-08-21T11:08:43.263Z"
+    },
+    {
+      "id": 836,
+      "name": "컵라면",
+      "description": "드셔보셔요",
+      "price": 20000,
+      "tags": [
+        "맛나겟쥬?",
+        "내가 팔아서 더 비쌈"
+      ],
+      "images": [
+        "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/1014/1746780352164/food.png"
+      ],
+      "ownerId": 1014,
+      "favoriteCount": 4,
+      "createdAt": "2025-05-12T04:49:54.834Z",
+      "updatedAt": "2025-10-04T11:01:35.607Z"
+    },
+    {
+      "id": 833,
+      "name": "연휴너무짧다",
+      "description": "zzz",
+      "price": 111111111,
+      "tags": [
+        "#어린이날",
+        "#어버이날",
+        "#스승의날",
+        "#부처님오신날"
+      ],
+      "images": [
+        "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/1047/1746678204865/IMG_1329.jpeg",
+        "https://sprint-fe-project.s3.ap-northeast-2.amazonaws.com/Sprint_Mission/user/1047/1746754256275/boheme7777_6646.jpg"
+      ],
+      "ownerId": 1047,
+      "favoriteCount": 3,
+      "createdAt": "2025-05-08T04:24:37.962Z",
+      "updatedAt": "2025-05-25T22:14:29.299Z"
+    }
+  ],
+  "totalCount": 315
+}
