@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+.form_container {
+  width: 640px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 24px;
+  margin-top: 200px;
+}
+
+.form_logo_img {
+  width: 62%;
+  display: flex;
+  margin: 0 auto;
+}
+
+.form_text_input {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.form_input {
+  width: 640px;
+  height: 56px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f3f4f6;
+  font-size: 16px;
+  padding: 0 23px;
+}
+
+.form_text_password {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.form_input_password {
+  width: 640px;
+  height: 56px;
+  border-radius: 12px;
+  border: none;
+  background-color: #f3f4f6;
+  font-size: 16px;
+  padding: 0 23px;
+}
+
+.form_button {
+  width: 640px;
+  height: 56px;
+  border-radius: 40px;
+  background-color: #3692ff;
+  color: #ffffff;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.simple_section {
+  width: 640px;
+  height: 74px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  padding: 16px 23px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  justify-content: space-between;
+}
+
+.simple_section_icon {
+  display: flex;
+}
+
+.simple_section_icon a img {
+  width: 42px;
+  height: 42px;
+  margin-left: 16px;
+}
+
+.form_bottom_text {
+  font-size: 14px;
+  text-align: center;
+}
+
+.form_bottom_text a {
+  color: #3692ff;
+  text-decoration: underline;
+  cursor: pointer;
+}

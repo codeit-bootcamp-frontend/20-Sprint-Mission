@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-section {
+.hero_container {
   width: 100%;
   background-color: #cfe5ff;
 }
@@ -11,9 +11,10 @@ section {
   display: flex;
   align-items: end;
   margin: 0 auto;
-  background-image: url(../img/Img_home_top.png);
+  background-image: url(../img/img_home_top.png);
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-size: 50%;
 }
 
 .hero_title_box {
@@ -50,7 +51,7 @@ section {
   background-color: #1251aa;
 }
 
-article {
+.item_box_container {
   width: 968px;
   display: flex;
   margin: 0 auto;
@@ -63,6 +64,10 @@ article {
   align-items: center;
   background-color: #fcfcfc;
   border-radius: 12px;
+}
+
+.item_box img {
+  width: 50%;
 }
 
 .item_text_box {
@@ -106,7 +111,7 @@ article {
   padding-left: 20px;
 }
 
-aside {
+.banner_container {
   margin-top: 140px;
   width: 100%;
   background-color: #cfe5ff;
@@ -115,15 +120,16 @@ aside {
 .banner {
   width: 1120px;
   height: 540px;
-  background-image: url(../img/Img_home_bottom.png);
+  background-image: url(../img/img_home_bottom.png);
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-size: 50%;
   margin: 0 auto;
   display: flex;
   align-items: end;
 }
 
-.banner h1 {
+.banner p {
   font-size: 40px;
   font-weight: 700;
   line-height: 1.5;
@@ -135,7 +141,7 @@ aside {
 }
 
 @media (max-width: 1120px) {
-  section {
+  .hero_container {
     padding-top: 150px;
   }
   .hero {
@@ -152,7 +158,7 @@ aside {
     margin-top: -80px;
   }
 
-  article {
+  .item_box_container {
     width: 100%;
   }
 
@@ -172,7 +178,7 @@ aside {
     width: 100%;
   }
 
-  aside {
+  .banner_container {
     padding-top: 100px;
   }
   .banner {
@@ -181,7 +187,7 @@ aside {
     background-position: center bottom;
     background-size: contain;
   }
-  .banner h1 {
+  .banner p {
     text-align: center;
     justify-content: flex-start;
     margin: 0 auto;
@@ -190,10 +196,21 @@ aside {
 }
 
 @media (max-width: 420px) {
-  main,
-  section,
-  article,
-  aside {
-    width: 420px;
+  .hero_title_box a {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 320px) {
+  main {
+    width: 320px;
+  }
+  .hero_title_box {
+    width: 100%;
+  }
+  .hero_title_box a {
+    width: 80%;
+    margin: 0 auto;
   }
 }
