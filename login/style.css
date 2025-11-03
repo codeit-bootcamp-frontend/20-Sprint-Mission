@@ -13,6 +13,12 @@ main{
     margin: 0 auto;
 
 }
+@media (min-width: 375px) and (max-width: 744px) {
+  main{
+      padding: 0px 16px;
+      width: 100%;
+  }
+}
 
 
 
@@ -20,6 +26,14 @@ main{
 .login-logo{
     width: 392px;
     height: 132px;
+}
+
+@media (min-width: 375px) and (max-width: 744px) {
+  .login-logo{
+      width: 60%;
+      height: auto;
+      padding-bottom: 40px;
+  }
 }
 
 .login-form{
