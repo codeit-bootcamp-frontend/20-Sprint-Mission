@@ -63,6 +63,20 @@
   background-position: right 23px top 23px;
 }
 
+.form_input_password_check {
+  width: 640px;
+  height: 56px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--gray100);
+  font-size: 16px;
+  padding: 0 23px;
+  background-image: url(../img/eye_on.png);
+  background-size: 20.39px 14px;
+  background-repeat: no-repeat;
+  background-position: right 23px top 23px;
+}
+
 .form_button {
   width: 640px;
   height: 56px;
