@@ -57,6 +57,10 @@
   background-color: var(--gray100);
   font-size: 16px;
   padding: 0 23px;
+  background-image: url(../img/eye_off.png);
+  background-size: 20.39px 14px;
+  background-repeat: no-repeat;
+  background-position: right 23px top 23px;
 }
 
 .form_button {
