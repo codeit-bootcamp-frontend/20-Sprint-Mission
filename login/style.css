@@ -2,6 +2,17 @@
     box-sizing: border-box;
     color: #1F2937;
 }
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard';
+}
+
+
+
+a{
+  text-decoration: none;
+}
 
 main{
     display: flex;
@@ -9,7 +20,7 @@ main{
     align-items: center;
     justify-content: center;
     width: 640px;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
 
 }
@@ -20,10 +31,19 @@ main{
   }
 }
 
-
+main > :first-child{
+    min-height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .login-logo{
+  background-image: url(./images/loginLogo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
     width: 392px;
     height: 132px;
 }
@@ -32,7 +52,7 @@ main{
   .login-logo{
       width: 60%;
       height: auto;
-      padding-bottom: 40px;
+      margin-bottom: 40px;
   }
 }
 
