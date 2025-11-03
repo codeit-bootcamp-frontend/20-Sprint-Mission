@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입페이지</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <a class="login-logo" href="../index.html"></a>
+
+        <form class="login-form">
+            <label class="login-form-label" for="email">이메일</label>
+            <input class="login-form-input" type="text" placeholder="이메일">
+            <label class="login-form-label" for="username">닉네임</label>
+            <input class="login-form-input" type="text" placeholder="닉네임">
+            <label class="login-form-label" for="password">비밀번호</label>
+            <div class="toggle-password-container">
+                <img class="toggle-password" src="./images/closeEye.png" alt="비밀번호아이콘">
+                <input class="login-form-input" type="password" placeholder="비밀번호">
+            </div>
+            <label class="login-form-label" for="password-check">비밀번호 확인</label>
+
+            <div class="toggle-password-container">
+                <img class="toggle-password" src="./images/closeEye.png" alt="비밀번호아이콘">
+                <input class="login-form-input" type="password" placeholder="비밀번호 확인">
+            </div>
+            <button class="login-form-button">회원가입</button>
+        </form>
+
+        <div class="login-easy">
+            간편 로그인하기
+            <div class="login-easy-button-container">
+                <button class="login-easy-button" id="google-login"></button>
+                <button class="login-easy-button" id="kakao-login"></button>
+            </div>
+        </div>
+
+        <div class="login-signup">
+            이미 회원이신가요?
+            <a class="login-signup-button" href="./login.html">로그인</a>
+        </div>
+    </main>
+    
+</body>
+</html>
