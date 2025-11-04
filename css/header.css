@@ -1,12 +1,18 @@
 @charset "utf-8";
 
 header {
-  width: 1120px;
+  /* width: 1120px; */
+  width: 100%;
   height: 70px;
+  padding: 0 200px;
+  background-color: #fff;
+  border-bottom: 1px solid #dfdfdf;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
 }
 
 .mo_logo {
@@ -41,16 +47,16 @@ header {
   }
 }
 
-@media (min-width: 421px) and (max-width: 1200px) {
+@media (min-width: 321px) and (max-width: 1200px) {
   header {
     width: 100%;
-    padding: 0 50px;
+    padding: 0 30px;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 320px) {
   header {
-    width: 420px;
+    width: 320px;
     padding: 0 20px;
   }
   .pc_logo {
