@@ -1,5 +1,4 @@
 .wrapper {
-  width: 100%;
   min-height: 100vh;
   max-width: 640px;
   margin: 0 auto;
@@ -7,10 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.logo {
-  margin-bottom: 40px;
+  padding: 10% 0;
 }
 
 form {
@@ -19,22 +15,27 @@ form {
   flex-direction: column;
   align-items: start;
   justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.input-contain {
+  width: 100%;
 }
 
 label {
   font-size: 18px;
   font-weight: 700;
   line-height: 26px;
-  margin-bottom: 16px;
 }
 
 input {
   width: 100%;
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 12px;
   background-color: var(--gray-100);
   padding: 16px 24px;
-  margin-bottom: 24px;
+  margin-top: 16px;
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
@@ -46,17 +47,30 @@ input::placeholder {
 }
 
 .pw-wrapper {
-  position: relative;
   width: 100%;
+}
+
+.bt-wrapper {
+  position: relative;
 }
 
 .pw-wrapper button {
   position: absolute;
-  top: 17%;
+  top: 40%;
   right: 5%;
   border: 0;
   background-color: transparent;
   cursor: pointer;
+}
+
+.view-bt-icon,
+.no-view-bt-icon {
+  display: none;
+}
+
+.view-bt-icon.show,
+.no-view-bt-icon.show {
+  display: block;
 }
 
 .auth-bt {
@@ -67,7 +81,44 @@ input::placeholder {
   font-size: 20px;
   font-weight: 600;
   line-height: 32px;
-  margin-bottom: 24px;
+}
+
+.auth-bt:disabled {
+  background-color: var(--gray-400);
+  cursor: auto;
+}
+
+.error-message {
+  display: none;
+  color: var(--error-red);
+  font-size: 14px;
+  font-weight: 600;
+  margin: 8px 0 0 16px;
+}
+
+.error-message.email-none.show {
+  display: block;
+}
+
+.error-message.email-wrong.show {
+  display: block;
+}
+
+.error-message.password-none.show {
+  display: block;
+}
+
+.error-message.password-wrong.show {
+  display: block;
+}
+
+.error-message.password-confirm.show {
+  display: block;
+}
+
+input.error-box:focus {
+  border: 1px solid var(--error-red);
+  outline: none;
 }
 
 .simple-login {
@@ -78,6 +129,7 @@ input::placeholder {
   justify-content: space-between;
   padding: 16px 23px;
   border-radius: 8px;
+  margin-top: 24px;
 }
 
 .simple-login div {
