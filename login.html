@@ -17,36 +17,60 @@
   </head>
   <body>
     <div class="wrapper">
-      <a href="/" class="logo">
-        <img src="/images/logo.webp" alt="판다마켓 로고" width="300" />
+      <a href="/">
+        <img src="/images/logo.svg" alt="판다마켓 로고" width="300" />
       </a>
-      <form action="">
-        <label for="login-email">이메일</label>
-        <input
-          id="login-email"
-          name="email"
-          type="email"
-          placeholder="이메일을 입력해주세요"
-        />
-
-        <label for="login-password">비밀번호</label>
-        <div class="pw-wrapper">
+      <form>
+        <div class="input-contain">
+          <label for="login-email">이메일</label>
           <input
-            id="login-password"
-            name="password"
-            type="password"
-            placeholder="비밀번호를 입력해주세요"
+            id="login-email"
+            name="email"
+            type="email"
+            required
+            placeholder="이메일을 입력해주세요"
+            class="email"
           />
-          <button type="button">
-            <img
-              src="/images/no-view-pw.webp"
-              alt="비밀번호 뷰 아이콘"
-              width="30"
-            />
-          </button>
+          <p class="error-message email-none">이메일을 입력해주세요.</p>
+          <p class="error-message email-wrong">잘못된 이메일 형식입니다.</p>
         </div>
-
-        <button type="submit" class="button auth-bt">로그인</button>
+        <div class="input-contain">
+          <label for="login-password">비밀번호</label>
+          <div class="pw-wrapper">
+            <div class="bt-wrapper">
+              <input
+                id="login-password"
+                name="password"
+                type="password"
+                required
+                minlength="8"
+                placeholder="비밀번호를 입력해주세요"
+                class="password"
+              />
+              <button type="button">
+                <img
+                  src="/images/view-pw.webp"
+                  alt="비밀번호 보이는 아이콘"
+                  width="30"
+                  class="view-bt-icon"
+                />
+                <img
+                  src="/images/no-view-pw.webp"
+                  alt="비밀번호 안 보이는 아이콘"
+                  width="30"
+                  class="no-view-bt-icon"
+                />
+              </button>
+            </div>
+            <p class="error-message password-none">비민번호를 입력해주세요.</p>
+            <p class="error-message password-wrong">
+              비밀번호를 8자 이상 입력해주세요.
+            </p>
+          </div>
+        </div>
+        <button type="submit" class="button auth-bt login" disabled>
+          로그인
+        </button>
       </form>
 
       <div class="simple-login">
@@ -76,5 +100,6 @@
         판다마켓이 처음이신가요? <a href="./signup.html">회원가입</a>
       </p>
     </div>
+    <script type="module" src="./auth.js"></script>
   </body>
 </html>

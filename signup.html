@@ -17,61 +17,100 @@
   </head>
   <body>
     <div class="wrapper">
-      <a href="/" class="logo">
-        <img src="/images/logo.webp" alt="판다마켓 로고" width="300" />
+      <a href="/">
+        <img src="/images/logo.svg" alt="판다마켓 로고" width="300" />
       </a>
-      <form action="http://127.0.0.1:5500/signup.html">
-        <label for="signup-email">이메일</label>
-        <input
-          id="signup-email"
-          name="email"
-          type="email"
-          placeholder="이메일을 입력해주세요"
-        />
-
-        <label for="signup-nickname">닉네임</label>
-        <input
-          id="signup-nickname"
-          name="nickname"
-          type="text"
-          placeholder="닉네임을 입력해주세요"
-        />
-
-        <label for="signup-password">비밀번호</label>
-        <div class="pw-wrapper">
+      <form>
+        <div class="input-contain">
+          <label for="join-email">이메일</label>
           <input
-            id="signup-password"
-            name="password"
-            type="password"
-            placeholder="비밀번호를 입력해주세요"
+            id="join-email"
+            name="email"
+            type="email"
+            required
+            placeholder="이메일을 입력해주세요"
+            class="email"
           />
-          <button type="button">
-            <img
-              src="/images/no-view-pw.webp"
-              alt="비밀번호 가리는 아이콘"
-              width="30"
-            />
-          </button>
+          <p class="error-message email-none">이메일을 입력해주세요.</p>
+          <p class="error-message email-wrong">잘못된 이메일 형식입니다.</p>
         </div>
-
-        <label for="signup-password-check">비밀번호 확인</label>
-        <div class="pw-wrapper">
+        <div class="input-contain">
+          <label for="join-nickname">닉네임</label>
           <input
-            id="signup-password-check"
-            name="password-check"
+            id="join-nickname"
+            name="nickname"
             type="text"
-            placeholder="비밀번호를 다시 한 번 입력해주세요"
+            placeholder="닉네임을 입력해주세요"
           />
-          <button type="button">
-            <img
-              src="/images/view-pw.webp"
-              alt="비밀번호 뷰 아이콘"
-              width="30"
-            />
-          </button>
         </div>
-
-        <button type="submit" class="button auth-bt">회원가입</button>
+        <div class="input-contain">
+          <label for="join-password">비밀번호</label>
+          <div class="pw-wrapper">
+            <div class="bt-wrapper">
+              <input
+                id="join-password"
+                name="password"
+                type="password"
+                required
+                minlength="8"
+                placeholder="비밀번호를 입력해주세요"
+                class="password"
+              />
+              <button type="button">
+                <img
+                  src="/images/view-pw.webp"
+                  alt="비밀번호 보이는 아이콘"
+                  width="30"
+                  class="view-bt-icon"
+                />
+                <img
+                  src="/images/no-view-pw.webp"
+                  alt="비밀번호 안 보이는 아이콘"
+                  width="30"
+                  class="no-view-bt-icon"
+                />
+              </button>
+            </div>
+            <p class="error-message password-none">비민번호를 입력해주세요.</p>
+            <p class="error-message password-wrong">
+              비밀번호를 8자 이상 입력해주세요.
+            </p>
+          </div>
+        </div>
+        <div class="input-contain">
+          <label for="join-password-confirm">비밀번호 확인</label>
+          <div class="pw-wrapper">
+            <div class="bt-wrapper">
+              <input
+                id="join-password-confirm"
+                name="password-confirm"
+                type="password"
+                required
+                minlength="8"
+                placeholder="비밀번호를 다시 한 번 입력해주세요"
+                class="password-confirm"
+              />
+              <button type="button">
+                <img
+                  src="/images/view-pw.webp"
+                  alt="비밀번호 보이는 아이콘"
+                  width="30"
+                  class="view-bt-icon confirm"
+                />
+                <img
+                  src="/images/no-view-pw.webp"
+                  alt="비밀번호 안 보이는 아이콘"
+                  width="30"
+                  class="no-view-bt-icon confirm"
+                />
+              </button>
+            </div>
+            <p class="error-message password-confirm">
+              비밀번호가 일치하지 않습니다.
+            </p>
+          </div>
+        </div>
+        <button type="submit" class="button auth-bt join">회원가입</button>
       </form>
 
       <div class="simple-login">
@@ -101,5 +140,6 @@
         이미 회원이신가요? <a href="./login.html">로그인</a>
       </p>
     </div>
+    <script type="module" src="./auth.js"></script>
   </body>
 </html>
