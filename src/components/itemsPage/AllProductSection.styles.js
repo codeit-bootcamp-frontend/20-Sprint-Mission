@@ -1,5 +1,5 @@
-import icArrowDown from "@/assets/ic_arrow_down.png";
-import icSort from "@/assets/ic_sort.png";
+import icArrowDown from "@/assets/imgs/ic_arrow_down.png";
+import icSort from "@/assets/imgs/ic_sort.png";
 import { media } from "@/styles/media";
 import styled, { css } from "styled-components";
 import { BaseButton } from "../common.styles";

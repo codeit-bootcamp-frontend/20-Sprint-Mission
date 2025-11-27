@@ -1,5 +1,5 @@
-import icVisibilityOff from "@/assets/ic_visibility_off.png";
-import icVisibilityOn from "@/assets/ic_visibility_on.png";
+import icVisibilityOff from "@/assets/imgs/ic_visibility_off.png";
+import icVisibilityOn from "@/assets/imgs/ic_visibility_on.png";
 import useDebouncedValue from "@/hooks/useDebouncedValue"; // 💡 디바운싱 훅 import 가정
 import useTouchedStatus from "@/hooks/useTouchedStatus";
 import { memo, useCallback, useEffect, useState } from "react";

@@ -1,11 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import RootLayout from "../components/layout/RootLayout";
 import FaqPage from "../pages/FaqPage";
 import HomePage from "../pages/HomePage";
 import ItemsPage from "../pages/ItemsPage";
 import LoginPage from "../pages/LoginPage";
 import PrivacyPage from "../pages/PrivacyPage";
 import SignupPage from "../pages/SignupPage";
-import RootLayout from "./layout/RootLayout";
 import { PATH } from "./router";
 
 const router = createBrowserRouter([

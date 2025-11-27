@@ -1,9 +1,9 @@
+import { PATH } from "@/app/router";
+import icFacebook from "@/assets/imgs/ic_facebook.png";
+import icInsta from "@/assets/imgs/ic_instagram.png";
+import icTwitter from "@/assets/imgs/ic_twitter.png";
+import icYoutube from "@/assets/imgs/ic_youtube.png";
 import { Link } from "react-router-dom";
-import icFacebook from "../../assets/ic_facebook.png";
-import icInsta from "../../assets/ic_instagram.png";
-import icTwitter from "../../assets/ic_twitter.png";
-import icYoutube from "../../assets/ic_youtube.png";
-import { PATH } from "../router";
 import * as S from "./Footer.styles";
 
 export default function Footer() {

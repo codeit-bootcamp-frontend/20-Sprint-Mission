@@ -1,4 +1,4 @@
-import defaultImage from "@/assets/panda-market.png";
+import defaultImage from "@/assets/imgs/panda-market.png";
 import * as S from "./BestProductCard.styles";
 
 const BestProductCard = ({ item, priceUnit, like }) => {

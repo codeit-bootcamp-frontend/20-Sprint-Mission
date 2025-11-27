@@ -1,6 +1,6 @@
-import user from "@/assets/user.png";
+import user from "@/assets/imgs/user.png";
 import { Link, NavLink } from "react-router-dom";
-import { PATH } from "../router";
+import { PATH } from "../../app/router";
 import * as S from "./Header.styles";
 
 const Header = () => {

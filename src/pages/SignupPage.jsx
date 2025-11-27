@@ -1,9 +1,9 @@
 import { PATH } from "@/app/router";
-import lgGoogle from "@/assets/ic_google.png";
-import lgKakao from "@/assets/ic_kakao.png";
-import lgLogo from "@/assets/lgLogo.png";
+import lgGoogle from "@/assets/imgs/ic_google.png";
+import lgKakao from "@/assets/imgs/ic_kakao.png";
+import lgLogo from "@/assets/imgs/lgLogo.png";
 import AuthShell from "@/components/AuthShell";
-import SchemaForm from "@/components/SchemaForm";
+import SchemaForm from "@/components/inputForm/SchemaForm";
 import { isEmpty, isMinLength, isSameString, isValidEmail } from "@/utils";
 import { useNavigate } from "react-router-dom";
 
