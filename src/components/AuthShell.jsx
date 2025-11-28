@@ -10,9 +10,7 @@ const AuthShell = ({ logo, children, easeLogin, bottom, externalBottom }) => {
             <img src={logo.image} alt={logo.imageAlt} />
           </Link>
         </S.LogoTitle>
-        {/* 폼 영역 */}
         {children}
-        {/* 간편 로그인 (옵션) */}
         {easeLogin && (
           <S.EaseLoginContainer>
             {easeLogin.title}
@@ -27,7 +25,6 @@ const AuthShell = ({ logo, children, easeLogin, bottom, externalBottom }) => {
             </ul>
           </S.EaseLoginContainer>
         )}
-        {/* 하단 링크 (내부 링크 or 외부 링크) */}
         {bottom && (
           <S.ToBottom>
             {bottom.text}

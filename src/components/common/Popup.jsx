@@ -1,18 +1,18 @@
 import { createPortal } from "react-dom";
 import styled from "styled-components";
 
-const Modal = ({ isOpen, children, modalRoot }) => {
+const Popup = ({ isOpen, children, modalRoot }) => {
   if (!isOpen) return null;
 
   return createPortal(
-    <DIV>{children}</DIV>,
+    <Container>{children}</Container>,
     document.getElementById(modalRoot)
   );
 };
 
-export default Modal;
+export default Popup;
 
-const DIV = styled.div`
+const Container = styled.div`
   border: 1px solid #e5e7eb;
   background: #fff;
   border-radius: 12px;

@@ -15,7 +15,7 @@ const BestProductCard = ({ item, priceUnit, like }) => {
       <S.ProductDescription>
         <S.ProductTitle>{item.name}</S.ProductTitle>
         <S.ProductPrice>
-          {item.price}
+          {item.price.toLocaleString()}
           {priceUnit}
         </S.ProductPrice>
         <S.ProductFavoriteCount>

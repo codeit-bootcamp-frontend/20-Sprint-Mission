@@ -107,19 +107,6 @@ const FIELDS = [
   },
 ];
 
-// const CustomSchemaContainer = styled(SchemaForm)`
-//   /* StyledForm 스타일을 덮어쓰기 */
-//   ${StyledForm} {
-//     gap: 50px; /* <form> 태그의 gap이 50px로 변경됨 */
-//     border: 2px solid blue;
-//   }
-
-//   /* tyledInput 스타일 덮어쓰기 */
-//   ${StyledInput} {
-//     background-color: yellow;
-//   }
-// `;
-
 const LoginPage = () => {
   const navigate = useNavigate();
 

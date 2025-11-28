@@ -1,7 +1,7 @@
 import usePopoverToggle from "@/hooks/usePopoverToggle";
 import { ITEMS_DATA } from "@/pages/ItemsPage";
-import styled from "styled-components";
-import Modal from "../Modal";
+import Popup from "../common/Popup";
+import * as S from "./SortButtonContainer.Style";
 
 const SortButtonView = ({
   id,
@@ -13,21 +13,21 @@ const SortButtonView = ({
   contentRef,
   children,
 }) => (
-  <div style={{ order: "4", position: "relative" }}>
+  <S.ButtonWapper>
     <div ref={buttonRef} onClick={onToggle}>
       {children}
     </div>
-    <ModalContainer ref={contentRef} id={id} />
+    <S.ModalContainer ref={contentRef} id={id} />
     {isOpen && (
-      <Modal modalRoot={id} isOpen={isOpen}>
+      <Popup modalRoot={id} isOpen={isOpen}>
         {options.map((el) => (
-          <ModalItem onClick={() => onSelect(el.text)} key={el.text}>
+          <S.ModalItem onClick={() => onSelect(el.text)} key={el.text}>
             {el.text}
-          </ModalItem>
+          </S.ModalItem>
         ))}
-      </Modal>
+      </Popup>
     )}
-  </div>
+  </S.ButtonWapper>
 );
 
 const SortButtonContainer = ({ children, onClick }) => {
@@ -55,21 +55,3 @@ const SortButtonContainer = ({ children, onClick }) => {
   );
 };
 export default SortButtonContainer;
-
-const ModalContainer = styled.div`
-  position: absolute;
-  cursor: pointer;
-  top: 50px;
-  right: 0;
-`;
-
-const ModalItem = styled.div`
-  width: 130px;
-  padding: 9px 0 7px;
-  text-align: center;
-  border-bottom: 1px solid #e5e7eb;
-
-  &:last-child {
-    border-bottom: none;
-  }
-`;
