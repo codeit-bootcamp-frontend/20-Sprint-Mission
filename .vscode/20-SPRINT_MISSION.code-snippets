@@ -1,0 +1,8 @@
+{
+  "ImportStylesAsS": {
+    "scope": "javascript,javascriptreact,typescriptreact",
+    "prefix": "ims",
+    "body": ["import * as S from \"./${TM_FILENAME_BASE}.styles\";"],
+    "description": "import * as S from './<컴포넌트이름>.styles'"
+  }
+}
