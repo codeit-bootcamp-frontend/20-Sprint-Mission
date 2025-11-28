@@ -2,7 +2,7 @@ import icArrowDown from "@/assets/imgs/ic_arrow_down.png";
 import icSort from "@/assets/imgs/ic_sort.png";
 import { media } from "@/styles/media";
 import styled, { css } from "styled-components";
-import { BaseButton } from "../common.styles";
+import { BaseButton } from "../../../components/common.styles";
 
 export const AllProductContainer = styled.div`
   width: 1200px;

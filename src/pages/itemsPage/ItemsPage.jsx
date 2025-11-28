@@ -5,9 +5,9 @@ import icRightArrow from "@/assets/imgs/arrow_right.png";
 import icArrowDown from "@/assets/imgs/ic_arrow_down.png";
 import icHeart from "@/assets/imgs/ic_heart.png";
 import icSearch from "@/assets/imgs/ic_search.png";
-import AllProductSection from "@/components/itemsPage/AllProductSection";
-import BestProductCard from "@/components/itemsPage/BestProductCard";
 import useBreakpoint from "@/hooks/useBreakpoint";
+import AllProductSection from "@/pages/itemsPage/components/AllProductSection";
+import BestProductCard from "@/pages/itemsPage/components/BestProductCard";
 import { useEffect, useMemo, useState } from "react";
 import * as S from "./ItemsPage.styles";
 

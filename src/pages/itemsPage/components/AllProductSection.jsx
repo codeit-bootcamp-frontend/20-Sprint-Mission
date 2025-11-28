@@ -1,6 +1,6 @@
 import api, { ENDPOINTS } from "@/api";
 import useBreakpoint from "@/hooks/useBreakpoint";
-import { ITEMS_DATA, PAGINATION_ITEMS } from "@/pages/ItemsPage";
+import { ITEMS_DATA, PAGINATION_ITEMS } from "@/pages/itemsPage/ItemsPage";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import AllProductCard from "./AllProductCard";

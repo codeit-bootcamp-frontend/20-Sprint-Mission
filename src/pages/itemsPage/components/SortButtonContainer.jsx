@@ -1,6 +1,6 @@
 import usePopoverToggle from "@/hooks/usePopoverToggle";
-import { ITEMS_DATA } from "@/pages/ItemsPage";
-import Popup from "../common/Popup";
+import { ITEMS_DATA } from "@/pages/itemsPage/ItemsPage";
+import Popup from "../../../components/common/Popup";
 import * as S from "./SortButtonContainer.Style";
 
 const SortButtonView = ({

@@ -1,4 +1,4 @@
-import HeroSection from "@/components/homePage/HeroSection";
+import HeroSection from "@/pages/homePage/components/HeroSection";
 import * as S from "./HomePage.styles";
 
 import { PATH } from "@/app/router";
@@ -7,7 +7,7 @@ import part3Img from "@/assets/imgs/img_home_02.png";
 import part4Img from "@/assets/imgs/img_home_03.png";
 import part5Img from "@/assets/imgs/img_home_bottom.png";
 import part1Img from "@/assets/imgs/img_home_top.png";
-import FeatureSection from "@/components/homePage/FeatureSection";
+import FeatureSection from "@/pages/homePage/components/FeatureSection";
 
 const HOME_CONTENT = {
   heroTop: {
