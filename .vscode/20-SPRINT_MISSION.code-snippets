@@ -4,5 +4,27 @@
     "prefix": "ims",
     "body": ["import * as S from \"./${TM_FILENAME_BASE}.styles\";"],
     "description": "import * as S from './<컴포넌트이름>.styles'"
+  },
+  "MediaTabletQuery": {
+    "prefix": "mdtab",
+    "description": "@media ${media.tablet}",
+    "body": [
+      "import { media } from \"@/styles/media\";",
+      "",
+      "@media ${media.tablet} {",
+      "  $0",
+      "}"
+    ]
+  },
+  "MediaMobileQuery": {
+    "prefix": "mdmo",
+    "description": "@media ${media.mobile}",
+    "body": [
+      "import { media } from \"@/styles/media\";",
+      "",
+      "@media ${media.mobile} {",
+      "  $0",
+      "}"
+    ]
   }
 }
