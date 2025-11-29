@@ -1,6 +1,7 @@
-const XSvg = ({ size = 24, color = "#9CA3AF" }) => {
+const XSvg = ({ size = 24, color = "#9CA3AF", onClick }) => {
   return (
     <svg
+      onClick={onClick}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
