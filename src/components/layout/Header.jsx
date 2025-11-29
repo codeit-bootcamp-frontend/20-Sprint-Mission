@@ -1,10 +1,13 @@
 import user from "@/assets/imgs/user.png";
-import { Link, NavLink } from "react-router-dom";
-import { PATH } from "../../app/router";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { MARKET_PATHS, PATH } from "../../app/router";
 import * as S from "./Header.styles";
 
 const Header = () => {
+  const location = useLocation();
   const isLogin = true;
+
+  const isMarketActive = MARKET_PATHS.includes(location.pathname);
 
   return (
     <S.Header>
@@ -27,8 +30,8 @@ const Header = () => {
             <li>
               <NavLink
                 to={PATH.ITEMS}
-                style={({ isActive }) =>
-                  isActive ? { color: "var(--blue100)" } : undefined
+                style={() =>
+                  isMarketActive ? { color: "var(--blue100)" } : undefined
                 }
               >
                 중고마켓
