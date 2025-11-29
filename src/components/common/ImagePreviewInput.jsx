@@ -13,9 +13,7 @@ const ImagePreviewInput = ({
   const [localError, setLocalError] = useState("");
   const inputRef = useRef(null);
 
-  const handleChange = (event) => {
-    const file = event.target.files?.[0];
-
+  const handleFileSelect = (file) => {
     if (previewUrl !== null) {
       setLocalError("*이미지 등록은 최대 1개까지 가능합니다.");
       return;
@@ -23,6 +21,11 @@ const ImagePreviewInput = ({
 
     if (!file) {
       setPreviewUrl(null);
+      return;
+    }
+
+    if (!file.type.startsWith("image/")) {
+      setLocalError("이미지 파일만 등록할 수 있습니다.");
       return;
     }
 
@@ -35,14 +38,37 @@ const ImagePreviewInput = ({
     }
   };
 
+  const handleChange = (event) => {
+    const file = event.target.files?.[0];
+    handleFileSelect(file);
+  };
+
   const handleDeleteImg = () => {
-    URL.revokeObjectURL(previewUrl);
+    if (previewUrl) {
+      URL.revokeObjectURL(previewUrl);
+    }
     setPreviewUrl(null);
     setLocalError("");
 
     if (inputRef.current) {
       inputRef.current.value = "";
     }
+  };
+
+  const handleDrop = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const file = event.dataTransfer.files?.[0];
+    if (!file) return;
+
+    if (inputRef.current) {
+      const dataTransfer = new DataTransfer();
+      dataTransfer.items.add(file);
+      inputRef.current.files = dataTransfer.files;
+    }
+
+    handleFileSelect(file);
   };
 
   useEffect(() => {
@@ -57,7 +83,11 @@ const ImagePreviewInput = ({
     <S.ImgPreviewContainer>
       {label && <S.Label htmlFor={id}>{label}</S.Label>}
       <S.ImgContainer>
-        <S.ImgInputLabel htmlFor={id}>
+        <S.ImgInputLabel
+          onDragOver={(e) => e.preventDefault()}
+          onDrop={handleDrop}
+          htmlFor={id}
+        >
           <PlusSvg />
           이미지 등록
         </S.ImgInputLabel>
