@@ -8,23 +8,11 @@
   "MediaTabletQuery": {
     "prefix": "mdtab",
     "description": "@media ${media.tablet}",
-    "body": [
-      "import { media } from \"@/styles/media\";",
-      "",
-      "@media ${media.tablet} {",
-      "  $0",
-      "}"
-    ]
+    "body": ["@media ${media.tablet} {", "  $0", "}"]
   },
   "MediaMobileQuery": {
     "prefix": "mdmo",
     "description": "@media ${media.mobile}",
-    "body": [
-      "import { media } from \"@/styles/media\";",
-      "",
-      "@media ${media.mobile} {",
-      "  $0",
-      "}"
-    ]
+    "body": ["@media ${media.mobile} {", "  $0", "}"]
   }
 }
