@@ -28,10 +28,10 @@ export const HeaderInner = styled.div`
 
 export const Nav = styled.nav`
   display: flex;
-  gap: 32px;
+  gap: 47px;
 
   @media ${media.tablet} {
-    gap: 20px;
+    gap: 35px;
   }
 
   @media ${media.mobile} {
@@ -40,7 +40,6 @@ export const Nav = styled.nav`
 `;
 
 export const Ul = styled.ul`
-  padding-left: 15px;
   display: flex;
   align-items: center;
   gap: 30px;

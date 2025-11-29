@@ -1,11 +1,10 @@
-import ImagePreviewInput from "@/components/common/ImagePrewiewInput";
 import * as S from "./AddItemPage.styles";
+import AddItemFromContainer from "./components/AddItemFromContainer";
 
 const AddItemPage = () => {
   return (
     <S.AddItemLayout>
-      상품 추가 페이지
-      <ImagePreviewInput />
+      <AddItemFromContainer />
     </S.AddItemLayout>
   );
 };
