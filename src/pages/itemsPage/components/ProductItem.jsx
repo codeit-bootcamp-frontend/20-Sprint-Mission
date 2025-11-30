@@ -1,10 +1,11 @@
+import icHeart from "@/assets/imgs/ic_heart.png";
 import defaultImage from "@/assets/imgs/panda-market.png";
-import * as S from "./AllProductCard.styles";
+import * as S from "./ProductItem.styles";
 
-const BestProductCard = ({ item, priceUnit, like }) => {
+const ProductItem = ({ item, size = "md" }) => {
   return (
     <S.Container>
-      <S.ProductImgBox>
+      <S.ProductImgBox size={size}>
         <S.ProductImg
           src={item.images}
           onError={(e) => {
@@ -14,12 +15,9 @@ const BestProductCard = ({ item, priceUnit, like }) => {
       </S.ProductImgBox>
       <S.ProductDescription>
         <S.ProductTitle>{item.name}</S.ProductTitle>
-        <S.ProductPrice>
-          {item.price}
-          {priceUnit}
-        </S.ProductPrice>
+        <S.ProductPrice>{item.price.toLocaleString()}원</S.ProductPrice>
         <S.ProductFavoriteCount>
-          <img src={like.src} alt={like.alt} />
+          <img src={icHeart} alt="좋아요" />
           {item.favoriteCount}
         </S.ProductFavoriteCount>
       </S.ProductDescription>
@@ -27,4 +25,4 @@ const BestProductCard = ({ item, priceUnit, like }) => {
   );
 };
 
-export default BestProductCard;
+export default ProductItem;

@@ -1,55 +1,9 @@
 import api, { ENDPOINTS } from "@/api";
-import { PATH } from "@/app/router";
-import icLeftArrow from "@/assets/imgs/arrow_left.png";
-import icRightArrow from "@/assets/imgs/arrow_right.png";
-import icArrowDown from "@/assets/imgs/ic_arrow_down.png";
-import icHeart from "@/assets/imgs/ic_heart.png";
-import icSearch from "@/assets/imgs/ic_search.png";
 import useBreakpoint from "@/hooks/useBreakpoint";
 import AllProductSection from "@/pages/itemsPage/components/AllProductSection";
-import BestProductCard from "@/pages/itemsPage/components/BestProductCard";
 import { useEffect, useMemo, useState } from "react";
 import * as S from "./ItemsPage.styles";
-
-export const ITEMS_DATA = {
-  sections: {
-    best: {
-      title: "베스트 상품",
-    },
-    all: {
-      title: "전체 상품",
-      search: {
-        src: icSearch,
-        alt: "검색",
-        searchPlaceholder: "검색할 상품을 입력해주세요",
-      },
-      addItem: { text: "상품 등록하기", to: PATH.ADDITEM },
-      sort: {
-        modalRootId: "sortModal",
-        options: [
-          { text: "최신순", value: "recent" },
-          { text: "좋아요순", value: "favorite" },
-        ],
-        src: icArrowDown,
-      },
-      icLeft: {
-        src: icLeftArrow,
-        alt: "왼쪽 버튼",
-      },
-      icRigit: {
-        src: icRightArrow,
-        alt: "오른쪽 버튼",
-      },
-    },
-  },
-  actions: {
-    like: {
-      src: icHeart,
-      alt: "좋아요",
-    },
-    priceUnit: "원",
-  },
-};
+import ProductItem from "./components/ProductItem";
 
 export const PAGINATION_ITEMS = {
   currentPage: 1, // 시작할 페이지
@@ -97,15 +51,10 @@ const ItemsPage = () => {
   return (
     <S.Main>
       <S.BestSection>
-        <S.SubTitle>{ITEMS_DATA.sections.best.title}</S.SubTitle>
+        <S.SubTitle>베스트 상품</S.SubTitle>
         <S.BestProductContainer>
           {bestProductdata.map((item) => (
-            <BestProductCard
-              key={item.id}
-              item={item}
-              like={ITEMS_DATA.actions.like}
-              priceUnit={ITEMS_DATA.actions.priceUnit}
-            />
+            <ProductItem size="lg" key={item.id} item={item} />
           ))}
         </S.BestProductContainer>
       </S.BestSection>

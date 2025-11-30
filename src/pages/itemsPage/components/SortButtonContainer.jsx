@@ -1,39 +1,9 @@
 import usePopoverToggle from "@/hooks/usePopoverToggle";
-import { ITEMS_DATA } from "@/pages/itemsPage/ItemsPage";
 import Popup from "../../../components/common/Popup";
 import * as S from "./SortButtonContainer.Style";
 
-const SortButtonView = ({
-  id,
-  isOpen,
-  onToggle,
-  onSelect,
-  options,
-  buttonRef,
-  contentRef,
-  children,
-}) => (
-  <S.ButtonWapper>
-    <div ref={buttonRef} onClick={onToggle}>
-      {children}
-    </div>
-    <S.ModalContainer ref={contentRef} id={id} />
-    {isOpen && (
-      <Popup modalRoot={id} isOpen={isOpen}>
-        {options.map((el) => (
-          <S.ModalItem onClick={() => onSelect(el.text)} key={el.text}>
-            {el.text}
-          </S.ModalItem>
-        ))}
-      </Popup>
-    )}
-  </S.ButtonWapper>
-);
-
-const SortButtonContainer = ({ children, onClick }) => {
+const SortButtonContainer = ({ children, onClick, options }) => {
   const { isOpen, close, toggle, buttonRef, contentRef } = usePopoverToggle();
-  const options = ITEMS_DATA.sections.all.sort.options;
-  const id = ITEMS_DATA.sections.all.sort.modalRootId;
 
   const handleSelect = (value) => {
     onClick(value);
@@ -41,17 +11,22 @@ const SortButtonContainer = ({ children, onClick }) => {
   };
 
   return (
-    <SortButtonView
-      id={id}
-      isOpen={isOpen}
-      onToggle={toggle}
-      onSelect={handleSelect}
-      options={options}
-      buttonRef={buttonRef}
-      contentRef={contentRef}
-    >
-      {children}
-    </SortButtonView>
+    <S.ButtonWapper>
+      <div ref={buttonRef} onClick={toggle}>
+        {children}
+      </div>
+      <S.ModalContainer id="sortPopup" ref={contentRef} />
+      {isOpen && (
+        <Popup modalRoot="sortPopup" isOpen={isOpen}>
+          {options.map((el) => (
+            <S.ModalItem onClick={() => handleSelect(el.text)} key={el.text}>
+              {el.text}
+            </S.ModalItem>
+          ))}
+        </Popup>
+      )}
+    </S.ButtonWapper>
   );
 };
+
 export default SortButtonContainer;

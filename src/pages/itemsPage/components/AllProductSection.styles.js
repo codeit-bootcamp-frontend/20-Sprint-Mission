@@ -2,7 +2,6 @@ import icArrowDown from "@/assets/imgs/ic_arrow_down.png";
 import icSort from "@/assets/imgs/ic_sort.png";
 import { media } from "@/styles/media";
 import styled, { css } from "styled-components";
-import { BaseButton } from "../../../components/common.styles";
 
 export const AllProductContainer = styled.div`
   width: 1200px;
@@ -77,14 +76,9 @@ export const SearchInput = styled.input`
   }
 `;
 
-export const AddProductButton = styled(BaseButton)`
-  border-radius: 8px;
-  padding: 8px 23px;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-
+export const ButtonContainer = styled.div`
+  width: 133px;
   @media ${media.mobile} {
-    width: 133px;
     order: 2;
   }
 `;

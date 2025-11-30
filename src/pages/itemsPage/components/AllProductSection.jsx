@@ -1,18 +1,38 @@
 import api, { ENDPOINTS } from "@/api";
 import useBreakpoint from "@/hooks/useBreakpoint";
-import { ITEMS_DATA, PAGINATION_ITEMS } from "@/pages/itemsPage/ItemsPage";
+import { PAGINATION_ITEMS } from "@/pages/itemsPage/ItemsPage";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import AllProductCard from "./AllProductCard";
 import * as S from "./AllProductSection.styles";
 import SortButtonContainer from "./SortButtonContainer";
+
+import { PATH } from "@/app/router";
+import icLeftArrow from "@/assets/imgs/arrow_left.png";
+import icRightArrow from "@/assets/imgs/arrow_right.png";
+import icArrowDown from "@/assets/imgs/ic_arrow_down.png";
+import icHeart from "@/assets/imgs/ic_heart.png";
+import icSearch from "@/assets/imgs/ic_search.png";
+import BlueButton from "@/components/common/BlueButton";
+import ProductItem from "./ProductItem";
+
+const SORT_OPTIONS = [
+  { text: "최신순", value: "recent" },
+  { text: "좋아요순", value: "favorite" },
+];
+
+const LIKE_ICON = {
+  src: icHeart,
+  alt: "좋아요",
+};
+
+const PRICE_UNIT = "원";
 
 const fetchProducts = async (params) => {
   return await api.get(ENDPOINTS.products, { ...params });
 };
 
 const AllProductSection = () => {
-  const defaultSort = ITEMS_DATA.sections.all.sort.options[0].text;
+  const defaultSort = SORT_OPTIONS[0].text;
   const [productItems, setProductItems] = useState([]);
   const [sortBy, setSortBy] = useState(defaultSort);
   const [totalPage, setTotalPage] = useState([]);
@@ -21,6 +41,7 @@ const AllProductSection = () => {
     maxPage: PAGINATION_ITEMS.pageRange,
     current: 1,
   });
+  const cacheRef = useRef(new Map());
   const bp = useBreakpoint();
 
   // 뷰포트별 pageSize를 서버에 그대로 전달
@@ -29,23 +50,16 @@ const AllProductSection = () => {
     return bp === "mobile" ? mobile : bp === "tablet" ? tablet : disktop;
   }, [bp]);
 
-  // 캐시: key => { list, totalCount }
-  const cacheRef = useRef(new Map());
-
   // 캐시 키는 쿼리 조합(정렬/페이지/페이지크기)을 모두 포함해야 충돌X
   const cacheKey = useMemo(() => {
-    const sort = ITEMS_DATA.sections.all.sort.options.find(
-      (v) => v.text === sortBy
-    )?.value;
+    const sort = SORT_OPTIONS.find((v) => v.text === sortBy)?.value;
     const page = currentPage.current;
     const pageSize = showCount;
     return JSON.stringify({ sort, page, pageSize });
   }, [sortBy, currentPage.current, showCount]);
 
   useEffect(() => {
-    const sort = ITEMS_DATA.sections.all.sort.options.find(
-      (v) => v.text === sortBy
-    )?.value;
+    const sort = SORT_OPTIONS.find((v) => v.text === sortBy)?.value;
 
     const params = {
       params: {
@@ -166,42 +180,36 @@ const AllProductSection = () => {
   return (
     <>
       <S.Nav>
-        <S.SubTitle>{ITEMS_DATA.sections.all.title}</S.SubTitle>
+        <S.SubTitle>전체 상품</S.SubTitle>
         <S.SearchInputContainer>
-          <img
-            src={ITEMS_DATA.sections.all.search.src}
-            alt={ITEMS_DATA.sections.all.search.alt}
-          />
-          <S.SearchInput
-            placeholder={ITEMS_DATA.sections.all.search.searchPlaceholder}
-          />
+          <img src={icSearch} alt="검색" />
+          <S.SearchInput placeholder="검색할 상품을 입력해주세요" />
         </S.SearchInputContainer>
-        <S.AddProductButton to={ITEMS_DATA.sections.all.addItem.to} as={Link}>
-          {ITEMS_DATA.sections.all.addItem.text}
-        </S.AddProductButton>
-        <SortButtonContainer onClick={handleSelectSort}>
+        <S.ButtonContainer to={PATH.ADDITEM} as={Link}>
+          <BlueButton size="sm" fontSize="sm">
+            상품 등록하기
+          </BlueButton>
+        </S.ButtonContainer>
+        <SortButtonContainer options={SORT_OPTIONS} onClick={handleSelectSort}>
           <S.SortButton>
             {sortBy}
-            <img src={ITEMS_DATA.sections.all.sortSrc} />
+            <img src={icArrowDown} alt="정렬 기준 선택" />
           </S.SortButton>
         </SortButtonContainer>
       </S.Nav>
       <S.AllProductContainer>
         {productItems.map((item) => (
-          <AllProductCard
+          <ProductItem
             key={item.id}
             item={item}
-            like={ITEMS_DATA.actions.like}
-            priceUnit={ITEMS_DATA.actions.priceUnit}
+            like={LIKE_ICON}
+            priceUnit={PRICE_UNIT}
           />
         ))}
       </S.AllProductContainer>
       <S.PageButtonContainer>
         <S.PageButton onClick={handlePrevPage}>
-          <img
-            src={ITEMS_DATA.sections.all.icLeft.src}
-            alt={ITEMS_DATA.sections.all.icLeft.alt}
-          />
+          <img src={icLeftArrow} alt="이전 페이지" />
         </S.PageButton>
         {totalPage
           ?.slice(currentPage.minPage - 1, currentPage.maxPage)
@@ -215,10 +223,7 @@ const AllProductSection = () => {
             </S.PageButton>
           ))}
         <S.PageButton onClick={handleNextPage}>
-          <img
-            src={ITEMS_DATA.sections.all.icRigit.src}
-            alt={ITEMS_DATA.sections.all.icRigit.alt}
-          />
+          <img src={icRightArrow} alt="다음 페이지" />
         </S.PageButton>
       </S.PageButtonContainer>
     </>

@@ -1,22 +1,38 @@
 import { media } from "@/styles/media";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+const CONTENT_SIZE = {
+  md: css`
+    width: 211px;
+    height: 211px;
+
+    @media ${media.mobile} {
+      width: 168px;
+      height: 168px;
+    }
+  `,
+  lg: css`
+    width: 282px;
+    height: 282px;
+
+    @media ${media.tablet} {
+      width: 343px;
+      height: 343px;
+      margin-bottom: 10px;
+    }
+  `,
+};
 
 export const Container = styled.div`
   color: var(--gray800);
 `;
 
 export const ProductImgBox = styled.div`
-  width: 282px;
-  height: 282px;
-  border-radius: 16px;
   overflow: hidden;
+  border-radius: 16px;
   margin-bottom: 16px;
 
-  @media ${media.tablet} {
-    width: 343px;
-    height: 343px;
-    margin-bottom: 10px;
-  }
+  ${({ size }) => CONTENT_SIZE[size]}
 `;
 
 export const ProductImg = styled.img`
@@ -33,6 +49,9 @@ export const ProductDescription = styled.div`
 `;
 
 export const ProductTitle = styled.h3`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2.4rem;
