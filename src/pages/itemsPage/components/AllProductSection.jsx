@@ -59,6 +59,15 @@ const AllProductSection = () => {
   }, [sortBy, currentPage.current, showCount]);
 
   useEffect(() => {
+    setCurrentPage((p) => ({
+      ...p,
+      current: 1,
+      minPage: 1,
+      maxPage: PAGINATION_ITEMS.pageRange,
+    }));
+  }, [showCount]);
+
+  useEffect(() => {
     const sort = SORT_OPTIONS.find((v) => v.text === sortBy)?.value;
 
     const params = {
