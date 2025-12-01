@@ -4,9 +4,9 @@ import RootLayout from "../components/layout/RootLayout";
 import FaqPage from "../pages/FaqPage";
 import HomePage from "../pages/homePage/HomePage";
 import ItemsPage from "../pages/itemsPage/ItemsPage";
-import LoginPage from "../pages/LoginPage";
+import LoginPage from "../pages/loginPage/LoginPage";
 import PrivacyPage from "../pages/PrivacyPage";
-import SignupPage from "../pages/SignupPage";
+import SignupPage from "../pages/signupPage/SignupPage";
 import { PATH } from "./router";
 
 const router = createBrowserRouter([

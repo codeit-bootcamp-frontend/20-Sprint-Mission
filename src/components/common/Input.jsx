@@ -23,6 +23,7 @@ const Input = ({
         onBlur={onBlur}
         placeholder={placeholder}
         aria-invalid={error ? true : false}
+        autoComplete={id}
       />
       {error && <S.ErrorText>{error}</S.ErrorText>}
     </S.Wrapper>

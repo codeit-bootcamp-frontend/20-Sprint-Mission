@@ -5,12 +5,10 @@ import lgLogo from "@/assets/imgs/lgLogo.png";
 import BlueButton from "@/components/common/BlueButton";
 import Input from "@/components/common/Input";
 import PassWordInput from "@/components/common/PassWordInput";
-import { media } from "@/styles/media";
 import { isMinLength, isValidEmail } from "@/utils";
 import { useReducer } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import styled from "styled-components";
-
+import * as S from "./LoginPage.styles";
 const initialFormState = {
   userEmail: "",
   userPassword: "",
@@ -100,23 +98,14 @@ const LoginPage = () => {
   };
 
   return (
-    <Main>
-      <Section>
-        <LogoTitle>
+    <S.Main>
+      <S.Section>
+        <S.LogoTitle>
           <Link to={PATH.INDEX}>
             <img src={lgLogo} alt="판다마켓 로고" />
           </Link>
-        </LogoTitle>
-
-        <form
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            gap: "24px",
-          }}
-          onSubmit={handleSubmit}
-        >
+        </S.LogoTitle>
+        <S.Form onSubmit={handleSubmit}>
           <Input
             value={userEmail}
             label="이메일"
@@ -140,12 +129,11 @@ const LoginPage = () => {
           <BlueButton size="lg" radius="max" type="submit" disabled={!isValid}>
             로그인
           </BlueButton>
-        </form>
-
-        <EaseLoginContainer>
+        </S.Form>
+        <S.EaseLoginContainer>
           간편 로그인 하기
           <ul>
-            <EaseLoginItem>
+            <S.EaseLoginItem>
               <a
                 href="https://www.google.com/"
                 target="_blank"
@@ -153,8 +141,8 @@ const LoginPage = () => {
               >
                 <img src={lgGoogle} alt="구글 아이콘" />
               </a>
-            </EaseLoginItem>
-            <EaseLoginItem>
+            </S.EaseLoginItem>
+            <S.EaseLoginItem>
               <a
                 href="https://www.kakaocorp.com/page/"
                 target="_blank"
@@ -162,99 +150,16 @@ const LoginPage = () => {
               >
                 <img src={lgKakao} alt="카카오 아이콘" />
               </a>
-            </EaseLoginItem>
+            </S.EaseLoginItem>
           </ul>
-        </EaseLoginContainer>
-
-        <ToBottom>
+        </S.EaseLoginContainer>
+        <S.ToBottom>
           판다마켓이 처음이신가요?
           <Link to={PATH.SIGNUP}>회원가입</Link>
-        </ToBottom>
-      </Section>
-    </Main>
+        </S.ToBottom>
+      </S.Section>
+    </S.Main>
   );
 };
-
-export const Main = styled.main`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media ${media.mobile} {
-    padding: 0 16px;
-  }
-`;
-
-export const Section = styled.section`
-  min-height: 100vh;
-  width: 640px;
-  padding: 40px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-`;
-
-export const LogoTitle = styled.h1`
-  width: 396px;
-  height: 132px;
-  margin-bottom: 16px;
-
-  img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-
-  @media ${media.mobile} {
-    width: 198px;
-    height: 66px;
-    margin-bottom: 0px;
-  }
-`;
-
-export const EaseLoginContainer = styled.div`
-  width: 100%;
-  padding: 16px 24px;
-  border-radius: 16px;
-  background-color: #e6f2ff;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 500;
-  color: var(--gray800);
-
-  ul {
-    display: flex;
-    gap: 16px;
-  }
-`;
-
-export const EaseLoginItem = styled.li`
-  width: 42px;
-  height: auto;
-  img {
-    width: 42px;
-    height: auto;
-    display: block;
-  }
-`;
-
-export const ToBottom = styled.div`
-  color: var(--gray800);
-  font-weight: 500;
-  font-size: 1.4rem;
-
-  a {
-    color: var(--blue100);
-    text-decoration: underline;
-    margin-left: 4px;
-
-    &:hover {
-      color: var(--blue200);
-    }
-  }
-`;
 
 export default LoginPage;

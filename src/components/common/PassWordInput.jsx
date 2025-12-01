@@ -33,6 +33,7 @@ const PassWordInput = ({
           onBlur={onBlur}
           placeholder={placeholder}
           aria-invalid={error ? true : false}
+          autoComplete="current-password"
         />
         <S.VisbilityButton
           onClick={() => setIsVisbility(!isVisbility)}
