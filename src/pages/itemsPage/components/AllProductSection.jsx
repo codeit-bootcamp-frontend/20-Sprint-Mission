@@ -1,6 +1,5 @@
 import api, { ENDPOINTS } from "@/api";
 import useBreakpoint from "@/hooks/useBreakpoint";
-import { PAGINATION_ITEMS } from "@/pages/itemsPage/ItemsPage";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import * as S from "./AllProductSection.styles";
@@ -10,7 +9,6 @@ import { PATH } from "@/app/router";
 import icLeftArrow from "@/assets/imgs/arrow_left.png";
 import icRightArrow from "@/assets/imgs/arrow_right.png";
 import icArrowDown from "@/assets/imgs/ic_arrow_down.png";
-import icHeart from "@/assets/imgs/ic_heart.png";
 import icSearch from "@/assets/imgs/ic_search.png";
 import BlueButton from "@/components/common/BlueButton";
 import ProductItem from "./ProductItem";
@@ -20,12 +18,15 @@ const SORT_OPTIONS = [
   { text: "좋아요순", value: "favorite" },
 ];
 
-const LIKE_ICON = {
-  src: icHeart,
-  alt: "좋아요",
+const PAGINATION_ITEMS = {
+  currentPage: 1, // 시작할 페이지
+  pageRange: 5, // 페이지 버튼 표시 개수
+  itemsPerPage: {
+    disktop: 10,
+    tablet: 6,
+    mobile: 4,
+  },
 };
-
-const PRICE_UNIT = "원";
 
 const fetchProducts = async (params) => {
   return await api.get(ENDPOINTS.products, { ...params });
@@ -208,12 +209,7 @@ const AllProductSection = () => {
       </S.Nav>
       <S.AllProductContainer>
         {productItems.map((item) => (
-          <ProductItem
-            key={item.id}
-            item={item}
-            like={LIKE_ICON}
-            priceUnit={PRICE_UNIT}
-          />
+          <ProductItem key={item.id} item={item} />
         ))}
       </S.AllProductContainer>
       <S.PageButtonContainer>
