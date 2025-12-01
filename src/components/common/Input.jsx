@@ -7,6 +7,7 @@ const Input = ({
   error,
   placeholder,
   onChange,
+  onBlur,
   onKeyDown,
   id,
 }) => {
@@ -19,6 +20,7 @@ const Input = ({
         type={type}
         onChange={onChange}
         onKeyDown={onKeyDown}
+        onBlur={onBlur}
         placeholder={placeholder}
         aria-invalid={error ? true : false}
       />
@@ -26,4 +28,5 @@ const Input = ({
     </S.Wrapper>
   );
 };
+
 export default Input;

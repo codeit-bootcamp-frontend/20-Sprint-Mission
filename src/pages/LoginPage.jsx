@@ -2,127 +2,259 @@ import { PATH } from "@/app/router";
 import lgGoogle from "@/assets/imgs/ic_google.png";
 import lgKakao from "@/assets/imgs/ic_kakao.png";
 import lgLogo from "@/assets/imgs/lgLogo.png";
-import AuthShell from "@/components/AuthShell";
-import SchemaForm from "@/components/inputForm/SchemaForm";
-import { isEmpty, isMinLength, isValidEmail } from "@/utils";
-import { useNavigate } from "react-router-dom";
+import BlueButton from "@/components/common/BlueButton";
+import Input from "@/components/common/Input";
+import PassWordInput from "@/components/common/PassWordInput";
+import { media } from "@/styles/media";
+import { isMinLength, isValidEmail } from "@/utils";
+import { useReducer } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import styled from "styled-components";
 
-const AUTHSHELL_CONTENT = {
-  logo: { href: PATH.INDEX, image: lgLogo, imageAlt: "판다마켓 로고" },
-  easeLogin: {
-    title: "간편 로그인 하기",
-    items: [
-      { href: "https://www.google.com/", img: lgGoogle, alt: "구글 아이콘" },
-      {
-        href: "https://www.kakaocorp.com/page/",
-        img: lgKakao,
-        alt: "카카오 아이콘",
-      },
-    ],
-  },
-  bottom: {
-    text: "판다마켓이 처음이신가요?",
-    link: { to: PATH.SIGNUP, text: "회원가입" },
+const initialFormState = {
+  userEmail: "",
+  userPassword: "",
+  touched: {
+    userEmail: false,
+    userPassword: false,
   },
 };
 
-const FIELDS = [
-  {
-    index: 1,
-    rules: [
-      {
-        element: "input",
-        label: {
-          contents: "이메일",
+const formReducer = (state, action) => {
+  switch (action.type) {
+    case "CHANGE_FIELD":
+      return {
+        ...state,
+        [action.name]: action.value,
+      };
+    case "BLUR":
+      return {
+        ...state,
+        touched: {
+          ...state.touched,
+          [action.name]: true,
         },
-        attribute: {
-          id: "userEmail",
-          type: "email",
-          placeholder: "이메일을 입력해주세요",
-        },
-        checkValue: (value) => {
-          switch (true) {
-            case isEmpty(value):
-              return {
-                isValid: !isEmpty(value),
-                message: "이메일을 입력해주세요.",
-              };
+      };
+    case "RESET":
+      return initialFormState;
+    default:
+      return state;
+  }
+};
 
-            case !isValidEmail(value):
-              return {
-                isValid: isValidEmail(value),
-                message: "잘못된 이메일 형식입니다.",
-              };
+const getEmailError = (value, touched) => {
+  if (!touched) return "";
 
-            default:
-              return {
-                isValid: true,
-                message: "",
-              };
-          }
-        },
-      },
-    ],
-  },
-  {
-    index: 2,
-    rules: [
-      {
-        element: "input",
-        label: {
-          contents: "비밀번호",
-        },
-        attribute: {
-          type: "password",
-          id: "userPassword",
-          placeholder: "비밀번호를 입력해주세요",
-        },
-        isVisibility: true,
-        checkValue: (value) => {
-          const length = 12;
+  if (value.trim() === "") return "이메일을 입력해주세요.";
+  if (!isValidEmail(value)) return "잘못된 이메일 형식입니다.";
 
-          switch (true) {
-            case isEmpty(value):
-              return {
-                isValid: !isEmpty(value),
-                message: "비밀번호를 입력해주세요.",
-              };
+  return "";
+};
 
-            case isMinLength(value, length):
-              // console.log(isMinLength(value, length));
-              return {
-                isValid: !isMinLength(value, length),
-                message: `비밀번호를 ${length}자 이상 입력해주세요.`,
-              };
+const getPasswordError = (value, touched) => {
+  const length = 12;
 
-            default:
-              return {
-                isValid: true,
-                message: "",
-              };
-          }
-        },
-      },
-    ],
-  },
-];
+  if (!touched) return "";
+
+  if (value.trim() === "") return "비밀번호를 입력해주세요.";
+  if (isMinLength(value, length))
+    return `비밀번호를 ${length}자 이상 입력해주세요.`;
+
+  return "";
+};
 
 const LoginPage = () => {
   const navigate = useNavigate();
+  const [formState, dispatch] = useReducer(formReducer, initialFormState);
+  const { userEmail, userPassword, touched } = formState;
 
-  const handleSubmit = (formValues) => {
-    navigate(PATH.ITEMS);
-    console.log("제출 값:", formValues);
+  const emailError = getEmailError(userEmail, touched.userEmail);
+  const passwordError = getPasswordError(userPassword, touched.userPassword);
+
+  // 아무것도 안 쳤을 때도 버튼 활성화 되지 않게 value 체크 추가
+  const isValid =
+    userEmail.trim() !== "" &&
+    userPassword.trim() !== "" &&
+    !emailError &&
+    !passwordError;
+
+  const handleChange = (name) => (e) => {
+    dispatch({
+      type: "CHANGE_FIELD",
+      name,
+      value: e.target.value,
+    });
   };
+
+  const handleBlur = (name) => () => {
+    dispatch({ type: "BLUR", name });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!isValid) return;
+
+    console.log("제출 값:", formState);
+    navigate(PATH.ITEMS);
+    dispatch({ type: "RESET" });
+  };
+
   return (
-    <AuthShell
-      logo={AUTHSHELL_CONTENT.logo}
-      easeLogin={AUTHSHELL_CONTENT.easeLogin}
-      bottom={AUTHSHELL_CONTENT.bottom}
-    >
-      <SchemaForm fields={FIELDS} onSubmit={handleSubmit} submitText="로그인" />
-    </AuthShell>
+    <Main>
+      <Section>
+        <LogoTitle>
+          <Link to={PATH.INDEX}>
+            <img src={lgLogo} alt="판다마켓 로고" />
+          </Link>
+        </LogoTitle>
+
+        <form
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            gap: "24px",
+          }}
+          onSubmit={handleSubmit}
+        >
+          <Input
+            value={userEmail}
+            label="이메일"
+            id="userEmail"
+            type="email"
+            placeholder="이메일을 입력해주세요"
+            error={emailError}
+            onChange={handleChange("userEmail")}
+            onBlur={handleBlur("userEmail")}
+          />
+          <PassWordInput
+            value={userPassword}
+            label="비밀번호"
+            id="userPassword"
+            type="password"
+            placeholder="비밀번호를 입력해주세요"
+            error={passwordError}
+            onChange={handleChange("userPassword")}
+            onBlur={handleBlur("userPassword")}
+          />
+          <BlueButton size="lg" radius="max" type="submit" disabled={!isValid}>
+            로그인
+          </BlueButton>
+        </form>
+
+        <EaseLoginContainer>
+          간편 로그인 하기
+          <ul>
+            <EaseLoginItem>
+              <a
+                href="https://www.google.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={lgGoogle} alt="구글 아이콘" />
+              </a>
+            </EaseLoginItem>
+            <EaseLoginItem>
+              <a
+                href="https://www.kakaocorp.com/page/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={lgKakao} alt="카카오 아이콘" />
+              </a>
+            </EaseLoginItem>
+          </ul>
+        </EaseLoginContainer>
+
+        <ToBottom>
+          판다마켓이 처음이신가요?
+          <Link to={PATH.SIGNUP}>회원가입</Link>
+        </ToBottom>
+      </Section>
+    </Main>
   );
 };
+
+export const Main = styled.main`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media ${media.mobile} {
+    padding: 0 16px;
+  }
+`;
+
+export const Section = styled.section`
+  min-height: 100vh;
+  width: 640px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+`;
+
+export const LogoTitle = styled.h1`
+  width: 396px;
+  height: 132px;
+  margin-bottom: 16px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  @media ${media.mobile} {
+    width: 198px;
+    height: 66px;
+    margin-bottom: 0px;
+  }
+`;
+
+export const EaseLoginContainer = styled.div`
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 16px;
+  background-color: #e6f2ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  color: var(--gray800);
+
+  ul {
+    display: flex;
+    gap: 16px;
+  }
+`;
+
+export const EaseLoginItem = styled.li`
+  width: 42px;
+  height: auto;
+  img {
+    width: 42px;
+    height: auto;
+    display: block;
+  }
+`;
+
+export const ToBottom = styled.div`
+  color: var(--gray800);
+  font-weight: 500;
+  font-size: 1.4rem;
+
+  a {
+    color: var(--blue100);
+    text-decoration: underline;
+    margin-left: 4px;
+
+    &:hover {
+      color: var(--blue200);
+    }
+  }
+`;
 
 export default LoginPage;
