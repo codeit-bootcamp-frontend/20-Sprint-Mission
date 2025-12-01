@@ -1,4 +1,3 @@
-import { BaseButton } from "@/components/common.styles";
 import styled from "styled-components";
 import { media } from "../../styles/media";
 
@@ -79,8 +78,6 @@ export const UserImg = styled.img`
   cursor: pointer;
 `;
 
-export const LoginButton = styled(BaseButton)`
+export const LoginButton = styled.div`
   width: 128px;
-  height: 48px;
-  border-radius: 8px;
 `;

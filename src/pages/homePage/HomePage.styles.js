@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { BaseButton } from "@/components/common.styles";
 import { media } from "@/styles/media";
 import { SubTitle } from "@/styles/typography";
 
@@ -64,24 +62,6 @@ export const HeroBottomTitle = styled(SubTitle)`
     font-size: 3.2rem;
     text-align: center;
     margin-bottom: 131px;
-  }
-`;
-
-export const Cta = styled(BaseButton).attrs({ as: Link })`
-  height: 56px;
-  font-size: 2rem;
-  border-radius: 40px;
-  text-align: center;
-
-  @media ${media.tablet} {
-    width: 357px;
-  }
-
-  @media ${media.mobile} {
-    width: 240px;
-    height: 48px;
-    font-size: 1.8rem;
-    line-height: 2.6rem;
   }
 `;
 
