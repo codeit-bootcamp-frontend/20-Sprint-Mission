@@ -8,4 +8,4 @@ export const PATH = {
   ADDITEM: "/additem",
 };
 
-export const MARKET_PATHS = ["/item", "/additem"];
+export const MARKET_PATHS = [PATH.ITEMS, PATH.ADDITEM];
