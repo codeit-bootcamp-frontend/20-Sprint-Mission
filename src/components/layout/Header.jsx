@@ -31,8 +31,10 @@ const Header = () => {
             <li>
               <NavLink
                 to={PATH.ITEMS}
-                style={() =>
-                  isMarketActive ? { color: "var(--blue100)" } : undefined
+                style={({ isActive }) =>
+                  isMarketActive || isActive
+                    ? { color: "var(--blue100)" }
+                    : undefined
                 }
               >
                 중고마켓
