@@ -7,3 +7,5 @@ export const PATH = {
   SIGNUP: "/signup",
   ADDITEM: "/additem",
 };
+
+export const MARKET_PATHS = ["/item", "/additem"];
