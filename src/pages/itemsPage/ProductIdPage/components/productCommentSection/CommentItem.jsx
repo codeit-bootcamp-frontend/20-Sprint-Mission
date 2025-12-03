@@ -9,6 +9,7 @@ import * as S from "./CommentItem.styles";
 const CommentItem = ({ comment }) => {
   const { isOpen, toggle, buttonRef, contentRef } = usePopoverToggle();
   const [isEditing, setIsEditing] = useState(false);
+  const [commentValue, setCommentValue] = useState(comment?.content || "");
 
   const handleIsEditing = () => {
     setIsEditing((pre) => !pre);
@@ -22,11 +23,19 @@ const CommentItem = ({ comment }) => {
     alert("로그인 후 사용 가능합니다.");
   };
 
+  const handleEdit = (e) => {
+    setCommentValue(e.target.value);
+  };
+
   return (
     <S.CommentItemWrapper>
       {isEditing ? (
         <S.CommentEditWrapper>
-          <S.CommentEdit placeholder={comment.content} />
+          <S.CommentEdit
+            value={commentValue}
+            placeholder={commentValue}
+            onChange={handleEdit}
+          />
         </S.CommentEditWrapper>
       ) : (
         <S.CommentContentWrapper>
