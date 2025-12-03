@@ -1,20 +1,21 @@
 import user from "@/assets/imgs/user.png";
 import KebebSvg from "@/assets/svg/KebebSvg";
+import { formatDate } from "@/utils/date";
 import { useState } from "react";
 import * as S from "./CommentItem.styles";
 
-const CommentItem = ({}) => {
+const CommentItem = ({ comment }) => {
   const [isEditing, setIsEditing] = useState(false); // 수정 모드 여부
 
   return (
     <S.CommentItemWrapper>
       {isEditing ? (
         <S.CommentEditWrapper>
-          <S.CommentEdit placeholder="기존 댓글 내용" />
+          <S.CommentEdit placeholder={comment.content} />
         </S.CommentEditWrapper>
       ) : (
         <S.CommentContentWrapper>
-          <S.CommentContent>댁슬내용</S.CommentContent>
+          <S.CommentContent>{comment.content}</S.CommentContent>
           <S.SettingButton>
             <KebebSvg />
           </S.SettingButton>
@@ -26,8 +27,8 @@ const CommentItem = ({}) => {
             <img src={user} alt="유저 이미지" />
           </S.CommentAvatar>
           <div>
-            <S.CommentAuthorName>이름</S.CommentAuthorName>
-            <S.CommentTime>tlrks</S.CommentTime>
+            <S.CommentAuthorName>{comment.writer.nickname}</S.CommentAuthorName>
+            <S.CommentTime>{formatDate(comment.createdAt)}</S.CommentTime>
           </div>
         </S.CommentAuthor>
         {isEditing ? (

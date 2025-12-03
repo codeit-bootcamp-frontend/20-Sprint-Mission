@@ -22,7 +22,7 @@ const ProductIdPage = () => {
   return (
     <S.Main>
       <ProductItem item={item} />
-      <ProductCommentSection />
+      <ProductCommentSection productId={productId} />
     </S.Main>
   );
 };

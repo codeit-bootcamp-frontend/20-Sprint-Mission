@@ -1,12 +1,19 @@
+import { getProductCommentList } from "@/api/productFetch";
 import EmptyImg from "@/assets/imgs/img_inquiry_empty.png";
 import BackSvg from "@/assets/svg/BackSvg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CommentForm from "./CommentForm";
 import CommentItem from "./CommentItem";
 import * as S from "./ProductCommentSection.styles";
 
-const ProductCommentSection = () => {
+const ProductCommentSection = ({ productId }) => {
   const [commentList, setCommentList] = useState([]);
+
+  useEffect(() => {
+    getProductCommentList(productId, { limit: 100 }).then((res) =>
+      setCommentList(res.list)
+    );
+  }, []);
 
   return (
     <S.Section>
@@ -18,7 +25,9 @@ const ProductCommentSection = () => {
         </S.EmptyWrapper>
       ) : (
         <S.CommentItemWrapper>
-          <CommentItem />
+          {commentList.map((comment) => (
+            <CommentItem key={comment.id} comment={comment} />
+          ))}
         </S.CommentItemWrapper>
       )}
       <S.ReturnButton radius="max">
