@@ -1,15 +1,24 @@
 import * as S from "./Textarea.styles";
 
-const Textarea = ({ value, label, error, placeholder, onChange, id }) => {
+const Textarea = ({
+  value,
+  label,
+  error,
+  placeholder,
+  onChange,
+  id,
+  className,
+}) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper className={className}>
       {label && <S.Label htmlFor={id}>{label}</S.Label>}
       <S.StyledTextarea
-        value={value}
         id={id}
-        onChange={onChange}
+        value={value}
         placeholder={placeholder}
+        className={className}
         aria-invalid={error ? true : false}
+        onChange={onChange}
       />
       {error && <S.ErrorText>{error}</S.ErrorText>}
     </S.Wrapper>

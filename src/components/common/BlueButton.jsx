@@ -8,6 +8,7 @@ const BlueButton = ({
   fontSize = "md",
   size = "md",
   radius = "sm",
+  className,
 }) => {
   return (
     <S.BlueButton
@@ -16,6 +17,7 @@ const BlueButton = ({
       fontSize={fontSize}
       type={type}
       disabled={disabled}
+      className={className}
       onClick={onClick}
     >
       {children}

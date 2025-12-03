@@ -44,7 +44,6 @@ export const BlueButton = styled.button`
   font-weight: 600;
   background-color: var(--blue100);
   color: var(--gray100);
-  width: 100%;
 
   ${({ size }) => resolveResponsiveValue(BUTTON_SIZE, size)}
   ${({ fontSize }) => resolveResponsiveValue(FONT_SIZE, fontSize)}

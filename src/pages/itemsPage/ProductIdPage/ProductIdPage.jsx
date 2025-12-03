@@ -1,8 +1,10 @@
 import { getProductDetail } from "@/api/productFetch";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import ProductCommentSection from "./components/productCommentSection/ProductCommentSection";
 import ProductItem from "./components/ProductItem";
 import * as S from "./ProductIdPage.styles";
+
 const ProductIdPage = () => {
   const { productId } = useParams();
   const [item, setItem] = useState(null);
@@ -21,6 +23,7 @@ const ProductIdPage = () => {
   return (
     <S.Main>
       <ProductItem item={item} />
+      <ProductCommentSection />
     </S.Main>
   );
 };
