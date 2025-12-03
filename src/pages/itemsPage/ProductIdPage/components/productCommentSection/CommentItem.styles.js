@@ -45,7 +45,7 @@ export const EditingPopupWrapper = styled.div`
 `;
 
 export const EditingItem = styled.button`
-  padding: 12px 42px 8px;
+  padding: 12px 42px;
   white-space: nowrap;
   display: flex;
   align-items: center;
