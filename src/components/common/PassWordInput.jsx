@@ -19,6 +19,7 @@ const PassWordInput = ({
   id,
 }) => {
   const [isVisbility, setIsVisbility] = useState(false);
+  const imgProps = isVisbility ? DEFAULT_VISIBILITY.on : DEFAULT_VISIBILITY.off;
 
   return (
     <S.Wrapper>
@@ -39,14 +40,7 @@ const PassWordInput = ({
           onClick={() => setIsVisbility(!isVisbility)}
           type="button"
         >
-          <img
-            src={
-              isVisbility
-                ? DEFAULT_VISIBILITY.on.src
-                : DEFAULT_VISIBILITY.off.src
-            }
-            alt={isVisbility ? "비밀번호 보이기 버튼" : "비밀번호 숨기기 버튼"}
-          />
+          <img {...imgProps} />
         </S.VisbilityButton>
       </S.PassWordWrap>
       {error && <S.ErrorText>{error}</S.ErrorText>}

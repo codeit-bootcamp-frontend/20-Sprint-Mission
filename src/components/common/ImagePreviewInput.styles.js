@@ -64,7 +64,7 @@ export const ItemImg = styled.img`
   object-position: center;
 `;
 
-export const SvgWrapper = styled.div`
+export const SvgWrapper = styled.button`
   position: absolute;
   right: 14px;
   top: 14px;

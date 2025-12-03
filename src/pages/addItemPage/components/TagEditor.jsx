@@ -11,16 +11,19 @@ const TagEditor = ({ tags = [], onAddTag, onRemoveTag }) => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && e.nativeEvent.isComposing === false) {
       e.preventDefault();
-
       const trimmed = tagInput.trim();
-      if (!trimmed) return;
 
-      if (onAddTag) {
-        onAddTag(trimmed);
+      if (!trimmed || !onAddTag) return;
+
+      if (tags.includes(trimmed)) {
+        setTagInput("");
+        alert("이미 생성한 태그 입니다.");
+        return;
       }
 
+      onAddTag(trimmed);
       setTagInput("");
     }
   };

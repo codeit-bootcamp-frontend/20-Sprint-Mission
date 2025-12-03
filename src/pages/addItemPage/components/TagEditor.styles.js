@@ -8,7 +8,7 @@ export const TagWrapper = styled.div`
   gap: 12px;
 `;
 
-export const Tag = styled.div`
+export const Tag = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
