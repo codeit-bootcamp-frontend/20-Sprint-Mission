@@ -33,7 +33,24 @@ export const CommentContent = styled.div`
   color: var(--gray800);
 `;
 
-export const SettingButton = styled.button``;
+export const SettingButtonWrapper = styled.div`
+  position: relative;
+`;
+
+export const EditingPopupWrapper = styled.div`
+  right: 0;
+  bottom: -70px;
+  position: absolute;
+  display: flex;
+`;
+
+export const EditingItem = styled.button`
+  padding: 12px 42px 8px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const bottomWrapper = styled.div`
   display: flex;

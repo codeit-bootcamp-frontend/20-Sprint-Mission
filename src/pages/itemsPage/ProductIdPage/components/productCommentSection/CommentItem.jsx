@@ -1,11 +1,26 @@
 import user from "@/assets/imgs/user.png";
 import KebebSvg from "@/assets/svg/KebebSvg";
+import Popup from "@/components/common/Popup";
+import usePopoverToggle from "@/hooks/usePopoverToggle";
 import { formatDate } from "@/utils/date";
 import { useState } from "react";
 import * as S from "./CommentItem.styles";
 
 const CommentItem = ({ comment }) => {
-  const [isEditing, setIsEditing] = useState(false); // 수정 모드 여부
+  const { isOpen, toggle, buttonRef, contentRef } = usePopoverToggle();
+  const [isEditing, setIsEditing] = useState(false);
+
+  const handleIsEditing = () => {
+    setIsEditing((pre) => !pre);
+  };
+
+  const handleDeleteComment = () => {
+    alert("인증이 필요합니다.");
+  };
+
+  const handleEditingComment = () => {
+    alert("인증이 필요합니다.");
+  };
 
   return (
     <S.CommentItemWrapper>
@@ -16,9 +31,22 @@ const CommentItem = ({ comment }) => {
       ) : (
         <S.CommentContentWrapper>
           <S.CommentContent>{comment.content}</S.CommentContent>
-          <S.SettingButton>
-            <KebebSvg />
-          </S.SettingButton>
+          <S.SettingButtonWrapper>
+            <button ref={buttonRef} onClick={toggle}>
+              <KebebSvg />
+            </button>
+            <S.EditingPopupWrapper id="EditPopup" ref={contentRef} />
+            {isOpen && (
+              <Popup modalRoot="EditPopup" isOpen={isOpen}>
+                <S.EditingItem onClick={handleIsEditing}>
+                  수정하기
+                </S.EditingItem>
+                <S.EditingItem onClick={handleDeleteComment}>
+                  삭제하기
+                </S.EditingItem>
+              </Popup>
+            )}
+          </S.SettingButtonWrapper>
         </S.CommentContentWrapper>
       )}
       <S.bottomWrapper>
@@ -33,8 +61,14 @@ const CommentItem = ({ comment }) => {
         </S.CommentAuthor>
         {isEditing ? (
           <S.ButtonWrapper>
-            <S.EditingCancelButton>취소</S.EditingCancelButton>
-            <S.EditingSubmitButton size="sm" fontSize="sm">
+            <S.EditingCancelButton onClick={handleIsEditing}>
+              취소
+            </S.EditingCancelButton>
+            <S.EditingSubmitButton
+              size="sm"
+              fontSize="sm"
+              onClick={handleEditingComment}
+            >
               수정 완료
             </S.EditingSubmitButton>
           </S.ButtonWrapper>
