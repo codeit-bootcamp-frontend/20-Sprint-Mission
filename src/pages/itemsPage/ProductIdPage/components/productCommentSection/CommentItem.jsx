@@ -44,9 +44,12 @@ const CommentItem = ({ comment }) => {
             <S.SettingButton ref={buttonRef} onClick={toggle}>
               <KebebSvg />
             </S.SettingButton>
-            <S.EditingPopupWrapper id="EditPopup" ref={contentRef} />
+            <S.EditingPopupWrapper
+              id={`EditPopup${comment.id}`}
+              ref={contentRef}
+            />
             {isOpen && (
-              <Popup modalRoot="EditPopup" isOpen={isOpen}>
+              <Popup modalRoot={`EditPopup${comment.id}`} isOpen={isOpen}>
                 <S.EditingItem onClick={handleIsEditing}>
                   수정하기
                 </S.EditingItem>
