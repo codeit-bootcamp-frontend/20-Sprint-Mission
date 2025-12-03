@@ -1,12 +1,15 @@
 import { getProductCommentList } from "@/api/productFetch";
+import { PATH } from "@/app/router";
 import EmptyImg from "@/assets/imgs/img_inquiry_empty.png";
 import BackSvg from "@/assets/svg/BackSvg";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CommentForm from "./CommentForm";
 import CommentItem from "./CommentItem";
 import * as S from "./ProductCommentSection.styles";
 
 const ProductCommentSection = ({ productId }) => {
+  let navigate = useNavigate();
   const [commentList, setCommentList] = useState([]);
 
   useEffect(() => {
@@ -14,6 +17,10 @@ const ProductCommentSection = ({ productId }) => {
       setCommentList(res.list)
     );
   }, []);
+
+  const handelToList = () => {
+    navigate(PATH.ITEMS);
+  };
 
   return (
     <S.Section>
@@ -30,7 +37,7 @@ const ProductCommentSection = ({ productId }) => {
           ))}
         </S.CommentItemWrapper>
       )}
-      <S.ReturnButton radius="max">
+      <S.ReturnButton radius="max" onClick={handelToList}>
         목록으로 돌아가기 <BackSvg />
       </S.ReturnButton>
     </S.Section>
