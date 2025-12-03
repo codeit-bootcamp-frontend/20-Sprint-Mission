@@ -13,7 +13,6 @@ const ProductIdPage = () => {
   useEffect(() => {
     getProductDetail(productId).then((res) => {
       setItem(res);
-      console.log(res);
     });
   }, [productId]);
 
