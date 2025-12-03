@@ -47,7 +47,7 @@ export const SettingButton = styled.button`
 
 export const EditingPopupWrapper = styled.div`
   right: 0;
-  bottom: -70px;
+  bottom: -84px;
   position: absolute;
   display: flex;
 `;
@@ -58,6 +58,10 @@ export const EditingItem = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    background-color: var(--gray100);
+  }
 `;
 
 export const bottomWrapper = styled.div`
@@ -105,6 +109,10 @@ export const EditingCancelButton = styled.button`
   font-size: 1.6rem;
   padding: 0 20px;
   color: var(--gray500);
+
+  &:hover {
+    color: var(--gray700);
+  }
 `;
 
 export const EditingSubmitButton = styled(BlueButton)`

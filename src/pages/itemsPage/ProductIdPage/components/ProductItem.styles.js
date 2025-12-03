@@ -175,7 +175,7 @@ export const LikeTagWrapper = styled.div`
   color: var(--gray500);
 `;
 
-export const LikeTag = styled.div`
+export const LikeTag = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -183,6 +183,8 @@ export const LikeTag = styled.div`
   padding: 4px 12px;
   border-radius: 999px;
   border: 1px solid var(--gray200);
+  color: var(--gray400);
+  font-size: 1.6rem;
 
   &:hover {
     color: var(--gray600);
