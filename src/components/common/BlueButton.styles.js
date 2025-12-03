@@ -39,6 +39,7 @@ const RADIUS = {
 
 export const BlueButton = styled.button`
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   font-weight: 600;

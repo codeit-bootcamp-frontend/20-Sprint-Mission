@@ -11,6 +11,7 @@ export const CommentItemWrapper = styled.div`
 `;
 
 export const CommentEditWrapper = styled.form`
+  width: 100%;
   margin-bottom: 16px;
 `;
 

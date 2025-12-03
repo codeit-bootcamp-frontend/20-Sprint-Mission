@@ -4,6 +4,7 @@ import { media } from "@/styles/media";
 import styled from "styled-components";
 
 export const CommetnFromWrapper = styled.form`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
