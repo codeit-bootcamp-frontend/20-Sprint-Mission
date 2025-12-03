@@ -8,7 +8,6 @@ import * as S from "./ProductIdPage.styles";
 const ProductIdPage = () => {
   const { productId } = useParams();
   const [item, setItem] = useState(null);
-  console.log(item);
 
   useEffect(() => {
     getProductDetail(productId).then((res) => {
