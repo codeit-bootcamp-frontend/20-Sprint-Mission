@@ -23,15 +23,15 @@ export const ProductItemWrapper = styled.section`
 
 export const ProductItemImgWrapper = styled.div`
   width: 486px;
-  aspect-ratio: 1 / 1; /* 가로:세로 = 1:1 → 정사각형 */
+  aspect-ratio: 1 / 1;
   border-radius: 8px;
   overflow: hidden;
 
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 비율 유지하면서 영역 채우기 */
-    object-position: center; /* 가운데 정렬 */
+    object-fit: cover;
+    object-position: center;
   }
 
   @media ${media.tablet} {
