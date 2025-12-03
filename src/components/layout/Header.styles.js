@@ -1,3 +1,5 @@
+import smLogo from "@/assets/imgs/smLogo.png";
+import typoLogo from "@/assets/imgs/typoLogo.png";
 import styled from "styled-components";
 import { media } from "../../styles/media";
 
@@ -60,7 +62,7 @@ export const Logo = styled.h1`
   display: block;
   width: 153px;
   height: 51px;
-  background-image: url("smLogo.png");
+  background-image: url(${smLogo});
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,7 +70,7 @@ export const Logo = styled.h1`
   @media ${media.mobile} {
     width: 81px;
     height: 40px;
-    background-image: url("typoLogo.png");
+    background-image: url(${typoLogo});
   }
 `;
 
