@@ -6,7 +6,9 @@ const ProductCommentSection = () => {
   return (
     <S.Section>
       <CommentForm />
-      <CommentItem />
+      <S.CommentItemWrapper>
+        <CommentItem />
+      </S.CommentItemWrapper>
     </S.Section>
   );
 };
