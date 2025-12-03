@@ -5,7 +5,8 @@ import lgLogo from "@/assets/imgs/lgLogo.png";
 import BlueButton from "@/components/common/BlueButton";
 import Input from "@/components/common/Input";
 import PassWordInput from "@/components/common/PassWordInput";
-import { isMinLength, isValidEmail } from "@/utils";
+import { hasMinLength } from "@/utils/common";
+import { isValidEmail } from "@/utils/string";
 import { useReducer } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import * as S from "./LoginPage.styles";
@@ -55,7 +56,7 @@ const getPasswordError = (value, touched) => {
   if (!touched) return "";
 
   if (value.trim() === "") return "비밀번호를 입력해주세요.";
-  if (isMinLength(value, length))
+  if (!hasMinLength(value, length))
     return `비밀번호를 ${length}자 이상 입력해주세요.`;
 
   return "";
