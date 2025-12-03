@@ -79,6 +79,10 @@ export const ProductPrice = styled.div`
 
 export const SettingButton = styled.button`
   color: var(--gray400);
+
+  &:hover {
+    color: var(--gray600);
+  }
 `;
 
 export const DescriptionBody = styled.div`
@@ -179,4 +183,8 @@ export const LikeTag = styled.div`
   padding: 4px 12px;
   border-radius: 999px;
   border: 1px solid var(--gray200);
+
+  &:hover {
+    color: var(--gray600);
+  }
 `;

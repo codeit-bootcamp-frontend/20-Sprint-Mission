@@ -41,9 +41,9 @@ const CommentItem = ({ comment }) => {
         <S.CommentContentWrapper>
           <S.CommentContent>{comment.content}</S.CommentContent>
           <S.SettingButtonWrapper>
-            <button ref={buttonRef} onClick={toggle}>
+            <S.SettingButton ref={buttonRef} onClick={toggle}>
               <KebebSvg />
-            </button>
+            </S.SettingButton>
             <S.EditingPopupWrapper id="EditPopup" ref={contentRef} />
             {isOpen && (
               <Popup modalRoot="EditPopup" isOpen={isOpen}>

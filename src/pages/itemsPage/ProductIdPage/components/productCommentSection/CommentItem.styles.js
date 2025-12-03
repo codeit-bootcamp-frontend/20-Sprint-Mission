@@ -37,6 +37,14 @@ export const SettingButtonWrapper = styled.div`
   position: relative;
 `;
 
+export const SettingButton = styled.button`
+  color: var(--gray400);
+
+  &:hover {
+    color: var(--gray600);
+  }
+`;
+
 export const EditingPopupWrapper = styled.div`
   right: 0;
   bottom: -70px;

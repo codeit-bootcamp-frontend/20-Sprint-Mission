@@ -5,6 +5,10 @@ import { formatDate } from "@/utils/date";
 import * as S from "./ProductItem.styles";
 
 const ProductItem = ({ item }) => {
+  const handleAddLike = () => {
+    alert("로그인 후 사용 가능합니다.");
+  };
+
   return (
     <S.ProductItemWrapper>
       <S.ProductItemImgWrapper>
@@ -42,7 +46,7 @@ const ProductItem = ({ item }) => {
               </div>
             </S.SellerWrapper>
             <S.LikeTagWrapper>
-              <S.LikeTag>
+              <S.LikeTag onClick={handleAddLike}>
                 <HeartSvg />
                 {item.favoriteCount}
               </S.LikeTag>
