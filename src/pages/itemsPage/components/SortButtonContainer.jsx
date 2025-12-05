@@ -1,6 +1,6 @@
+import Popup from "@/components/common/Popup";
 import usePopoverToggle from "@/hooks/usePopoverToggle";
-import Popup from "../../../components/common/Popup";
-import * as S from "./SortButtonContainer.Style";
+import * as S from "./SortButtonContainer.Styles";
 
 const SortButtonContainer = ({ children, onClick, options }) => {
   const { isOpen, close, toggle, buttonRef, contentRef } = usePopoverToggle();

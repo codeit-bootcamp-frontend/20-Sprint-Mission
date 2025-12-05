@@ -1,4 +1,5 @@
 import AddItemPage from "@/pages/addItemPage/AddItemPage";
+import ProductIdPage from "@/pages/itemsPage/ProductIdPage/ProductIdPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "../components/layout/RootLayout";
 import FaqPage from "../pages/FaqPage";
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: PATH.ITEMS, element: <ItemsPage /> },
+      { path: `${PATH.ITEMS}/:productId`, element: <ProductIdPage /> },
       { path: PATH.ADDITEM, element: <AddItemPage /> },
       { path: PATH.FAQ, element: <FaqPage /> },
       { path: PATH.PRIVACY, element: <PrivacyPage /> },

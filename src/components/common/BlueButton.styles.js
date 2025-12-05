@@ -39,12 +39,12 @@ const RADIUS = {
 
 export const BlueButton = styled.button`
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
   font-weight: 600;
   background-color: var(--blue100);
   color: var(--gray100);
-  width: 100%;
 
   ${({ size }) => resolveResponsiveValue(BUTTON_SIZE, size)}
   ${({ fontSize }) => resolveResponsiveValue(FONT_SIZE, fontSize)}
