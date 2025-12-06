@@ -17,29 +17,55 @@
   <body>
     <div class="form_container">
       <a href="index.html">
-        <img
-          class="form_logo_img"
-          src="img/login_logo.png"
-          alt="로그인페이지_판다마켓_로고_이미지"
-        />
+        <img class="form_logo_img" src="img/login_logo.png" alt="판다마켓" />
       </a>
-      <p class="form_text_input">이메일</p>
-      <input type="text" class="form_input" />
-      <p class="form_text_input">닉네임</p>
-      <input type="text" class="form_input" />
-      <p class="form_text_password">비밀번호</p>
-      <input type="password" class="form_input_password" />
-      <p class="form_text_password">비밀번호 확인</p>
-      <input type="password" class="form_input_password_check" />
-      <button class="form_button">회원가입</button>
+      <form class="form_login" onsubmit="login">
+        <label class="form_text_input" for="email">이메일</label>
+        <input
+          id="email"
+          type="text"
+          class="form_input"
+          placeholder="이메일을 입력해주세요"
+        />
+        <label class="form_text_input" for="nick_name">닉네임</label>
+        <input
+          id="nick_name"
+          type="text"
+          class="form_input"
+          placeholder="닉네임을 입력해주세요"
+        />
+        <label class="form_text_password" for="password">비밀번호</label>
+        <div class="password_wrap">
+          <input
+            id="password"
+            type="password"
+            class="form_input_password"
+            placeholder="비밀번호를 입력해주세요"
+          />
+          <input type="button" class="password_eye" />
+        </div>
+        <label class="form_text_password" for="password_check">
+          비밀번호 확인
+        </label>
+        <div class="password_wrap">
+          <input
+            id="password_check"
+            type="password"
+            class="form_input_password_check"
+            placeholder="비밀번호를 다시 한 번 입력해주세요"
+          />
+          <input type="button" class="password_eye" />
+        </div>
+        <button class="form_button">회원가입</button>
+      </form>
       <div class="simple_section">
         <p>간편 로그인하기</p>
         <div class="simple_section_icon">
           <a href="https://www.google.com">
-            <img src="img/google_icon@2x.png" alt="구글_아이콘" />
+            <img src="img/google_icon.png" alt="구글_아이콘" />
           </a>
           <a href="https://www.kakaocorp.com/page/">
-            <img src="img/kakao_icon@2x.png" alt="카카오_아이콘" />
+            <img src="img/kakao_icon.png" alt="카카오_아이콘" />
           </a>
         </div>
       </div>
