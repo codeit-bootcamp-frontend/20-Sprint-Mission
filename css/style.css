@@ -367,7 +367,7 @@ footer #footer-license {
 }
 
 /* Mobile */
-@media (max-width: 767px) and (min-width: 375px) {
+@media (max-width: 767px) {
   .section-look {
     height: 540px;
   }
@@ -487,7 +487,6 @@ footer #footer-license {
     order: 2;
     margin-top: 12px;
   }
-
   .footer-notice,
   .footer-sns {
     order: 1;
