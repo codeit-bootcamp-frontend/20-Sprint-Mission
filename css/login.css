@@ -109,3 +109,20 @@
   color: var(--blue);
   margin-left: 4px;
 }
+
+/* Tablet */
+@media (max-width: 1199px) and (min-width: 768px) {
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .login {
+    margin: 0 16px;
+    min-width: 343px;
+    height: 681px;
+  }
+  #logo img {
+    width: 198px;
+    height: 66px;
+  }
+}
