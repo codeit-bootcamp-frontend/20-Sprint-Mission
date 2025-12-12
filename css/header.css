@@ -47,17 +47,17 @@ header {
   }
 }
 
-@media (min-width: 321px) and (max-width: 1200px) {
+@media (min-width: 376px) and (max-width: 1200px) {
   header {
     width: 100%;
-    padding: 0 30px;
+    padding: 0 24px;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   header {
-    width: 320px;
-    padding: 0 20px;
+    width: 375px;
+    padding: 0 16px;
   }
   .pc_logo {
     display: none;

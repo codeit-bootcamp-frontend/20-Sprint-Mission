@@ -34,8 +34,15 @@ footer {
   }
   .footer_container {
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer_container {
+    padding-left: 104px;
+    padding-right: 104px;
   }
 }
 
@@ -47,8 +54,8 @@ footer {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   footer {
-    width: 320px;
+    width: 375px;
   }
 }
