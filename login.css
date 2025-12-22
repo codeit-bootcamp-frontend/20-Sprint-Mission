@@ -1,116 +1,169 @@
 body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
 }
 
 .container {
-    width: 640px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 60px;
+  width: 640px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
 }
 
 #panda-market {
-    width: 396px;
-    height: 132px;
-    object-fit: fill;
+  width: 396px;
+  height: 132px;
+  object-fit: fill;
 }
 
 .inner-container {
-    margin-top: 40px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .input-title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 26px;
-    color: #1F2937;
-    margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #1f2937;
+  margin-bottom: 16px;
 }
 
 .login-input {
-    background-color: #F3F4F6;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    color: #1F2937;
-    padding: 16px 24px;
-    margin-bottom: 24px;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #9ca3af;
+  padding: 16px 24px;
+  margin-bottom: 24px;
 }
 
 .login-button {
-    font-size: 20px;
-    line-height: 32px;
-    font-weight: 600;
-    width: 100%;
-    text-align: center;
-    border-radius: 40px;
-    border: none;
-    padding: 12px;
-    color: #F3F4F6;
-    cursor: pointer;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  border-radius: 40px;
+  border: none;
+  padding: 12px;
+  color: #f3f4f6;
+  cursor: pointer;
 }
 
 .simple-login {
-    width: 100%;
-    background-color: #E6F2FF;
-    padding: 16px 23px;
-    color: #1F2937;
-    border-radius: 18px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 26px;
-    margin-top: 24px;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
+  width: 100%;
+  background-color: #e6f2ff;
+  padding: 16px 23px;
+  color: #1f2937;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin-top: 24px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
 }
 
 .sns-buttons {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .sns-button {
-    width: 44px;
-    height: 44px;
+  width: 44px;
+  height: 44px;
 }
 
 #register-panel {
-    color: #1F2937;
-    margin-top: 24px;
+  color: #1f2937;
+  margin-top: 24px;
 }
 
 #register-link {
-    color: #3692FF;
+  color: #3692ff;
 }
 
 .register {
-    display: flex;
-    justify-content: center;
-    gap: 4px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
 }
 
 .input-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.eye {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 24px;
+  top: calc(50% - 12px);
+  transform: translateY(-50%);
+}
+
+@media (max-width: 1023px) {
+  .container {
+    width: 100%;
+    margin: 190px 52px 325px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin: 80px 16px 231px;
+  }
+
+  #panda-market {
+    width: 198px;
+    height: 66px;
+    object-fit: fill;
+  }
+
+  .inner-container {
+    margin-top: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-title {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+
+  .login-input {
+    margin-bottom: 16px;
+  }
+
+  .input-wrapper {
     width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
-}
+  }
 
-.eye {
+  .eye {
     width: 24px;
     height: 24px;
     position: absolute;
     right: 24px;
     top: calc(50% - 12px);
     transform: translateY(-50%);
+  }
 }
