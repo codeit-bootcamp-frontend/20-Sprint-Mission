@@ -4,6 +4,7 @@
     <title>판다 마켓</title>
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="login.css" />
+    <script src="signup.js"></script>
   </head>
 
   <body>
@@ -13,51 +14,51 @@
       <div class="inner-container">
         <div class="input-title">이메일</div>
         <input
+          id="email"
           class="login-input"
           type="email"
           placeholder="이메일을 입력해주세요"
+          onblur="onEmailBlur()"
+          onfocus="onEmailFocus()"
         />
+        <div id="email-status"></div>
 
         <div class="input-title">닉네임</div>
         <input
+          id="nickname"
           class="login-input"
           type="text"
           placeholder="닉네임을 입력해주세요"
+          onblur="onNicknameBlur()"
+          onfocus="onNicknameFocus()"
         />
+        <div id="nickname-status"></div>
 
         <div class="input-title">비밀번호</div>
-        <div class="input-wrapper">
-          <input
-            class="login-input"
-            type="password"
-            placeholder="비밀번호를 입력해주세요"
-          />
-          <img class="eye" src="/images/eye_off.png" />
-        </div>
+        <input
+          id="password"
+          class="login-input"
+          type="password"
+          placeholder="비밀번호를 입력해주세요"
+          onblur="onPasswordBlur()"
+          onfocus="onPasswordFocus()"
+        />
+        <div id="password-status"></div>
 
         <div class="input-title">비밀번호 확인</div>
-        <div class="input-wrapper">
-          <input
-            class="login-input"
-            type="text"
-            placeholder="비밀번호를 다시 한 번 입력해주세요"
-          />
-          <img class="eye" src="/images/eye_on.png" />
-        </div>
+        <input
+          id="password-confirm"
+          class="login-input"
+          type="password"
+          placeholder="비밀번호를 다시 한 번 입력해주세요"
+          onblur="onPasswordConfirmBlur()"
+          onfocus="onPasswordConfirmFocus()"
+        />
+        <div id="password-confirm-status"></div>
 
-        <button class="login-button blue-button">회원가입</button>
-
-        <div class="simple-login">
-          <div>간편 로그인하기</div>
-          <div class="sns-buttons">
-            <a href="https://www.google.com/"
-              ><img class="sns-button" src="/images/google.png"
-            /></a>
-            <a href="https://www.kakaocorp.com/page/"
-              ><img class="sns-button" src="/images/kakao.png"
-            /></a>
-          </div>
-        </div>
+        <button class="login-button blue-button disabled" onclick="goLogin()">
+          회원가입
+        </button>
 
         <div class="register" id="register-panel">
           이미 회원이신가요? <a id="register-link" href="/login.html">로그인</a>
