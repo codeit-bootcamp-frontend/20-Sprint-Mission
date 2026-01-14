@@ -7,29 +7,43 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="판다 마켓" />
+    <meta property="og:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta property="og:url" content="https://pandamarket.example.com/" />
+    <meta property="og:image" content="https://pandamarket.example.com/og-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="판다 마켓" />
+    <meta name="twitter:description" content="일상의 모든 물건을 거래해보세요" />
+    <meta name="twitter:image" content="https://pandamarket.example.com/og-image.png" />
+
     <link rel="stylesheet" href="src/shared/style/reset.css" />
     <link rel="stylesheet" href="src/shared/font/font.css" />
     <link rel="stylesheet" href="src/shared/style/color.css" />
     <link rel="stylesheet" href="src/shared/style/style.css" />
     <title>판다마켓</title>
   </head>
+
   <body>
-    <!-- 헤더 -->
     <header class="header">
       <div class="headerInner">
-      <a href="./" class="logoContainer">
-        <img
-          class="logoImg"
-          src="src/shared/img/logo/brand/logo.svg"
-          alt="logoImg"
-        />
-       <img class="" src="src/shared/img/logo/brand/logoText.svg" alt="logoText" />
-      </a>
-      <a href="./src/pages/login/login.html" class="loginButton">로그인</a>
+        <a href="./" class="logoContainer">
+          <img
+            class="logoImg"
+            src="src/shared/img/logo/brand/logo.svg"
+            alt="logoImg"
+          />
+          <img
+            src="src/shared/img/logo/brand/logoText.svg"
+            alt="logoText"
+          />
+        </a>
+        <a href="./src/pages/login/login.html" class="loginButton">로그인</a>
       </div>
     </header>
 
-    <!-- 배너 01 -->
     <section class="banner">
       <div class="bannerContainer">
         <h2 class="bannerTitle">
@@ -51,7 +65,6 @@
       />
     </section>
 
-    <!-- 배너 02 -->
     <section class="bannerLeft">
       <div class="bannerContent">
         <img
@@ -59,7 +72,7 @@
           src="src/shared/img/banner/banner02.svg"
           alt="판다 배너 이미지"
         />
-        <div>
+        <div class="bannerText">
           <p class="sectionLabel">Hot Item</p>
           <h2 class="bannerTitle">
             인기 상품을<br />
@@ -73,12 +86,13 @@
       </div>
     </section>
 
-    <!-- 배너 03 -->
     <section class="bannerRight">
       <div class="bannerContent">
-        <div>
+        <div class="bannerText">
           <p class="sectionLabel">Search</p>
-          <h2 class="bannerTitle">구매를 원하는 <br />상품을 검색하세요</h2>
+          <h2 class="bannerTitle">
+            구매를 원하는 <br />상품을 검색하세요
+          </h2>
           <p class="bannerSubTitle">
             구매하고 싶은 물품은 검색해서<br />
             쉽게 찾아보세요
@@ -92,7 +106,6 @@
       </div>
     </section>
 
-    <!-- 배너 04 -->
     <section class="bannerLeft">
       <div class="bannerContent">
         <img
@@ -100,7 +113,7 @@
           src="src/shared/img/banner/banner04.svg"
           alt="판다 배너 이미지"
         />
-        <div>
+        <div class="bannerText">
           <p class="sectionLabel">Register</p>
           <h2 class="bannerTitle">
             판매를 원하는<br />
@@ -114,7 +127,6 @@
       </div>
     </section>
 
-    <!-- 배너 05 -->
     <section class="banner">
       <div class="bannerContainer">
         <h1 class="bannerTitle">
@@ -138,52 +150,63 @@
           </button>
           <button type="button" onclick="location.href='/faq'">FAQ</button>
         </div>
-        <list class="snsButtonContainer">
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="src/shared/img/logo/sns/ic_facebook.svg"
-              alt="facebookButton"
-              class="snsLogo"
-            />
-          </a>
-
-          <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-            <img
-              src="src/shared/img/logo/sns/ic_twitter.svg"
-              alt="twitterButton"
-              class="snsLogo"
-            />
-          </a>
-
-          <a
-            href="https://www.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="src/shared/img/logo/sns/ic_youtube.svg"
-              alt="youtubeButton"
-              class="snsLogo"
-            />
-          </a>
-
-          <a
-            href="https://www.instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="src/shared/img/logo/sns/ic_instagram.svg"
-              alt="instagramButton"
-              class="snsLogo"
-            />
-          </a>
-        </list>
+        <ul class="snsButtonContainer">
+          <li>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="src/shared/img/logo/sns/ic_facebook.svg"
+                alt="facebookButton"
+                class="snsLogo"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://x.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="src/shared/img/logo/sns/ic_twitter.svg"
+                alt="twitterButton"
+                class="snsLogo"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="src/shared/img/logo/sns/ic_youtube.svg"
+                alt="youtubeButton"
+                class="snsLogo"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="src/shared/img/logo/sns/ic_instagram.svg"
+                alt="instagramButton"
+                class="snsLogo"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   </body>
 </html>
+
+
