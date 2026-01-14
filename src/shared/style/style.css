@@ -2,6 +2,12 @@
   font-family: Pretendard, sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background: #fff;
 }
@@ -11,41 +17,21 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: white;
+  background: #fff;
+  z-index: 10;
+  padding: 0 40px;
 }
 
+
+
 .headerInner {
+  width: 100%;
   max-width: 1200px;
-  height: 70px;
+  height: 72px;
   margin: 0 auto;
-  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@media (max-width: 1920px) {
-  .header {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: 1440px) {
-  .header {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .header {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding: 9px 50px;
-  }
 }
 
 .logoContainer {
@@ -83,9 +69,12 @@ body {
 
 .banner {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 540px;
+  gap: 48px;
+  min-height: 540px;
+  padding: 160px 40px 120px;
   background-color: var(--banner);
 }
 
@@ -93,8 +82,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 120px 40px;
   gap: 10px;
-  height: 720px;
   background-color: #fff;
 }
 
@@ -102,17 +91,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 540px;
+  padding: 120px 40px;
 }
 
 .bannerContainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 32px;
   flex-direction: column;
-  margin-bottom: 40px;
-  margin-top: 240px;
+  margin: 0;
+  max-width: 520px;
 }
 
 .bannerTitle {
@@ -120,7 +109,7 @@ body {
   font-weight: 700;
   line-height: 140%;
   color: var(--secondary-700);
-  margin-bottom: 32px;
+  margin: 0 0 12px;
 }
 
 .seeButton {
@@ -133,14 +122,19 @@ body {
   background-color: var(--brand-blue);
   border: none;
   border-radius: 40px;
-  margin-bottom: 60px;
   cursor: pointer;
+  align-self: flex-start;
 }
 
 .bannerImg {
   width: 746px;
-  height: 340px;
-  margin-top: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+.bannerImg02 {
+  max-width: 100%;
+  height: auto;
 }
 
 .sectionLabel {
@@ -162,8 +156,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 64px;
-  width: 988px;
-  height: 444px;
+  width: 100%;
+  max-width: 988px;
+  min-height: 444px;
+  padding: 64px 80px;
   background-color: #fcfcfc;
   border-radius: 12px;
 }
@@ -174,8 +170,7 @@ body {
 }
 
 .footer {
-  height: 160px;
-  padding: 32px 400px;
+  padding: 32px 40px;
   background-color: var(--secondary-900);
 }
 
@@ -183,6 +178,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 16px;
 }
 
 .snsLogo {
@@ -199,6 +197,11 @@ body {
   cursor: pointer;
 }
 
+.buttonContainer {
+  display: flex;
+  gap: 12px;
+}
+
 .footerContainer > p {
   font-size: 15px;
   font-weight: 400;
@@ -208,4 +211,165 @@ body {
 .snsButtonContainer {
   display: flex;
   gap: 12px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+  .header {
+    padding: 0 24px;
+  }
+
+  .headerInner {
+    height: 68px;
+  }
+
+  .loginButton {
+    width: 120px;
+    height: 44px;
+    font-size: 15px;
+    line-height: 44px;
+  }
+
+  .banner {
+    gap: 40px;
+    padding: 140px 24px 100px;
+    min-height: auto;
+  }
+
+  .bannerTitle {
+    font-size: 34px;
+  }
+
+  .bannerSubTitle {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .seeButton {
+    padding: 14px 96px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .bannerImg {
+    max-width: 540px;
+  }
+
+  .bannerLeft,
+  .bannerRight {
+    padding: 100px 24px;
+  }
+
+  .bannerContent {
+    gap: 48px;
+    padding: 48px 56px;
+    min-height: auto;
+  }
+
+  .bannerImg02 {
+    max-width: 360px;
+  }
+
+  .footer {
+    padding: 28px 24px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+  .header {
+    padding: 0 16px;
+  }
+
+  .headerInner {
+    height: 64px;
+  }
+
+  .logoContainer {
+    gap: 6px;
+  }
+
+  .logoImg {
+    height: 30px;
+    width: auto;
+  }
+
+  .logoContainer img:last-child {
+    height: 18px;
+    width: auto;
+  }
+
+  .loginButton {
+    width: 96px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 120px 16px 80px;
+    min-height: auto;
+  }
+
+  .bannerContainer {
+    width: 100%;
+    max-width: none;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .bannerTitle {
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+
+  .bannerSubTitle {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .seeButton {
+    width: 100%;
+    max-width: 360px;
+    padding: 14px 0;
+    text-align: center;
+  }
+
+  .bannerImg {
+    width: 100%;
+  }
+
+  .bannerLeft,
+  .bannerRight {
+    padding: 80px 16px;
+  }
+
+  .bannerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 32px 24px;
+    min-height: auto;
+  }
+
+  .bannerImg02 {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .footer {
+    padding: 24px 16px;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttonContainer {
+    width: 100%;
+  }
 }
