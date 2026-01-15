@@ -7,6 +7,7 @@ import { api } from "../api/axiosInstance";
 import { Product } from "./Product";
 import { Pagination } from "./Pagination";
 import { useDeviceType } from "../hook/useDeviceType";
+import { Link } from "react-router-dom";
 
 const OPTIONS = [
   { title: "최신순", value: "recent" },
@@ -78,7 +79,11 @@ export function AllProducts() {
         />
 
         {/* 상품 등록 버튼 */}
-        <BlueButton className="[grid-area:button]">상품 등록하기</BlueButton>
+        <Link to="/additem">
+          <BlueButton className="[grid-area:button] cursor-pointer">
+            상품 등록하기
+          </BlueButton>
+        </Link>
 
         {/* sorting dropdown */}
         <Dropdown
