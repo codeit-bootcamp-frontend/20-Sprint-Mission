@@ -1,6 +1,6 @@
 import heart from "../assets/images/heart.svg";
 
-export function Product({ item, className }) {
+export function Product({ item, className = "" }) {
   const { name, images, price, favoriteCount } = item;
   return (
     <div className={`flex flex-col gap-[6px] ${className}`}>

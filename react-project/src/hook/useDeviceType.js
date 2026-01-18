@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
-export function useDeviceType() {
+export default function useDeviceType() {
   const [device, setDevice] = useState(getDeviceType());
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export function useDeviceType() {
   return device;
 }
 
-export function getDeviceType() {
+function getDeviceType() {
   const width = window.innerWidth;
 
   if (width < 768) return "phone";
