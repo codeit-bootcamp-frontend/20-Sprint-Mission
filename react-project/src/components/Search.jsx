@@ -1,6 +1,6 @@
 import searchImg from "../assets/images/search-img.svg";
 
-export function Search({ className, ...rest }) {
+export function Search({ className = "", ...rest }) {
   return (
     <div
       className={`flex rounded-[12px] bg-[#F3F4F6] h-[42px] items-center gap-1 px-4 ${className}`}
