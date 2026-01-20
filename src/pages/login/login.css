@@ -33,9 +33,9 @@
 .inputContainer {
   display: flex;
   gap: 16px;
-  height: 98px;
   flex-direction: column;
   margin-bottom: 24px;
+  min-height: 98px;
 }
 
 .inputContainer label {
@@ -51,7 +51,7 @@
   height: 56px;
   line-height: 26px;
   background-color: var(--cool-gray-100);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 12px;
   text-indent: 24px;
 }
@@ -73,11 +73,27 @@
   height: 100%;
   line-height: 26px;
   background-color: var(--cool-gray-100);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 12px;
   text-indent: 24px;
 }
 
+.inputContainer.error input,
+.passwordWrapper input.error {
+  background-color: #ffecec;
+  border-color: #ef4444;
+}
+
+.errorMessage {
+  display: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ef4444;
+}
+
+.inputContainer.error .errorMessage {
+  display: block;
+}
 
 .togglePassword {
   padding: 0;
@@ -107,6 +123,12 @@
   border-radius: 40px;
   cursor: pointer;
   margin-bottom: 24px;
+}
+
+.loginButton:disabled {
+  color: var(--secondary-400);
+  background-color: var(--secondary-200);
+  cursor: not-allowed;
 }
 
 .socialLoginContainer {
@@ -195,6 +217,21 @@
 }
 
 @media (375px <= width <= 767px) {
+  .logoContainer {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .logoImg {
+    width: 72px;
+    height: 72px;
+  }
+
+  .logoTextImg {
+    width: 180px;
+    height: auto;
+  }
+
   .mainContainer {
     max-width: 400px;
   }
