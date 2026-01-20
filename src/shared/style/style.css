@@ -93,10 +93,6 @@ body {
   color: var(--secondary-700);
 }
 
-.bannerTitle br {
-  display: none;
-}
-
 .bannerSubTitle {
   font-size: 24px;
   font-weight: 500;
@@ -137,7 +133,7 @@ body {
 
 .bannerContent {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 64px;
   width: 100%;
@@ -151,9 +147,11 @@ body {
 .bannerText {
   display: flex;
   align-items: flex-start;
+  gap: 12px;
   width: 100%;
+  flex: 1;
   flex-direction: column;
-  max-width: 420px;
+  max-width: 360px;
 }
 
 .sectionLabel {
@@ -161,6 +159,30 @@ body {
   font-weight: 800;
   color: var(--label);
   margin-bottom: 4px;
+}
+
+.bannerContent .sectionLabel {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.bannerContent .bannerTitle {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 140%;
+  color: var(--secondary-800);
+}
+
+.bannerContent .bannerSubTitle {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--secondary-700);
+}
+
+.bannerContent .bannerTitle br,
+.bannerContent .bannerSubTitle br {
+  display: block;
 }
 
 .footer {
@@ -207,6 +229,48 @@ body {
   gap: 12px;
 }
 
+@media (width >= 1200px) {
+  .banner {
+    gap: 40px;
+    padding: 140px 24px 100px;
+    min-height: auto;
+  }
+
+  .bannerTitle {
+    font-size: 34px;
+  }
+
+  .bannerTitle,
+  .bannerSubTitle {
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-break: keep-all;
+  }
+
+  .bannerContent {
+    gap: 48px;
+    padding: 48px 56px;
+    min-height: auto;
+  }
+
+  .bannerContent .bannerTitle {
+    font-size: 30px;
+  }
+
+  .bannerSubTitle {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .bannerImg {
+    max-width: 540px;
+  }
+
+  .bannerImg02 {
+    max-width: 360px;
+  }
+}
+
 @media (width >= 768px) and (width <= 1199px) {
   .header {
     padding: 0 24px;
@@ -233,15 +297,15 @@ body {
     font-size: 34px;
   }
 
-  .bannerTitle br {
-    display: none;
-  }
-
   .bannerTitle, 
   .bannerSubTitle {
     overflow-wrap: break-word;
     white-space: normal;
     word-break: keep-all;
+  }
+
+  .bannerContent .bannerTitle {
+    font-size: 30px;
   }
 
   .bannerSubTitle {
@@ -361,14 +425,30 @@ body {
   .bannerText {
     display: flex;
     align-items: flex-start;
+    gap: 8px;
     width: 100%;
     flex-direction: column;
-    max-width: 420px;
+    max-width: none;
   }
 
   .bannerImg02 {
     width: 100%;
     max-width: 420px;
+  }
+
+  .bannerContent .sectionLabel {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .bannerContent .bannerTitle {
+    font-size: 26px;
+    line-height: 140%;
+  }
+
+  .bannerContent .bannerSubTitle {
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .footer {
