@@ -18,6 +18,7 @@
   align-items: center;
   gap: 24px;
   margin-bottom: 24px;
+  margin-right: 220px;
 }
 
 .logoImg {
@@ -33,9 +34,9 @@
 .inputContainer {
   display: flex;
   gap: 16px;
-  height: 98px;
   flex-direction: column;
   margin-bottom: 24px;
+  min-height: 98px;
 }
 
 .inputContainer label {
@@ -51,7 +52,7 @@
   height: 56px;
   line-height: 26px;
   background-color: var(--cool-gray-100);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 12px;
   max-width: 400px;
   text-indent: 24px;
@@ -75,9 +76,26 @@
   height: 100%;
   line-height: 26px;
   background-color: var(--cool-gray-100);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 12px;
   text-indent: 24px;
+}
+
+.inputContainer.error input,
+.passwordWrapper input.error {
+  background-color: #ffecec;
+  border-color: #ef4444;
+}
+
+.errorMessage {
+  display: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ef4444;
+}
+
+.inputContainer.error .errorMessage {
+  display: block;
 }
 
 .togglePassword {
@@ -109,6 +127,12 @@
   cursor: pointer;
   margin-bottom: 24px;
   max-width: 400px;
+}
+
+.loginButton:disabled {
+  color: var(--secondary-400);
+  background-color: var(--secondary-200);
+  cursor: not-allowed;
 }
 
 .socialLoginContainer {
@@ -152,6 +176,7 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
+  margin-right: 220px;
 }
 
 .signupMessage {
@@ -159,6 +184,7 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--secondary-800);
+
 }
 
 .signupButton {
@@ -172,5 +198,40 @@
 @media (width <= 767px) {
   .mainContainer {
     max-width: 400px;
+  }
+
+  .logoContainer {
+    gap: 12px;
+    margin-right: 0;
+  }
+
+  .logoImg {
+    width: 72px;
+    height: 72px;
+  }
+
+  .logoTextImg {
+    width: 180px;
+    height: auto;
+  }
+
+  .inputContainer {
+    min-height: 90px;
+  }
+
+  .inputContainer input,
+  .passwordWrapper,
+  .passwordWrapper input,
+  .loginButton {
+    max-width: 100%;
+  }
+
+  .socialLoginContainer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .signupContainer {
+    margin-right: 0;
   }
 }
