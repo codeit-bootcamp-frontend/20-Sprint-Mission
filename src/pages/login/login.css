@@ -47,7 +47,7 @@
 }
 
 .inputContainer input {
-  width: 640px;
+  width: 100%;
   height: 56px;
   line-height: 26px;
   background-color: var(--cool-gray-100);
@@ -63,7 +63,7 @@
 }
 
 .passwordWrapper {
-  width: 640px;
+  width: 100%;
   height: 56px;
   position: relative;
 }
@@ -96,7 +96,7 @@
 }
 
 .loginButton {
-  width: 640px;
+  width: 100%;
   height: 56px;
   font-family: Pretendard, sans-serif;
   font-size: 20px;
@@ -111,7 +111,7 @@
 
 .socialLoginContainer {
   gap: 10px;
-  width: 640px;
+  width: 100%;
   height: 74px;
   background-color: #E6F2FF;
   border-radius: 8px;
@@ -168,9 +168,41 @@
 }
 
 
-@media (width <= 767px) {
+@media (width >= 1200px) {
   .mainContainer {
-    max-width: 400px;
+    max-width: 618px;
+  }
+
+  .inputContainer input,
+  .passwordWrapper,
+  .loginButton,
+  .socialLoginContainer {
+    max-width: 618px;
   }
 }
 
+@media (768px <= width <= 1199px) {
+  .mainContainer {
+    max-width: 618px;
+  }
+
+  .inputContainer input,
+  .passwordWrapper,
+  .loginButton,
+  .socialLoginContainer {
+    max-width: 618px;
+  }
+}
+
+@media (375px <= width <= 767px) {
+  .mainContainer {
+    max-width: 400px;
+  }
+
+  .inputContainer input,
+  .passwordWrapper,
+  .loginButton,
+  .socialLoginContainer {
+    max-width: 400px;
+  }
+}
