@@ -21,6 +21,7 @@
     <div class="inputContainer">
       <label for="email">이메일</label>
       <input id="email" placeholder="codeit@email.com"/>
+      <p class="errorMessage" data-error="email"></p>
     </div>
 
     <div class="inputContainer">
@@ -31,9 +32,10 @@
           <img src="/src/shared/img/button/btn_visibility_on.svg" alt="비밀번호 보기" />
         </button>
       </div>
+      <p class="errorMessage" data-error="password"></p>
     </div>
 
-    <button class="loginButton">로그인</button>
+    <button class="loginButton" disabled>로그인</button>
 
     <div class="socialLoginContainer">
       <div class="box">
@@ -55,5 +57,6 @@
     </div>
   </div>
 </div>
+<script src="./login.js"></script>
 </body>
 </html>

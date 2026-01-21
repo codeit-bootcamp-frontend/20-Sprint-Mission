@@ -2,50 +2,34 @@
   font-family: Pretendard, sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   background: #fff;
 }
 
 .header {
+  width: 100%;
+  padding: 0 40px;
+  background: #fff;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
+  z-index: 10;
 }
 
 .headerInner {
-  max-width: 1200px;
-  height: 70px;
-  margin: 0 auto;
-  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@media (max-width: 1920px) {
-  .header {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: 1440px) {
-  .header {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .header {
-    padding: 0 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding: 9px 50px;
-  }
+  width: 100%;
+  height: 72px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .logoContainer {
@@ -57,27 +41,18 @@ body {
   text-decoration: none;
 }
 
-.logoButtonText {
-  font-family: 'Rokaf Sans', sans-serif;
-  font-size: 26px;
-  font-weight: bold;
-  color: var(--brand-blue);
-
-  border: none;
-}
-
 .loginButton {
   width: 128px;
   height: 48px;
   font-size: 16px;
   font-weight: 600;
-  text-align: center;
   line-height: 48px;
   color: var(--cool-gray-100);
   background-color: var(--brand-blue);
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -85,46 +60,53 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 540px;
+  gap: 48px;
+  padding: 160px 40px 120px;
   background-color: var(--banner);
+  flex-wrap: wrap;
+  min-height: 540px;
 }
 
-.bannerLeft {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  height: 720px;
-  background-color: #fff;
-}
-
+.bannerLeft,
 .bannerRight {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 540px;
+  padding: 120px 40px;
+  background-color: #fff;
 }
 
 .bannerContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 32px;
   flex-direction: column;
-  margin-bottom: 40px;
-  margin-top: 240px;
+  max-width: 520px;
 }
 
 .bannerTitle {
+  margin: 0 0 12px;
   font-size: 40px;
   font-weight: 700;
   line-height: 140%;
   color: var(--secondary-700);
-  margin-bottom: 32px;
+}
+
+.bannerSubTitle {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.bannerTitle,
+.bannerSubTitle {
+  overflow-wrap: break-word;
+  white-space: normal;
+  word-break: keep-all;
 }
 
 .seeButton {
-  gap: 10px;
   padding: 16px 124px;
   font-size: 20px;
   font-weight: 600;
@@ -133,14 +115,43 @@ body {
   background-color: var(--brand-blue);
   border: none;
   border-radius: 40px;
-  margin-bottom: 60px;
+  align-self: flex-start;
   cursor: pointer;
 }
 
 .bannerImg {
   width: 746px;
-  height: 340px;
-  margin-top: 200px;
+  height: auto;
+  max-width: 100%;
+}
+
+.bannerImg02 {
+  height: auto;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.bannerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  padding: 64px 80px;
+  background-color: #fcfcfc;
+  border-radius: 12px;
+  max-width: 988px;
+  min-height: 444px;
+}
+
+.bannerText {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  max-width: 360px;
 }
 
 .sectionLabel {
@@ -150,32 +161,32 @@ body {
   margin-bottom: 4px;
 }
 
-.bannerSubTitle {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 32px;
-  letter-spacing: 0;
+.bannerContent .sectionLabel {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 8px;
 }
 
-.bannerContent{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 64px;
-  width: 988px;
-  height: 444px;
-  background-color: #fcfcfc;
-  border-radius: 12px;
+.bannerContent .bannerTitle {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 140%;
+  color: var(--secondary-800);
 }
 
-.emptySection {
-  height: 138px;
-  background-color: var(--cool-gray-100);
+.bannerContent .bannerSubTitle {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--secondary-700);
+}
+
+.bannerContent .bannerTitle br,
+.bannerContent .bannerSubTitle br {
+  display: block;
 }
 
 .footer {
-  height: 160px;
-  padding: 32px 400px;
+  padding: 32px 40px;
   background-color: var(--secondary-900);
 }
 
@@ -183,11 +194,19 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .snsLogo {
   width: 20px;
   height: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 12px;
 }
 
 .buttonContainer > button {
@@ -208,4 +227,241 @@ body {
 .snsButtonContainer {
   display: flex;
   gap: 12px;
+}
+
+@media (width >= 1200px) {
+  .banner {
+    gap: 40px;
+    padding: 140px 24px 100px;
+    min-height: auto;
+  }
+
+  .bannerTitle {
+    font-size: 34px;
+  }
+
+  .bannerTitle,
+  .bannerSubTitle {
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-break: keep-all;
+  }
+
+  .bannerContent {
+    gap: 48px;
+    padding: 48px 56px;
+    min-height: auto;
+  }
+
+  .bannerContent .bannerTitle {
+    font-size: 30px;
+  }
+
+  .bannerSubTitle {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .bannerImg {
+    max-width: 540px;
+  }
+
+  .bannerImg02 {
+    max-width: 360px;
+  }
+}
+
+@media (width >= 768px) and (width <= 1199px) {
+  .header {
+    padding: 0 24px;
+  }
+
+  .headerInner {
+    height: 68px;
+  }
+
+  .loginButton {
+    width: 120px;
+    height: 44px;
+    font-size: 15px;
+    line-height: 44px;
+  }
+
+  .banner {
+    gap: 40px;
+    padding: 140px 24px 100px;
+    min-height: auto;
+  }
+
+  .bannerTitle {
+    font-size: 34px;
+  }
+
+  .bannerTitle, 
+  .bannerSubTitle {
+    overflow-wrap: break-word;
+    white-space: normal;
+    word-break: keep-all;
+  }
+
+  .bannerContent .bannerTitle {
+    font-size: 30px;
+  }
+
+  .bannerSubTitle {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .seeButton {
+    padding: 14px 96px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .bannerImg {
+    max-width: 540px;
+  }
+
+  .bannerLeft,
+  .bannerRight {
+    padding: 100px 24px;
+  }
+
+  .bannerContent {
+    gap: 48px;
+    padding: 48px 56px;
+    min-height: auto;
+  }
+
+  .bannerImg02 {
+    max-width: 360px;
+  }
+}
+
+@media (width >= 375px) and (width <= 767px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .headerInner {
+    height: 64px;
+  }
+
+  .logoContainer {
+    gap: 6px;
+  }
+
+  .logoImg {
+    width: auto;
+    height: 30px;
+  }
+
+  .logoContainer img:last-child {
+    width: auto;
+    height: 18px;
+  }
+
+  .loginButton {
+    width: 96px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  .banner {
+    align-items: flex-start;
+    gap: 24px;
+    padding: 120px 16px 80px;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .bannerContainer {
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    max-width: none;
+  }
+
+  .bannerTitle {
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+
+  .bannerTitle br {
+    display: inline;
+  }
+
+  .bannerSubTitle {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .seeButton {
+    width: 100%;
+    padding: 14px 0;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .bannerImg {
+    width: 100%;
+  }
+
+  .bannerLeft,
+  .bannerRight {
+    padding: 80px 16px;
+  }
+
+  .bannerContent {
+    align-items: flex-start;
+    gap: 24px;
+    padding: 32px 24px;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .bannerText {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    flex-direction: column;
+    max-width: none;
+  }
+
+  .bannerImg02 {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .bannerContent .sectionLabel {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .bannerContent .bannerTitle {
+    font-size: 26px;
+    line-height: 140%;
+  }
+
+  .bannerContent .bannerSubTitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .footer {
+    padding: 24px 16px;
+  }
+
+  .footerContainer {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .buttonContainer {
+    display: flex;
+    width: 100%;
+  }
 }

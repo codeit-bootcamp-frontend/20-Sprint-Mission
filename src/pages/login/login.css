@@ -3,10 +3,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  padding: 0 16px;
 }
 
 .mainContainer {
   width: 100%;
+  margin: 0 auto;
   max-width: 618px;
 }
 
@@ -29,68 +31,79 @@
 }
 
 .inputContainer {
-  height: 98px;
   display: flex;
-  flex-direction: column;
   gap: 16px;
+  flex-direction: column;
   margin-bottom: 24px;
+  min-height: 98px;
 }
 
 .inputContainer label {
   font-family: Pretendard, sans-serif;
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
   line-height: 26px;
   color: var(--secondary-800);
 }
 
 .inputContainer input {
-  width: 640px;
+  width: 100%;
   height: 56px;
   line-height: 26px;
-
-  text-indent: 24px;
-
-  border: none;
-  border-radius: 12px;
-
   background-color: var(--cool-gray-100);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-indent: 24px;
 }
 
 .inputContainer input::placeholder {
   font-family: Pretendard, sans-serif;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
 }
 
 .passwordWrapper {
-  position: relative;
-  width: 640px;
+  width: 100%;
   height: 56px;
+  position: relative;
 }
 
 .passwordWrapper input {
   width: 100%;
   height: 100%;
   line-height: 26px;
-  text-indent: 24px;
-
-  border: none;
-  border-radius: 12px;
   background-color: var(--cool-gray-100);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-indent: 24px;
 }
 
-/* ✅ 눈 모양 버튼 */
-.togglePassword {
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
+.inputContainer.error input,
+.passwordWrapper input.error {
+  background-color: #ffecec;
+  border-color: #ef4444;
+}
 
+.errorMessage {
+  display: none;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ef4444;
+}
+
+.inputContainer.error .errorMessage {
+  display: block;
+}
+
+.togglePassword {
+  padding: 0;
   border: none;
   background: none;
   cursor: pointer;
-  padding: 0;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .togglePassword img {
@@ -99,29 +112,31 @@
 }
 
 .loginButton {
-  width: 640px;
+  width: 100%;
   height: 56px;
-  margin-bottom: 24px;
-
   font-family: Pretendard, sans-serif;
   font-size: 20px;
   font-weight: 600;
   color: var(--cool-gray-100);
-
+  background-color: var(--brand-blue);
   border: none;
   border-radius: 40px;
-  background-color: var(--brand-blue);
-
   cursor: pointer;
+  margin-bottom: 24px;
+}
+
+.loginButton:disabled {
+  color: var(--secondary-400);
+  background-color: var(--secondary-200);
+  cursor: not-allowed;
 }
 
 .socialLoginContainer {
-  width: 640px;
+  gap: 10px;
+  width: 100%;
   height: 74px;
   background-color: #E6F2FF;
-
   border-radius: 8px;
-  gap: 10px;
   margin-bottom: 24px;
 }
 
@@ -172,4 +187,59 @@
   font-weight: 500;
   color: var(--brand-blue);
   text-decoration: underline;
+}
+
+
+@media (width >= 1200px) {
+  .mainContainer {
+    max-width: 618px;
+  }
+
+  .inputContainer input,
+  .passwordWrapper,
+  .loginButton,
+  .socialLoginContainer {
+    max-width: 618px;
+  }
+}
+
+@media (768px <= width <= 1199px) {
+  .mainContainer {
+    max-width: 618px;
+  }
+
+  .inputContainer input,
+  .passwordWrapper,
+  .loginButton,
+  .socialLoginContainer {
+    max-width: 618px;
+  }
+}
+
+@media (375px <= width <= 767px) {
+  .logoContainer {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .logoImg {
+    width: 72px;
+    height: 72px;
+  }
+
+  .logoTextImg {
+    width: 180px;
+    height: auto;
+  }
+
+  .mainContainer {
+    max-width: 400px;
+  }
+
+  .inputContainer input,
+  .passwordWrapper,
+  .loginButton,
+  .socialLoginContainer {
+    max-width: 400px;
+  }
 }
